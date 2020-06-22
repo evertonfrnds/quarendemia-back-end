@@ -1,17 +1,17 @@
-### **UNIVERSIDADE FEDERAL DO RIO GRANDE DO NORTE**
+### UNIVERSIDADE FEDERAL DO RIO GRANDE DO NORTE
 
-### **CENTRO DE ENSINO SUPERIOR DO SERIDÓ**
+### CENTRO DE ENSINO SUPERIOR DO SERIDÓ
 
-### **DEPARTAMENTO DE COMPUTAÇÃO E TECNOLOGIA**
+### DEPARTAMENTO DE COMPUTAÇÃO E TECNOLOGIA
 
-### **CURSO DE BACHARELADO EM SISTEMAS DE INFORMAÇÃO**
+### CURSO DE BACHARELADO EM SISTEMAS DE INFORMAÇÃO
 
 **Douglas Pacelli Maia Baltazar**  
 **Everton Ankelys Fernandes Bezerra**  
 **Fernando José dos Santos**  
 **José Rubens de Oliveira Júnior**
 
-# **Quarendemia: Lista de User Stories**
+# Quarendemia: Lista de User Stories
 
 ## Descrição
 
