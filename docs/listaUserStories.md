@@ -21,8 +21,8 @@ O presente documento mostra uma breve descrição dos User Stories do sistema **
 
 | Data       | Versão | Descrição                                                       | Autor                          |
 | :--------- | :----: | :-------------------------------------------------------------- | :----------------------------- |
-| 16/03/2020 |  1.0   | Template e descrição do documento; descrição do User Story US01 | José Rubens de Oliveira Junior |
-| 16/03/2020 |   -    |                                                                 |                                |
+| 22/06/2020 |  1.0   | Template e descrição do documento; descrição do User Story US01 | José Rubens de Oliveira Junior |
+| -          |   -    |                                                                 |                                |
 
 ### **User Story US01 - Manter Usuário**
 
