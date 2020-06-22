@@ -15,47 +15,44 @@
 
 ## 1. Introdução
 
-### 1. Propósito do documento de requisitos
+### 1.1 Propósito do documento de requisitos
 
 Este documento visa a apresentação do sistema **Quarendemia** produzido pela equipe **JuremasTEC Social**. Este documento contém todos os requisitos bem como seu escopo e demais informações relevantes para a implementação deste projeto.
 
-### 2. Escopo do Produto
+### 1.2 Escopo do Produto
 
 O Sistema Quarendemia foi criado para ajudar na administração de uma academia, com funcionalidades relevante para o administrado dela, facilitando o controle de fluxo de clientes e a contabilidade da empresa.
 
 ## 2. Descrição Geral
 
-### 1. Requisitos Funcionais
+### 2.1 Requisitos Funcionais
 
-RF01 - Cadastrar usuários;
-RF02 - Atualizar dados do usuário;
-RF03 - Excluir o usuário;
-RF04 - Ver dados do usuário;
-RF05 - Recuperar senha do usuário;
-RF06 - Cadastrar planos;
-RF07 - Exibir planos;
-RF08 - Atualizar planos;
-RF09 - Excluir planos;
-RF10 - Cadastro de clientes;
-RF11 - Atualização de clientes;
-RF12 - Exclusão de clientes;
-RF13 - Visualização de clientes;
-RF14 - Visualização de clientes que devem pagar no mês;
-RF15 - Confirmação de pagamentos do mês;
-RF16 - Visualização de pagamentos atrasado;
-RF17 - Visualização de valor arrecadado no mês;
+- RF01 - Cadastrar usuários;
+- RF02 - Atualizar dados do usuário;
+- RF03 - Excluir o usuário;
+- RF04 - Ver dados do usuário;
+- RF05 - Recuperar senha do usuário;
+- RF06 - Cadastrar planos;
+- RF07 - Exibir planos;
+- RF08 - Atualizar planos;
+- RF09 - Excluir planos;
+- RF10 - Cadastro de clientes;
+- RF11 - Atualização de clientes;
+- RF12 - Exclusão de clientes;
+- RF13 - Visualização de clientes;
+- RF14 - Visualização de clientes que devem pagar no mês;
+- RF15 - Confirmação de pagamentos do mês;
+- RF16 - Visualização de pagamentos atrasado;
+- RF17 - Visualização de valor arrecadado no mês;
 
-### 2. Requisitos não-funcionais
+### 2.2 Requisitos não-funcionais
 
-RNF01 - Conexão com a internet
-RNF02 - Sistema operacional Windows ou Linux
-...
+- RNF01 - Conexão com a internet
+- RNF02 - Sistema operacional Windows ou Linux
 
-### 3. Perfis dos usuários
+### 2.3 Perfis dos usuários
 
-...
-
-### 4. Riscos
+### 2.4 Riscos
 
 ## 3. Histórico de Revisões
 
