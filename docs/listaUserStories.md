@@ -6,29 +6,16 @@
 
 ### **CURSO DE BACHARELADO EM SISTEMAS DE INFORMAÇÃO**
 
-**Douglas Baltazar**  
-**Fernando**  
-**Everton**  
+**Douglas Pacelli Maia Baltazar**  
+**Everton Ankelys Fernandes Bezerra**  
+**Fernando José dos Santos**  
 **José Rubens de Oliveira Júnior**
 
-## **Coders Movies: Lista de User Stories**
-
-**Caicó – RN**  
-**2020**
-
-<div id='sumario'/>
-## Sumário
-
-1. [Descrição](#descricao)
-2. [Lista de User Stories](#us)
-   1. [User Story US01](#us01)
-3. [Referências](#referencias)
-
-<div id='descricao'/>
+## **Quarendemia: Lista de User Stories**
 
 ## Descrição
 
-O presente documento mostra uma breve descrição dos passos seguidos por um usuário do sistema **_Coders Movies_** ao acessar alguma das funcionalidades que estarão disponíveis.
+O presente documento mostra uma breve descrição dos User Stories do sistema **Quarendemia**.
 
 ### Histórico de revisões
 
@@ -62,16 +49,5 @@ O presente documento mostra uma breve descrição dos passos seguidos por um usu
 | **TA01.02** |           |
 | **TA01.03** |           |
 | **TA01.04** |           |
-
-<div id='us02'/>
-
-### **Testes de Aceitação (TA)**
-
-| Código      | Descrição |
-| ----------- | --------- |
-| **TA04.01** |           |
-| **TA04.02** |           |
-| **TA04.03** |           |
-| **TA04.04** |           |
 
 <div id='referencias'/>
