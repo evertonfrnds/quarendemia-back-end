@@ -11,13 +11,13 @@
 **Fernando José dos Santos**  
 **José Rubens de Oliveira Júnior**
 
-## **Quarendemia: Lista de User Stories**
+# **Quarendemia: Lista de User Stories**
 
 ## Descrição
 
 O presente documento mostra uma breve descrição dos User Stories do sistema **Quarendemia**.
 
-### Histórico de revisões
+## Histórico de revisões
 
 | Data       | Versão | Descrição                                                       | Autor                          |
 | :--------- | :----: | :-------------------------------------------------------------- | :----------------------------- |
