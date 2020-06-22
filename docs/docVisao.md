@@ -2,9 +2,10 @@
 
 ## 1. Introdução
 ### 1. Propósito do documento de requisitos
-...
+Este documento visa a apresentação do sistema LocationVan produzido pela equipe Quarendemia. Este documento contém todos os requisitos bem como seu escopo e demais informações relevantes para a implementação deste projeto.
 ### 2. Escopo do Produto
-...
+O Sistema Quarendemia foi criado para ajudar na administração de uma academia, com funcionalidades relevante para o administrado dela, facilitando o controle de fluxo de clientes e a contabilidade da empresa.
+
 
 ## 2. Descrição Geral
 ### 1. Requisitos Funcionais
