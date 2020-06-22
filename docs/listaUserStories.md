@@ -24,12 +24,6 @@ O presente documento mostra uma breve descrição dos User Stories do sistema **
 | 16/03/2020 |  1.0   | Template e descrição do documento; descrição do User Story US01 | José Rubens de Oliveira Junior |
 | 16/03/2020 |   -    |                                                                 |                                |
 
-[topo](#sumario)
-
-<div id='us'/>
-
-<div id='us01'/>
-
 ### **User Story US01 - Manter Usuário**
 
 |                           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
@@ -49,5 +43,3 @@ O presente documento mostra uma breve descrição dos User Stories do sistema **
 | **TA01.02** |           |
 | **TA01.03** |           |
 | **TA01.04** |           |
-
-<div id='referencias'/>
