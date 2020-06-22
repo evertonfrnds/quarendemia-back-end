@@ -9,9 +9,31 @@ O Sistema Quarendemia foi criado para ajudar na administração de uma academia,
 
 ## 2. Descrição Geral
 ### 1. Requisitos Funcionais
-...
+
+RF01 - Cadastrar usuários;
+RF02 - Atualizar dados do usuário;
+RF03 - Excluir o usuário;
+RF04 - Ver dados do usuário;
+RF05 - Recuperar senha do usuário;
+RF06 - Cadastrar planos;
+RF07 - Exibir planos;
+RF08 - Atualizar planos;
+RF09 - Excluir planos;
+RF10 - Cadastro de clientes;
+RF11 - Atualização de clientes;
+RF12 - Exclusão de clientes;
+RF13 - Visualização de clientes;
+RF14 - Visualização de clientes que devem pagar no mês;
+RF15 - Confirmação de pagamentos do mês;
+RF16 - Visualização de pagamentos atrasado;
+RF17 - Visualização de valor arrecadado no mês;
+
 ### 2. Requisitos não-funcionais
+
+RNF01 - Conexão com a internet
+RNF02 - Sistema operacional Windows ou Linux
 ...
+
 ### 3. Perfis dos usuários
 ...
 ### 4. Riscos
