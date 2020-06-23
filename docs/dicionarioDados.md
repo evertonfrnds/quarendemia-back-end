@@ -58,3 +58,4 @@
 | **antebraco**  |  Float | {e: N, d: N}  | 10  | {e: 25, d: 24}  |
 | **created_at**  |  Date |   | 10  | 2020/06/21  |
 
+
