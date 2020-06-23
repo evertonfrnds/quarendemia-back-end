@@ -27,28 +27,37 @@ O Sistema Quarendemia foi criado para ajudar na administração de uma academia,
 
 ### 2.1 Requisitos Funcionais
 
-- RF01 - Cadastrar usuários;
-- RF02 - Atualizar dados do usuário;
-- RF03 - Excluir o usuário;
-- RF04 - Ver dados do usuário;
-- RF05 - Recuperar senha do usuário;
-- RF06 - Cadastrar planos;
-- RF07 - Exibir planos;
-- RF08 - Atualizar planos;
-- RF09 - Excluir planos;
-- RF10 - Cadastro de clientes;
-- RF11 - Atualização de clientes;
-- RF12 - Exclusão de clientes;
-- RF13 - Visualização de clientes;
-- RF14 - Visualização de clientes que devem pagar no mês;
-- RF15 - Confirmação de pagamentos do mês;
-- RF16 - Visualização de pagamentos atrasado;
-- RF17 - Visualização de valor arrecadado no mês;
+Requisito | Descrição | Ator |
+--------- | ----------- | ---------- |
+RF01 - Cadastrar usuários | Requisito para a criação de usuários. | Administrador
+RF02 - Atualizar dados do usuário | Requisito para atualizar dados sobre o Usuário. | Administrador
+RF03 - Excluir o usuário; | Requisito de exclusão de um Usuário. | Administrador
+RF04 - Ver dados do usuário | Requisito para exibir os dados do Usuário.| Administrador
+RF05 - Recuperar senha do usuário | Requisito para recuperar senha de um Usuário |Administrador
+RF06 - Cadastrar planos | Requisito para a criação de planos no sistema. | Administrador
+RF07 - Exibir planos | Requisito para exibir os dados dos planos.| Administrador
+RF08 - Atualizar planos | Requisito para atualizar dados sobre os Planos. | Administrador
+RF09 - Excluir planos |Requisito de exclusão de um Plano.|Administrador
+RF10 - Cadastro de clientes | Requisito para a criação de clientes. |Administrador
+RF11 - Atualização de clientes | Requisito para atualizar dados sobre os clientes. |Administrador
+RF12 - Exclusão de clientes |Requisito de exclusão de um Cliente. |Administrador
+RF13 - Visualização de clientes | Requisito para exibir os dados de Clientes.|Administrador
+RF14 - Visualização de clientes que devem pagar no mês |Requisito para exibir os clientes que devem pagar no Mês. |Administrador
+RF15 - Confirmação de pagamentos do mês | Requisito para cadastrar o pagamento de um Cliente. |Administrador
+RF16 - Visualização de pagamentos atrasados |Requisito para exibir os clientes com débitos. |Administrador
+RF17 - Visualização de valor arrecadado no mês | Requisito para exibir o Caixa mensal. |Administrador
+RF18 - Cadastrar medidas | Requisito para a criação de medidas. |Administrador
+RF19 - Exibir medidas | Requisito para exibir as medidas de um cliente.|Administrador
+RF20 - Atualizar medidas | Requisito para atualizar dados sobre as medidas dos clientes. |Administrador
+RF21 - Excluir medidas |Requisito de exclusão das Medidas de um Cliente. | Administrador
 
 ### 2.2 Requisitos não-funcionais
 
-- RNF01 - Conexão com a internet
-- RNF02 - Sistema operacional Windows ou Linux
+Requisito                                 | Descrição   |
+---------                                 | ----------- |
+RNF001 - Conexão com a internet | Deve manter uma conexão ativa com a Internet. |
+RNF002 - Sistema operacional Windows ou Linux | O computador deve ter como Sistema Operacional uma dessas 2 opções. |
+RNF003 - Deve ser acessível via navegador | Deve abrir perfeitamento no Firefox e no Chrome. |
 
 ### 2.3 Perfis dos usuários
 
