@@ -1,6 +1,6 @@
 # Modelo Relacional
 
-// Cool Class Diagram by yUML
+// Cool Class Diagram by yUML alterado
 // ------------------
 
 // Chain elements like this
