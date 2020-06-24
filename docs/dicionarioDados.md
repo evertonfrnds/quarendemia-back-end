@@ -33,6 +33,7 @@
 | Field name  | Data type  | Data format  | Field size  | Example  |
 |---|---|---|---|---|
 | **id**  | Integer  | NNNNNN  | 6  |  1 |
+  **id_cliente**  | Integer  | NNNNNN  | 6  | 1  |
 | **mes**  |  Integer |   | 32  | 06 |
 | **ano**  | Integer  |   | 64  | 2020 |
 | **valor**  |  Float |   | 32  | 50,00 |
@@ -43,6 +44,7 @@
 | Field name  | Data type  | Data format  | Field size  | Example  |
 |---|---|---|---|---|
 | **id**  | Integer  | NNNNNN  | 6  | 1  |
+  **id_cliente**  | Integer  | NNNNNN  | 6  | 1  |
 | **altura**  |  Integer |   |  32 |  180 |
 | **peso**  | Float  |   |  64 | 84  |
 | **pescoco**  | Float  |   | 1  | 34 |
