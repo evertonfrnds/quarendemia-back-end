@@ -36,6 +36,7 @@ O presente documento mostra uma breve descrição dos User Stories do sistema **
 | **Tempo Gasto (real):**   |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | **Tamanho Funcional**     | 18 PF                                                                                                                   |
 
+
 ### **User Story US02 - Recuperar senha**
 
 |                           |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
