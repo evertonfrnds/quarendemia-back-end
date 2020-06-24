@@ -55,10 +55,14 @@
 | **cintura**  |  Float |   | 10  | 90  |
 | **abdomen**  |  Float |   | 10  | 94  |
 | **quadril**  |  Float |   | 10  | 103  |
-| **coxa**  |  Float |  {e: N, d: N} | 10  | {e: 66, d: 66}  |
-| **panturrilha**  |  Float | {e: N, d: N}  | 10  | {e: 41, d: 40}  |
-| **braco**  |  Float | {e: N, d: N}  | 10  | {e: 31, d: 30}  |
-| **antebraco**  |  Float | {e: N, d: N}  | 10  | {e: 25, d: 24}  |
+| **coxa_esq**  |  Float |   | 10  | 66  |
+| **coxa_dir**  |  Float |   | 10  | 66  |
+| **panturrilha_esq**  |  Float |   | 10  | 41  |
+| **panturrilha_dir**  |  Float |   | 10  | 41  |
+| **braco_esq**  |  Float |   | 10  | 31  |
+| **braco_dir**  |  Float |   | 10  | 30  |
+| **antebraco_esq**  |  Float |   | 10  | 25  |
+| **antebraco_dir**  |  Float |   | 10  | 24  |
 | **created_at**  |  Date |   | 10  | 2020/06/21  |
 
 
