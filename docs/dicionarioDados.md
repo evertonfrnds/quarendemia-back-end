@@ -25,6 +25,7 @@
 | Field name  | Data type  | Data format  | Field size  | Example  |
 |---|---|---|---|---|
 | **id**  | Integer  | NNNNNN  | 6  |  1 |
+| **id_usuario**  | Integer (FK) | NNNNNN  | 6  |  1 |
 | **nome**  |  Text |   | 32  | Fernando |
 | **email**  | Text  |   | 64  | email@email.com |
 | **status**  | Integer  |   | 1  | 1 |
@@ -44,7 +45,7 @@
 | Field name  | Data type  | Data format  | Field size  | Example  |
 |---|---|---|---|---|
 | **id**  | Integer  | NNNNNN  | 6  | 1  |
-  **id_cliente**  | Integer  | NNNNNN  | 6  | 1  |
+  **id_cliente**  | Integer (FK)  | NNNNNN  | 6  | 1  |
 | **altura**  |  Integer |   |  32 |  180 |
 | **peso**  | Float  |   |  64 | 84  |
 | **pescoco**  | Float  |   | 1  | 34 |
