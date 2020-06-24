@@ -2,11 +2,11 @@
 
 ## Sumário
 
-1. [Informações Gerais](##Informações Gerais)
-2. [Requisitos Funcionais](##Requisitos Funcionais)
+1. [Informações Gerais]()
+2. [Requisitos Funcionais]()
 3. [Documentação](##Documentação)
-4. [Tecnologias](##Tecnologias)
-5. [Tutoriais e Documentação](Tutoriais e Documentação)
+4. [Tecnologias]()
+5. [Tutoriais e Documentação]()
 6. [License](#license)
 
 ## Informações Gerais
