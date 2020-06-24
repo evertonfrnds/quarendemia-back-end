@@ -2,13 +2,12 @@
 
 ## Sumário
 
-1. [Informações Gerais]()
-2. [Requisitos Funcionais]()
-3. [Documentação]()
-4. [Tecnologias]()
-5. [Tutoriais]()
+1. [Informações Gerais](##Informações Gerais)
+2. [Requisitos Funcionais](##Requisitos Funcionais)
+3. [Documentação](##Documentação)
+4. [Tecnologias](##Tecnologias)
+5. [Tutoriais e Documentação](Tutoriais e Documentação)
 6. [License](#license)
-7. [RASCUNHOS](#license)
 
 ## Informações Gerais
 
@@ -22,9 +21,10 @@ Os requisitos funcionais detalhados estão na página wiki [Requisitos Funcionai
 
 Aqui está os documentos produzidos:
 
-1. Documento de Visão ->[Documento de Visão](ainda pra afazer)
-2. Modelo de dados ->[Modelo de Dados](ainda pra afazer)
-3. Modelo conceitual ->[Modelo Conceitual](ainda pra afazer)
+1. [Documento de Visão](docs/docVisao.md)
+2. [Modelo de Dados](docs/modDados.md)
+3. [Modelo Conceitual](docs/dicionarioDados.md)
+4. [Termo de Abertura](docs/termAbertura.md)
 
 ## Tecnologias
 
@@ -43,10 +43,4 @@ O projeto vai ser usado as seguintes tecnologias:
 
 ## License
 
-MIT License
-
-## RASCUNHOS
-
-- CRUDS:
-  - Cadastro de: - Clientes - -
-- FUNCIONALIDADES:
+- MIT License
