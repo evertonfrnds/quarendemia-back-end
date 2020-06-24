@@ -81,9 +81,9 @@ O presente documento mostra uma breve descrição dos User Stories do sistema **
 
 ### **Testes de Aceitação (TA)**
 
-| Código      | Descrição                                                                                           |
-| ----------- | --------------------------------------------------------------------------------------------------- |
-| **TA01.01** | conseguir cadastrar um dos planos e aparecer uma mensagem de cadastro de plano com sucesso          |
-| **TA01.02** | Alterar a modalidade de plano do cliente e aparecer uma mensagem de alteração realizada com sucesso |
-| **TA01.03** |                                                                                                     |
-| **TA01.04** |                                                                                                     |
+| Código      | Descrição                                                                                            |
+| ----------- | ---------------------------------------------------------------------------------------------------- |
+| **TA01.01** | conseguir cadastrar um dos planos e aparecer uma mensagem de cadastro de plano realizado com sucesso |
+| **TA01.02** | Alterar a modalidade de plano do cliente e aparecer uma mensagem de alteração realizada com sucesso  |
+| **TA01.03** |                                                                                                      |
+| **TA01.04** |                                                                                                      |
