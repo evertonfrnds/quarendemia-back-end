@@ -27,37 +27,38 @@ O Sistema Quarendemia foi criado para ajudar na administração de uma academia,
 
 ### 2.1 Requisitos Funcionais
 
-Requisito | Descrição | Ator |
---------- | ----------- | ---------- |
-RF01 - Cadastrar usuários | Requisito para a criação de usuários. | Administrador
-RF02 - Atualizar dados do usuário | Requisito para atualizar dados sobre o Usuário. | Administrador
-RF03 - Excluir o usuário; | Requisito de exclusão de um Usuário. | Administrador
-RF04 - Ver dados do usuário | Requisito para exibir os dados do Usuário.| Administrador
-RF05 - Recuperar senha do usuário | Requisito para recuperar senha de um Usuário |Administrador
-RF06 - Cadastrar planos | Requisito para a criação de planos no sistema. | Administrador
-RF07 - Exibir planos | Requisito para exibir os dados dos planos.| Administrador
-RF08 - Atualizar planos | Requisito para atualizar dados sobre os Planos. | Administrador
-RF09 - Excluir planos |Requisito de exclusão de um Plano.|Administrador
-RF10 - Cadastro de clientes | Requisito para a criação de clientes. |Administrador
-RF11 - Atualização de clientes | Requisito para atualizar dados sobre os clientes. |Administrador
-RF12 - Exclusão de clientes |Requisito de exclusão de um Cliente. |Administrador
-RF13 - Visualização de clientes | Requisito para exibir os dados de Clientes.|Administrador
-RF14 - Visualização de clientes que devem pagar no mês |Requisito para exibir os clientes que devem pagar no Mês. |Administrador
-RF15 - Confirmação de pagamentos do mês | Requisito para cadastrar o pagamento de um Cliente. |Administrador
-RF16 - Visualização de pagamentos atrasados |Requisito para exibir os clientes com débitos. |Administrador
-RF17 - Visualização de valor arrecadado no mês | Requisito para exibir o Caixa mensal. |Administrador
-RF18 - Cadastrar medidas | Requisito para a criação de medidas. |Administrador
-RF19 - Exibir medidas | Requisito para exibir as medidas de um cliente.|Administrador
-RF20 - Atualizar medidas | Requisito para atualizar dados sobre as medidas dos clientes. |Administrador
-RF21 - Excluir medidas |Requisito de exclusão das Medidas de um Cliente. | Administrador
+| Requisito                                              | Descrição                                                     | Ator                     |
+| ------------------------------------------------------ | ------------------------------------------------------------- | ------------------------ |
+| RF01 - Cadastrar usuários                              | Requisito para a criação de usuários.                         | Administrador            |
+| RF02 - Atualizar dados do usuário                      | Requisito para atualizar dados sobre o Usuário.               | Administrador            |
+| RF03 - Excluir o usuário;                              | Requisito de exclusão de um Usuário.                          | Administrador            |
+| RF04 - Ver dados do usuário                            | Requisito para exibir os dados do Usuário.                    | Administrador            |
+| RF05 - Realizar login                                  | Requisito para realizar login no sistema.                     | Administrador ou gerente |
+| RF06 - Recuperar senha do usuário                      | Requisito para recuperar senha de um Usuário                  | Administrador            |
+| RF07 - Cadastrar planos                                | Requisito para a criação de planos no sistema.                | Administrador            |
+| RF08 - Exibir planos                                   | Requisito para exibir os dados dos planos.                    | Administrador            |
+| RF09 - Atualizar planos                                | Requisito para atualizar dados sobre os Planos.               | Administrador            |
+| RF10 - Excluir planos                                  | Requisito de exclusão de um Plano.                            | Administrador            |
+| RF11 - Cadastro de clientes                            | Requisito para a criação de clientes.                         | Administrador            |
+| RF12 - Atualização de clientes                         | Requisito para atualizar dados sobre os clientes.             | Administrador            |
+| RF13 - Exclusão de clientes                            | Requisito de exclusão de um Cliente.                          | Administrador            |
+| RF14 - Visualização de clientes                        | Requisito para exibir os dados de Clientes.                   | Administrador            |
+| RF15 - Visualização de clientes que devem pagar no mês | Requisito para exibir os clientes que devem pagar no Mês.     | Administrador            |
+| RF16 - Confirmação de pagamentos do mês                | Requisito para cadastrar o pagamento de um Cliente.           | Administrador            |
+| RF17 - Visualização de pagamentos atrasados            | Requisito para exibir os clientes com débitos.                | Administrador            |
+| RF18 - Visualização de valor arrecadado no mês         | Requisito para exibir o Caixa mensal.                         | Administrador            |
+| RF19 - Cadastrar medidas                               | Requisito para a criação de medidas.                          | Administrador            |
+| RF20 - Exibir medidas                                  | Requisito para exibir as medidas de um cliente.               | Administrador            |
+| RF21 - Atualizar medidas                               | Requisito para atualizar dados sobre as medidas dos clientes. | Administrador            |
+| RF22 - Excluir medidas                                 | Requisito de exclusão das Medidas de um Cliente.              | Administrador            |
 
 ### 2.2 Requisitos não-funcionais
 
-Requisito                                 | Descrição   |
----------                                 | ----------- |
-RNF001 - Conexão com a internet | Deve manter uma conexão ativa com a Internet. |
-RNF002 - Sistema operacional Windows ou Linux | O computador deve ter como Sistema Operacional uma dessas 2 opções. |
-RNF003 - Deve ser acessível via navegador | Deve abrir perfeitamento no Firefox e no Chrome. |
+| Requisito                                     | Descrição                                                           |
+| --------------------------------------------- | ------------------------------------------------------------------- |
+| RNF001 - Conexão com a internet               | Deve manter uma conexão ativa com a Internet.                       |
+| RNF002 - Sistema operacional Windows ou Linux | O computador deve ter como Sistema Operacional uma dessas 2 opções. |
+| RNF003 - Deve ser acessível via navegador     | Deve abrir perfeitamento no Firefox e no Chrome.                    |
 
 ### 2.3 Perfis dos usuários
 
