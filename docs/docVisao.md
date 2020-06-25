@@ -27,30 +27,30 @@ O Sistema Quarendemia foi criado para ajudar na administração de uma academia,
 
 ### 2.1 Requisitos Funcionais
 
-| Requisito                                              | Descrição                                                     | Ator                     |
-| ------------------------------------------------------ | ------------------------------------------------------------- | ------------------------ |
-| RF01 - Cadastrar usuários                              | Requisito para a criação de usuários.                         | Administrador            |
-| RF02 - Atualizar dados do usuário                      | Requisito para atualizar dados sobre o Usuário.               | Administrador            |
-| RF03 - Excluir o usuário;                              | Requisito de exclusão de um Usuário.                          | Administrador            |
-| RF04 - Ver dados do usuário                            | Requisito para exibir os dados do Usuário.                    | Administrador            |
-| RF05 - Realizar login                                  | Requisito para realizar login no sistema.                     | Administrador ou gerente |
-| RF06 - Recuperar senha do usuário                      | Requisito para recuperar senha de um Usuário                  | Administrador            |
-| RF07 - Cadastrar planos                                | Requisito para a criação de planos no sistema.                | Administrador            |
-| RF08 - Exibir planos                                   | Requisito para exibir os dados dos planos.                    | Administrador            |
-| RF09 - Atualizar planos                                | Requisito para atualizar dados sobre os Planos.               | Administrador            |
-| RF10 - Excluir planos                                  | Requisito de exclusão de um Plano.                            | Administrador            |
-| RF11 - Cadastro de clientes                            | Requisito para a criação de clientes.                         | Administrador            |
-| RF12 - Atualização de clientes                         | Requisito para atualizar dados sobre os clientes.             | Administrador            |
-| RF13 - Exclusão de clientes                            | Requisito de exclusão de um Cliente.                          | Administrador            |
-| RF14 - Visualização de clientes                        | Requisito para exibir os dados de Clientes.                   | Administrador            |
-| RF15 - Visualização de clientes que devem pagar no mês | Requisito para exibir os clientes que devem pagar no Mês.     | Administrador            |
-| RF16 - Confirmação de pagamentos do mês                | Requisito para cadastrar o pagamento de um Cliente.           | Administrador            |
-| RF17 - Visualização de pagamentos atrasados            | Requisito para exibir os clientes com débitos.                | Administrador            |
-| RF18 - Visualização de valor arrecadado no mês         | Requisito para exibir o Caixa mensal.                         | Administrador            |
-| RF19 - Cadastrar medidas                               | Requisito para a criação de medidas.                          | Administrador            |
-| RF20 - Exibir medidas                                  | Requisito para exibir as medidas de um cliente.               | Administrador            |
-| RF21 - Atualizar medidas                               | Requisito para atualizar dados sobre as medidas dos clientes. | Administrador            |
-| RF22 - Excluir medidas                                 | Requisito de exclusão das Medidas de um Cliente.              | Administrador            |
+| Requisito                                              | Descrição                                                     | Ator                                                    |
+| ------------------------------------------------------ | ------------------------------------------------------------- | ------------------------------------------------------- |
+| RF01 - Cadastrar usuários                              | Requisito para a criação de usuários.                         | Administrador                                           |
+| RF02 - Atualizar dados do usuário                      | Requisito para atualizar dados sobre o Usuário.               | Administrador ou Gerente (limitado)                     |
+| RF03 - Excluir o usuário;                              | Requisito de exclusão de um Usuário.                          | Administrador                                           |
+| RF04 - Ver dados do usuário                            | Requisito para exibir os dados do Usuário.                    | Administrador ou Gerente (pode ver seus próprios dados) |
+| RF05 - Realizar login                                  | Requisito para realizar login no sistema.                     | Administrador ou Gerente                                |
+| RF06 - Recuperar senha do usuário                      | Requisito para recuperar senha de um Usuário                  | Administrador ou Gerente                                |
+| RF07 - Cadastrar planos                                | Requisito para a criação de planos no sistema.                | Gerente                                                 |
+| RF08 - Exibir planos                                   | Requisito para exibir os dados dos planos.                    | Gerente                                                 |
+| RF09 - Atualizar planos                                | Requisito para atualizar dados sobre os Planos.               | Gerente                                                 |
+| RF10 - Excluir planos                                  | Requisito de exclusão de um Plano.                            | Gerente                                                 |
+| RF11 - Cadastro de clientes                            | Requisito para a criação de clientes.                         | Gerente                                                 |
+| RF12 - Atualização de clientes                         | Requisito para atualizar dados sobre os clientes.             | Gerente                                                 |
+| RF13 - Exclusão de clientes                            | Requisito de exclusão de um Cliente.                          | Gerente                                                 |
+| RF14 - Visualização de clientes                        | Requisito para exibir os dados de Clientes.                   | Gerente                                                 |
+| RF15 - Visualização de clientes que devem pagar no mês | Requisito para exibir os clientes que devem pagar no Mês.     | Gerente                                                 |
+| RF16 - Confirmação de pagamentos do mês                | Requisito para cadastrar o pagamento de um Cliente.           | Gerente                                                 |
+| RF17 - Visualização de pagamentos atrasados            | Requisito para exibir os clientes com débitos.                | Gerente                                                 |
+| RF18 - Visualização de valor arrecadado no mês         | Requisito para exibir o Caixa mensal.                         | Gerente                                                 |
+| RF19 - Cadastrar medidas                               | Requisito para a criação de medidas.                          | Gerente                                                 |
+| RF20 - Exibir medidas                                  | Requisito para exibir as medidas de um cliente.               | Gerente                                                 |
+| RF21 - Atualizar medidas                               | Requisito para atualizar dados sobre as medidas dos clientes. | Gerente                                                 |
+| RF22 - Excluir medidas                                 | Requisito de exclusão das Medidas de um Cliente.              | Gerente                                                 |
 
 ### 2.2 Requisitos não-funcionais
 

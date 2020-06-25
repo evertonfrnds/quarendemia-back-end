@@ -11,20 +11,22 @@
 
 ## Informações Gerais
 
-Quarendemia visa cadastrar os usuários de academias locais bem como atualizar as informações necessárias de pagamentos .
+Quarendemia visa cadastrar os usuários de academias locais bem como atualizar as informações necessárias de pagamentos.
 
 ## Requisitos Funcionais
 
-Os requisitos funcionais detalhados estão na página wiki [Requisitos Funcionais](https://github.com/).
+Os requisitos funcionais detalhados estão na página wiki [Requisitos Funcionais](docs/docVisao.md).
 
 ## Documentação
 
 Aqui está os documentos produzidos:
 
 1. [Documento de Visão](docs/docVisao.md)
-2. [Modelo de Dados](docs/modDados.md)
-3. [Modelo Conceitual](docs/dicionarioDados.md)
-4. [Termo de Abertura](docs/termAbertura.md)
+2. [Modelo Conceitual](docs/modConceitual.md)
+3. [Dicionário de Dados](docs/dicionarioDados.md)
+4. [Modelo Relacional](docs/modRelacional.md)
+5. [Lista de User Stories](docs/listaUserStories.md)
+6. [Termo de Abertura](docs/termAbertura.md)
 
 ## Tecnologias
 
