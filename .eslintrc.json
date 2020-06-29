@@ -17,6 +17,8 @@
   "plugins": ["@typescript-eslint", "prettier"],
   "rules": {
     "semi": "off",
+    "camelcase": "off",
+    "@typescript-eslint/camelcase": "off",
     "prettier/prettier": "error",
     "class-methods-use-this": "off",
     "import/extensions": [
