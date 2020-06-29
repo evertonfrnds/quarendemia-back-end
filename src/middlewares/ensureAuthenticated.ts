@@ -1,6 +1,8 @@
 import { Request, Response, NextFunction } from 'express'
 import { verify } from 'jsonwebtoken'
 
+import AppError from '../errors/AppError'
+
 import authConfig from '../config/auth'
 
 interface TokenPayload {
@@ -17,7 +19,7 @@ export default function ensureAuthenticated(
   const authHeader = request.headers.authorization
 
   if (!authHeader) {
-    throw new Error('JWT não foi enviado na requisição.')
+    throw new AppError('JWT não foi enviado na requisição.', 401)
   }
 
   const [, token] = authHeader.split(' ')
@@ -31,6 +33,6 @@ export default function ensureAuthenticated(
 
     return next()
   } catch {
-    throw new Error('JWT inválido')
+    throw new AppError('JWT inválido', 401)
   }
 }
