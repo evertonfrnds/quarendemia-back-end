@@ -1,24 +1,10 @@
 import { Router } from 'express'
 
-import SignUpService from '@modules/users/services/SignUpService'
-import { container } from 'tsyringe'
+import ManagersController from '../controllers/ManagersController'
 
 const managersRouter = Router()
+const managersController = new ManagersController()
 
-managersRouter.post('/', async (request, response) => {
-  const { name, email, password } = request.body
-
-  const signUp = container.resolve(SignUpService)
-
-  const newUser = await signUp.execute({
-    name,
-    email,
-    password,
-  })
-
-  delete newUser.password
-
-  return response.json(newUser)
-})
+managersRouter.post('/', managersController.create)
 
 export default managersRouter
