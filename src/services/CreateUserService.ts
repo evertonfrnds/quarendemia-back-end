@@ -8,11 +8,17 @@ import User from '../models/User'
 interface Request {
   name: string
   email: string
+  type: string
   password: string
 }
 
 class CreateUserService {
-  public async execute({ name, email, password }: Request): Promise<User> {
+  public async execute({
+    name,
+    email,
+    type,
+    password,
+  }: Request): Promise<User> {
     const usersRepository = getRepository(User)
 
     const checkUserExists = await usersRepository.findOne({
@@ -30,7 +36,7 @@ class CreateUserService {
     const user = usersRepository.create({
       name,
       email,
-      type: 'common',
+      type,
       isActive: true,
       password: hashedPassword,
     })
