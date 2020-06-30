@@ -2,14 +2,13 @@ import { Router } from 'express'
 
 import { getRepository } from 'typeorm'
 
-import UsersRepository from '@modules/users/infra/typeorm/repositories/UsersRepository'
-
 import CreateUserService from '@modules/users/services/CreateUserService'
 import UpdateUserService from '@modules/users/services/UpdateUserService'
 import DeleteUserService from '@modules/users/services/DeleteUserService'
 
 import ensureIsAdmin from '@modules/users/infra/http/middlewares/ensureIsAdmin'
 import User from '@modules/users/infra/typeorm/entities/User'
+import { container } from 'tsyringe'
 
 const usersRouter = Router()
 
@@ -27,8 +26,7 @@ usersRouter.get('/', async (request, response) => {
 usersRouter.post('/', async (request, response) => {
   const { name, email, type, password } = request.body
 
-  const usersRepository = new UsersRepository()
-  const createUser = new CreateUserService(usersRepository)
+  const createUser = container.resolve(CreateUserService)
 
   const user = await createUser.execute({
     name,
@@ -46,8 +44,7 @@ usersRouter.put('/:id', async (request, response) => {
   const { name, email, type, isActive, password } = request.body
   const { id } = request.params
 
-  const usersRepository = new UsersRepository()
-  const updateUser = new UpdateUserService(usersRepository)
+  const updateUser = container.resolve(UpdateUserService)
 
   const user = await updateUser.execute({
     user_id: id,
@@ -66,8 +63,7 @@ usersRouter.put('/:id', async (request, response) => {
 usersRouter.delete('/:id', async (request, response) => {
   const { id } = request.params
 
-  const usersRepository = new UsersRepository()
-  const deleteUser = new DeleteUserService(usersRepository)
+  const deleteUser = container.resolve(DeleteUserService)
 
   await deleteUser.execute({
     user_id: id,
