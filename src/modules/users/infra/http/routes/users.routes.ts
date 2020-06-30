@@ -2,20 +2,22 @@ import { Router } from 'express'
 
 import { getRepository } from 'typeorm'
 
-import CreateUserService from '../services/CreateUserService'
-import UpdateUserService from '../services/UpdateUserService'
-import DeleteUserService from '../services/DeleteUserService'
+import UsersRepository from '@modules/users/infra/typeorm/repositories/UsersRepository'
 
-import ensureIsAdmin from '../middlewares/ensureIsAdmin'
-import User from '../models/User'
+import CreateUserService from '@modules/users/services/CreateUserService'
+import UpdateUserService from '@modules/users/services/UpdateUserService'
+import DeleteUserService from '@modules/users/services/DeleteUserService'
+
+import ensureIsAdmin from '@modules/users/infra/http/middlewares/ensureIsAdmin'
+import User from '@modules/users/infra/typeorm/entities/User'
 
 const usersRouter = Router()
 
 usersRouter.use(ensureIsAdmin)
 
 usersRouter.get('/', async (request, response) => {
-  const usersRepository = getRepository(User)
-  const users = await usersRepository.find({
+  const usersGetRepository = getRepository(User)
+  const users = await usersGetRepository.find({
     select: ['id', 'name', 'email', 'type', 'isActive', 'created_at'],
   })
 
@@ -25,7 +27,8 @@ usersRouter.get('/', async (request, response) => {
 usersRouter.post('/', async (request, response) => {
   const { name, email, type, password } = request.body
 
-  const createUser = new CreateUserService()
+  const usersRepository = new UsersRepository()
+  const createUser = new CreateUserService(usersRepository)
 
   const user = await createUser.execute({
     name,
@@ -43,7 +46,8 @@ usersRouter.put('/:id', async (request, response) => {
   const { name, email, type, isActive, password } = request.body
   const { id } = request.params
 
-  const updateUser = new UpdateUserService()
+  const usersRepository = new UsersRepository()
+  const updateUser = new UpdateUserService(usersRepository)
 
   const user = await updateUser.execute({
     user_id: id,
@@ -62,7 +66,8 @@ usersRouter.put('/:id', async (request, response) => {
 usersRouter.delete('/:id', async (request, response) => {
   const { id } = request.params
 
-  const deleteUser = new DeleteUserService()
+  const usersRepository = new UsersRepository()
+  const deleteUser = new DeleteUserService(usersRepository)
 
   await deleteUser.execute({
     user_id: id,

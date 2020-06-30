@@ -1,9 +1,8 @@
 import { Request, Response, NextFunction } from 'express'
 import { verify } from 'jsonwebtoken'
 
-import AppError from '../errors/AppError'
-
-import authConfig from '../config/auth'
+import authConfig from '@config/auth'
+import AppError from '@shared/errors/AppError'
 
 interface TokenPayload {
   iat: number
@@ -12,7 +11,7 @@ interface TokenPayload {
   type: string
 }
 
-export default function ensureAuthorizated(
+export default function ensureAuthenticated(
   request: Request,
   response: Response,
   next: NextFunction,
@@ -28,19 +27,12 @@ export default function ensureAuthorizated(
   try {
     const decode = verify(token, authConfig.jwt.secret)
 
-    const { sub, type } = decode as TokenPayload
-
-    if (type !== 'admin') {
-      throw new Error()
-    }
+    const { sub } = decode as TokenPayload
 
     request.user = { id: sub }
 
     return next()
   } catch {
-    throw new AppError(
-      'Você não possui permissões para acessar esta rota.',
-      401,
-    )
+    throw new AppError('JWT inválido', 401)
   }
 }

@@ -1,11 +1,11 @@
-import { getRepository } from 'typeorm'
 import { hash } from 'bcryptjs'
 
-import AppError from '../errors/AppError'
+import AppError from '@shared/errors/AppError'
 
-import User from '../models/User'
+import User from '@modules/users/infra/typeorm/entities/User'
+import IUsersRepository from '../repositories/IUsersRepository'
 
-interface Request {
+interface IRequest {
   user_id: string
   name: string
   email: string
@@ -15,6 +15,8 @@ interface Request {
 }
 
 class UpdateUserService {
+  constructor(private usersRepository: IUsersRepository) {}
+
   public async execute({
     user_id,
     name,
@@ -22,19 +24,15 @@ class UpdateUserService {
     type,
     isActive,
     password,
-  }: Request): Promise<User> {
-    const usersRepository = getRepository(User)
-
-    const user = await usersRepository.findOne(user_id)
+  }: IRequest): Promise<User> {
+    const user = await this.usersRepository.findById(user_id)
 
     if (!user) {
       throw new AppError('Usuário não encontrado.')
     }
 
     if (email && user.email !== email) {
-      const checkUserExists = await usersRepository.findOne({
-        where: { email },
-      })
+      const checkUserExists = await this.usersRepository.findByEmail(email)
 
       if (checkUserExists) {
         throw new AppError(
@@ -49,13 +47,11 @@ class UpdateUserService {
 
     if (
       (type && type !== 'admin' && user.type === 'admin') ||
-      isActive === false
+      (isActive === false && user.type === 'admin')
     ) {
-      const admCount = await usersRepository.count({
-        where: { isActive: true, type: 'admin' },
-      })
+      const admsCount = await this.usersRepository.countAdms(user.id)
 
-      if (admCount < 2) {
+      if (admsCount === 0) {
         throw new AppError(
           'A aplicação deve possuir pelo menos um administrador ativo.',
         )
@@ -67,7 +63,7 @@ class UpdateUserService {
     user.type = type
     user.isActive = isActive
 
-    await usersRepository.save(user)
+    await this.usersRepository.save(user)
 
     return user
   }
