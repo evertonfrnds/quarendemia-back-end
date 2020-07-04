@@ -20,7 +20,7 @@ describe('AuthenticateUser', () => {
     )
 
     const user = await createUser.execute({
-      name: 'Joseph',
+      name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'common',
       password: '12345678',
@@ -44,7 +44,7 @@ describe('AuthenticateUser', () => {
       fakeHashProvider,
     )
 
-    expect(
+    await expect(
       authenticateUser.execute({
         email: 'josephmonkey@gmail.com',
         password: '12345678',
@@ -67,13 +67,13 @@ describe('AuthenticateUser', () => {
     )
 
     await createUser.execute({
-      name: 'Joseph',
+      name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'common',
       password: '12345678',
     })
 
-    expect(
+    await expect(
       authenticateUser.execute({
         email: 'josephmonkey@gmail.com',
         password: 'wrong-password',

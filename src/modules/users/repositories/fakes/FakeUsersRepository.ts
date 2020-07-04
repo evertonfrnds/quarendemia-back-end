@@ -7,7 +7,7 @@ import ISignUpDTO from '@modules/users/dtos/ISignUpDTO'
 
 import User from '../../infra/typeorm/entities/User'
 
-class UsersRepository implements IUsersRepository {
+class FakeUsersRepository implements IUsersRepository {
   private users: User[] = []
 
   public async findAll(): Promise<User[]> {
@@ -63,4 +63,4 @@ class UsersRepository implements IUsersRepository {
   }
 }
 
-export default UsersRepository
+export default FakeUsersRepository
