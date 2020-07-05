@@ -13,8 +13,6 @@
 
 # Quarendemia: Projeto Arquitetural
 
-# Sumário
-
 # Descrição
 
 Este documento descreve a arquitetura proposta, descrevendo os padrões arquiteturais usados, requisitos não funcionais, decisões arquiteturais e descrição da tecnologias utilizadas.
@@ -75,4 +73,11 @@ Este documento descreve a arquitetura proposta, descrevendo os padrões arquitet
 
 # Implantação
 
+![Diagrama Implantação](https://github.com/evertonfrnds/quarendemia-back-end/blob/master/docs/diagramasIMGS/diaImplantacao.jpg?raw=true)
+
 # Referências
+
+https://docs.google.com/document/d/1i80vPaInPi5lSpI7rk4QExnO86iEmrsHBfmYRy6RDSM/edit
+http://www.linhadecodigo.com.br/artigo/3343/como-documentar-a-arquitetura-de-software.aspx#ixzz5AE2cXUmI
+https://www.youtube.com/watch?v=p1sY4XzaMyM
+https://www.youtube.com/watch?v=2VUPhYY_YLE
