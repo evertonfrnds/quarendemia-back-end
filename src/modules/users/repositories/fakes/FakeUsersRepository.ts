@@ -31,6 +31,9 @@ class FakeUsersRepository implements IUsersRepository {
       user => user.type === 'admin' && user.isActive === true,
     )
 
+    console.log(this.users)
+    console.log(admUsers.length)
+
     return admUsers.length
   }
 

@@ -33,6 +33,8 @@ class SignUpManagerService {
     const user = await this.usersRepository.signUp({
       name,
       email,
+      type: 'common',
+      isActive: true,
       password: hashedPassword,
     })
 
