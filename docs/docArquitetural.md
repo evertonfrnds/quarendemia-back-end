@@ -60,7 +60,7 @@ Este documento descreve a arquitetura proposta, descrevendo os padrões arquitet
 
 # Componentes
 
-![Diagrama Componentes](https://github.com/evertonfrnds/quarendemia-back-end/blob/master/docs/diagramasIMGS/diaComponenentes.jpg?raw=true)
+![Diagrama Componentes](https://github.com/evertonfrnds/quarendemia-back-end/blob/master/docs/diagramasIMGS/diaComponentes.jpg?raw=true)
 
 | Componente          | Descrição                                                            |
 | ------------------- | -------------------------------------------------------------------- |
