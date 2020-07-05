@@ -60,6 +60,19 @@ Este documento descreve a arquitetura proposta, descrevendo os padrões arquitet
 
 # Componentes
 
+![Diagrama Componentes](https://github.com/evertonfrnds/quarendemia-back-end/blob/master/docs/diagramasIMGS/diaComponenentes.jpg?raw=true)
+
+| Componente          | Descrição                                                            |
+| ------------------- | -------------------------------------------------------------------- |
+| Página do Sistema   | Gera todas as informações ao usuário sobre os dados do sistema.      |
+| Login               | Responsável por realizar o login do usuário.                         |
+| Cadastro de usuário | Responsável por cadastrar um novo usuário no sistema.                |
+| Alteração de Senha  | Altera a senha de um usuário que esqueceu sua senha.                 |
+| Clientes            | Altera ou cadastra todas as informações de um cliente                |
+| Mensalidade         | Altera ou cadastra todas as informações de um cliente                |
+| Planos              | Altera ou cadastra todas as informações da mensalidade de um cliente |
+| Medidas             | Altera ou cadastra todas as informações de medidas de um cliente     |
+
 # Implantação
 
 # Referências
