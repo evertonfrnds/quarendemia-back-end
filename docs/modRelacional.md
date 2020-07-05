@@ -1,5 +1,7 @@
 # Modelo Relacional
 
+# (Imagem em "docs/diagramasIMGS")
+
 // Cool Class Diagram by yUML alterado
 // ------------------
 
