@@ -4,7 +4,7 @@ import { verify } from 'jsonwebtoken'
 import authConfig from '@config/auth'
 import AppError from '@shared/errors/AppError'
 
-interface TokenPayload {
+interface ITokenPayload {
   iat: number
   exp: number
   sub: string
@@ -27,7 +27,7 @@ export default function ensureAuthorizated(
   try {
     const decode = verify(token, authConfig.jwt.secret)
 
-    const { sub, type } = decode as TokenPayload
+    const { sub, type } = decode as ITokenPayload
 
     if (type !== 'admin') {
       throw new Error()
