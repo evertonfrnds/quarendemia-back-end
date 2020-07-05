@@ -23,6 +23,7 @@ describe('UpdateManagerProfile', () => {
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'common',
+      isActive: true,
       password: '12345678',
     })
 
@@ -51,6 +52,7 @@ describe('UpdateManagerProfile', () => {
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'common',
+      isActive: true,
       password: '12345678',
     })
 
@@ -58,6 +60,7 @@ describe('UpdateManagerProfile', () => {
       name: 'João Pé de Feijão',
       email: 'joaofeijao@gmail.com',
       type: 'common',
+      isActive: true,
       password: '123456789',
     })
 
@@ -75,6 +78,7 @@ describe('UpdateManagerProfile', () => {
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'common',
+      isActive: true,
       password: '12345678',
     })
 
@@ -94,6 +98,7 @@ describe('UpdateManagerProfile', () => {
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'common',
+      isActive: true,
       password: '12345678',
     })
 
@@ -112,6 +117,7 @@ describe('UpdateManagerProfile', () => {
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'common',
+      isActive: true,
       password: '12345678',
     })
 

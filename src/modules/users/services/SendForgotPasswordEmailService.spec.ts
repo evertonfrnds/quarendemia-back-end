@@ -3,7 +3,6 @@ import AppError from '@shared/errors/AppError'
 
 import FakeUsersRepository from '../repositories/fakes/FakeUsersRepository'
 import FakeUserTokensRepository from '../repositories/fakes/FakeUserTokensRepository'
-
 import SendForgotPasswordEmailService from './SendForgotPasswordEmailService'
 
 let fakeUsersRepository: FakeUsersRepository
@@ -31,6 +30,7 @@ describe('SendForgotPasswordEmail', () => {
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'common',
+      isActive: true,
       password: '12345678',
     })
 
@@ -56,6 +56,7 @@ describe('SendForgotPasswordEmail', () => {
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'common',
+      isActive: true,
       password: '12345678',
     })
 

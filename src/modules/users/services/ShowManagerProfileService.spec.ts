@@ -18,6 +18,7 @@ describe('ShowManagerProfile', () => {
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'common',
+      isActive: true,
       password: '12345678',
     })
 

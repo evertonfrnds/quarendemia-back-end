@@ -1,9 +1,8 @@
-import { hash } from 'bcryptjs'
-
 import AppError from '@shared/errors/AppError'
 
 import User from '@modules/users/infra/typeorm/entities/User'
 import { injectable, inject } from 'tsyringe'
+import IHashProvider from '../providers/HashProvider/models/IHashProvider'
 import IUsersRepository from '../repositories/IUsersRepository'
 
 interface IRequest {
@@ -12,7 +11,7 @@ interface IRequest {
   email: string
   type: string
   isActive: boolean
-  password: string
+  password?: string
 }
 
 @injectable()
@@ -20,6 +19,9 @@ class UpdateUserService {
   constructor(
     @inject('UsersRepository')
     private usersRepository: IUsersRepository,
+
+    @inject('HashProvider')
+    private hashProvider: IHashProvider,
   ) {}
 
   public async execute({
@@ -47,7 +49,7 @@ class UpdateUserService {
     }
 
     if (password) {
-      user.password = await hash(password, 8)
+      user.password = await this.hashProvider.generateHash(password)
     }
 
     if (

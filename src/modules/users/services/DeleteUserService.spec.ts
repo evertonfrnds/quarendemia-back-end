@@ -1,30 +1,24 @@
 import AppError from '@shared/errors/AppError'
 
 import FakeUsersRepository from '../repositories/fakes/FakeUsersRepository'
-import FakeHashProvider from '../providers/HashProvider/fakes/FakeHashProvider'
-
-import CreateUserService from './CreateUserService'
 import DeleteUserService from './DeleteUserService'
 
 let fakeUsersRepository: FakeUsersRepository
-let fakeHashProvider: FakeHashProvider
-let createUser: CreateUserService
 let deleteUser: DeleteUserService
 
 describe('DeleteUser', () => {
   beforeEach(() => {
     fakeUsersRepository = new FakeUsersRepository()
-    fakeHashProvider = new FakeHashProvider()
 
-    createUser = new CreateUserService(fakeUsersRepository, fakeHashProvider)
     deleteUser = new DeleteUserService(fakeUsersRepository)
   })
 
   it('should be able to delete a existing user', async () => {
-    const user = await createUser.execute({
+    const user = await fakeUsersRepository.create({
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'common',
+      isActive: true,
       password: '12345678',
     })
 
@@ -36,17 +30,19 @@ describe('DeleteUser', () => {
   })
 
   it('should be able to delete a admin if have suficient admins', async () => {
-    const user = await createUser.execute({
+    const user = await fakeUsersRepository.create({
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'admin',
+      isActive: true,
       password: '12345678',
     })
 
-    await createUser.execute({
-      name: 'Guilherme Pocoyo',
-      email: 'guilhermepocoyo@gmail.com',
+    await fakeUsersRepository.create({
+      name: 'Joseph Monkey',
+      email: 'josephmonkey@gmail.com',
       type: 'admin',
+      isActive: true,
       password: '12345678',
     })
 
@@ -66,10 +62,11 @@ describe('DeleteUser', () => {
   })
 
   it('should not be able to delete a admin if do not have suficient admins', async () => {
-    const user = await createUser.execute({
-      name: 'Teste',
+    const user = await fakeUsersRepository.create({
+      name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'admin',
+      isActive: true,
       password: '12345678',
     })
 

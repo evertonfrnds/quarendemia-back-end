@@ -3,7 +3,6 @@ import AppError from '@shared/errors/AppError'
 import FakeUsersRepository from '../repositories/fakes/FakeUsersRepository'
 import FakeUserTokensRepository from '../repositories/fakes/FakeUserTokensRepository'
 import FakeHashProvider from '../providers/HashProvider/fakes/FakeHashProvider'
-
 import ResetPasswordService from './ResetPasswordService'
 
 let fakeUsersRepository: FakeUsersRepository
@@ -29,6 +28,7 @@ describe('ResetForgotPassword', () => {
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'common',
+      isActive: true,
       password: '12345678',
     })
 
@@ -74,6 +74,7 @@ describe('ResetForgotPassword', () => {
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'common',
+      isActive: true,
       password: '12345678',
     })
 
