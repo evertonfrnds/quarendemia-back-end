@@ -67,7 +67,7 @@ describe('DeleteUser', () => {
 
   it('should not be able to delete a admin if do not have suficient admins', async () => {
     const user = await createUser.execute({
-      name: 'Joseph Monkey',
+      name: 'Teste',
       email: 'josephmonkey@gmail.com',
       type: 'admin',
       password: '12345678',
