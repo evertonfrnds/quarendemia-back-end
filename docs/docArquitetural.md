@@ -52,7 +52,9 @@ Este documento descreve a arquitetura proposta, descrevendo os padrões arquitet
 
 # Decisões de Design
 
-#### Fundamentação: Diante das especificações do Projeto, decidimos aplicar a arquiteura Model-View-Controller(MVC), ela se torna melhor diante do pouco tempo de implementação e o desenvolvimento paralelo fica mais eficiente. Arquiteturas em n camadas e microserviços descartamos pois o projeto é de pequeno porte e não faz sentido aplicar.
+#### Fundamentação:
+
+Diante das especificações do Projeto, decidimos aplicar a arquiteura Model-View-Controller(MVC), ela se torna melhor diante do pouco tempo de implementação e o desenvolvimento paralelo fica mais eficiente. Arquiteturas em n camadas e microserviços descartamos pois o projeto é de pequeno porte e não faz sentido aplicar.
 
 # Validação com Casos de Teste
 
