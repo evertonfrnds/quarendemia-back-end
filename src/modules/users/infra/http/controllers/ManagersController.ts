@@ -1,6 +1,7 @@
 import { Request, Response } from 'express'
 
 import { container } from 'tsyringe'
+import { classToClass } from 'class-transformer'
 
 import SignUpManagerService from '@modules/users/services/SignUpManagerService'
 import UpdateManagerProfileService from '@modules/users/services/UpdateManagerProfileService'
@@ -16,9 +17,7 @@ export default class ManagersController {
       user_id,
     })
 
-    delete user.password
-
-    return response.json(user)
+    return response.json(classToClass(user))
   }
 
   public async create(request: Request, response: Response): Promise<Response> {
@@ -32,9 +31,7 @@ export default class ManagersController {
       password,
     })
 
-    delete newUser.password
-
-    return response.json(newUser)
+    return response.json(classToClass(newUser))
   }
 
   public async update(request: Request, response: Response): Promise<Response> {
@@ -51,8 +48,6 @@ export default class ManagersController {
       password,
     })
 
-    delete user.password
-
-    return response.json(user)
+    return response.json(classToClass(user))
   }
 }
