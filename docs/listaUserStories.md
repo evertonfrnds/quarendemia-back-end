@@ -46,7 +46,9 @@ O presente documento mostra uma breve descrição dos User Stories do sistema **
 | **Prioridade**            | Essencial                                                                                                                                                                                                                                                                                       |
 | **Estimativa**            | 14h                                                                                                                                                                                                                                                                                             |
 | **Tempo Gasto (real):**   |                                                                                                                                                                                                                                                                                                 |
-| **Tamanho Funcional**     |
+| **Tamanho Funcional**     | 18 PF
+| **Estória do usuário**     | Quando o usuário esquecer a senha da sua conta. Na tela de login haverá uma opção de recuperação de senha, onde o usuário irá clicar e abrirar uma nova tela na qual ele vai digitar o email, logo após ele receberá um email contendo um link para alterar a senha.
+
 
 ### **User Story US03 - Manter Cliente**
 
