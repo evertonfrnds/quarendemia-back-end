@@ -4,5 +4,5 @@ serverUrl=https://sonarcloud.io
 serverVersion=8.0.0.9324
 branch=master
 dashboardUrl=https://sonarcloud.io/dashboard?id=quarendemia-back-end&branch=master
-ceTaskId=AXMglb63jQe94qIfVW0R
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXMglb63jQe94qIfVW0R
+ceTaskId=AXMhMKUejQe94qIfVW6q
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXMhMKUejQe94qIfVW6q
