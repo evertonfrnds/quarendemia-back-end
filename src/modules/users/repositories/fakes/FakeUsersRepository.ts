@@ -7,7 +7,7 @@ import ISignUpDTO from '@modules/users/dtos/ISignUpDTO'
 
 import User from '../../infra/typeorm/entities/User'
 
-class UsersRepository implements IUsersRepository {
+class FakeUsersRepository implements IUsersRepository {
   private users: User[] = []
 
   public async findAll(): Promise<User[]> {
@@ -28,7 +28,8 @@ class UsersRepository implements IUsersRepository {
 
   public async countAdms(user_id: string): Promise<number> {
     const admUsers = this.users.filter(
-      user => user.type === 'admin' && user.isActive === true,
+      user =>
+        user.type === 'admin' && user.isActive === true && user.id !== user_id,
     )
 
     return admUsers.length
@@ -63,4 +64,4 @@ class UsersRepository implements IUsersRepository {
   }
 }
 
-export default UsersRepository
+export default FakeUsersRepository

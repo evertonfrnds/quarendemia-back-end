@@ -44,8 +44,6 @@ class UsersRepository implements IUsersRepository {
 
   public async signUp(signUpData: ISignUpDTO): Promise<User> {
     const user = this.ormRepository.create(signUpData)
-    user.type = 'common'
-    user.isActive = true
 
     await this.ormRepository.save(user)
 
@@ -54,7 +52,6 @@ class UsersRepository implements IUsersRepository {
 
   public async create(userData: ICreateUsersDTO): Promise<User> {
     const user = this.ormRepository.create(userData)
-    user.isActive = true
 
     await this.ormRepository.save(user)
 
