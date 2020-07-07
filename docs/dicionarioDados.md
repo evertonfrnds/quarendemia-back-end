@@ -6,7 +6,7 @@
 | **id**  | Integer  | NNNNNN  | 6  | 1  |
 | **nome**  |  Text |   |  32 |  everton fernandes |
 | **email**  | Text  |   |  64 | email@email.com  |
-| **cargo**  | Integer  | N  | 1  | 1 |
+| **tipo**  | Integer  | N  | 1  | 1 |
 | **senha**  | Text  |   |21|  password |
 | **status**  | Integer  |   | 1  | 1 |
 | **token**  |  Text |   |  64 | asd1wd12da99ASj983  |
@@ -17,6 +17,7 @@
 | Field name  | Data type  | Data format  | Field size  | Example  |
 |---|---|---|---|---|
 | **id**  | Integer  | NNNNNN  | 6  |  1 |
+| **id_usuario**|Interger|NNNNN|6|1|
 | **nome**  |  Text |   | 32  | Completo |
 | **descricao**  | Text  |   | 64  | Todos os planos atribuido |
 | **valor**  | Float  | NNN,NN  | 10  | 50,00 |
@@ -38,9 +39,9 @@
 | **mes**  |  Integer |   | 32  | 06 |
 | **ano**  | Integer  |   | 64  | 2020 |
 | **valor**  |  Float |   | 32  | 50,00 |
-| **status**  | Integer  |   | 1  | 1 |
 
-## Medidas 
+
+## Medidas
 
 | Field name  | Data type  | Data format  | Field size  | Example  |
 |---|---|---|---|---|
