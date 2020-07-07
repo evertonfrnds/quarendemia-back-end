@@ -6,7 +6,7 @@
 // ------------------
 
 // Chain elements like this
-//[Usuario]<>-orders*>[Cliente]++-0..*>[Planos][usuario]++1.-n.>[Cliente][cliente]<>n.-n.>[Planos][cliente]<>1.-1.>[Mensalidade][cliente]++1.-1.>[Medidas]
+//[Usuario]<>-orders*>[Cliente]++-0..*>[Planos][usuario]++1.-n.>[Cliente][cliente]<>n.-n.>[Planos][cliente]<>n.-1.>[Mensalidade][cliente]++1.-n.>[Medidas]
 
 // Add notes
 // [Order]-[note: Aggregate Root ala DDD{bg:wheat}]
