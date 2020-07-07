@@ -2,6 +2,18 @@ const { pathsToModuleNameMapper } = require('ts-jest/utils')
 const { compilerOptions } = require('./tsconfig.json')
 
 module.exports = {
+  globals: {
+    'ts-jest': {
+      skipBabel: true,
+    },
+  },
+  mapCoverage: true,
+  moduleFileExtensions: ['js', 'ts'],
+  testResultsProcessor: 'jest-sonar-reporter',
+  transform: {
+    '^.+\\.ts$': '<rootDir>/node_modules/ts-jest/preprocessor.js',
+  },
+
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
