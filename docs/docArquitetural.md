@@ -33,14 +33,14 @@ Este documento descreve a arquitetura proposta, descrevendo os padrões arquitet
 
 # Mecanismos arquiteturais
 
-| Mecanismo de Análise | Mecanismo de Design                                | Mecanismo de Implementação                   |
-| -------------------- | -------------------------------------------------- | -------------------------------------------- |
-| Front-End            | Interface de comunicação com o usuário do portal.  | React JS                                     |
-| Build                | Programação da IDE para validação do código fonte. | Visual Studio Team System Foundation Server. |
-| Deploy               | Configuração da IDE de deploy.                     | Visual Studio Team System Foundation Server. |
-| Testes               | Aplicação para eecução dos testes no back-end      | Jest                                         |
-| Rotas e server       | Modulo para subir o server e classificar rotas     | Express                                      |
-| ORM                  | Modulo de tradução do JS para query em BD          | TypeORM                                      |
+| Mecanismo de Análise | Mecanismo de Design                                | Mecanismo de Implementação |
+| -------------------- | -------------------------------------------------- | -------------------------- |
+| Front-End            | Interface de comunicação com o usuário do portal.  | React JS                   |
+| Build                | Programação da IDE para validação do código fonte. | Visual Studio Code         |
+| Deploy               | Configuração da IDE de deploy.                     | Visual Studio Code         |
+| Testes               | Aplicação para eecução dos testes no back-end      | Jest                       |
+| Rotas e server       | Módulo para subir o server e classificar rotas     | Express                    |
+| ORM                  | Módulo de tradução do JS para query em BD          | TypeORM                    |
 
 ## Tecnologias
 
@@ -55,6 +55,7 @@ Este documento descreve a arquitetura proposta, descrevendo os padrões arquitet
 #### Fundamentação:
 
 Diante das especificações do Projeto, decidimos aplicar a arquiteura Model-View-Controller(MVC), ela se torna melhor diante do pouco tempo de implementação e o desenvolvimento paralelo fica mais eficiente. Arquiteturas em n camadas e microserviços descartamos pois o projeto é de pequeno porte e não faz sentido aplicar.
+Decidimos usar um banco de daods relacional por haver muitos relacionamentos entre as entidades.Em relação a um banco de dados não relacional se torna melhor para o nosso sistema.
 
 # Validação com Casos de Teste
 
@@ -62,16 +63,16 @@ Diante das especificações do Projeto, decidimos aplicar a arquiteura Model-Vie
 
 ![Diagrama Componentes](https://github.com/evertonfrnds/quarendemia-back-end/blob/master/docs/diagramasIMGS/diaComponentes.jpg?raw=true)
 
-| Componente          | Descrição                                                            |
-| ------------------- | -------------------------------------------------------------------- |
-| Página do Sistema   | Gera todas as informações ao usuário sobre os dados do sistema.      |
-| Login               | Responsável por realizar o login do usuário.                         |
-| Cadastro de usuário | Responsável por cadastrar um novo usuário no sistema.                |
-| Alteração de Senha  | Altera a senha de um usuário que esqueceu sua senha.                 |
-| Clientes            | Altera ou cadastra todas as informações de um cliente                |
-| Mensalidade         | Altera ou cadastra todas as informações de um cliente                |
-| Planos              | Altera ou cadastra todas as informações da mensalidade de um cliente |
-| Medidas             | Altera ou cadastra todas as informações de medidas de um cliente     |
+| Componente          | Descrição                                                       |
+| ------------------- | --------------------------------------------------------------- |
+| Página do Sistema   | Gera todas as informações ao usuário sobre os dados do sistema. |
+| Login               | Responsável por realizar o login do usuário.                    |
+| Cadastro de usuário | Responsável por cadastrar um novo usuário no sistema.           |
+| Alteração de Senha  | Altera a senha de um usuário que esqueceu sua senha.            |
+| Clientes            | Mantem todas as informações de um cliente                       |
+| Mensalidade         | Mantem todas as informações de um cliente                       |
+| Planos              | Mantem todas as informações da mensalidade de um cliente        |
+| Medidas             | Mantem todas as informações de medidas de um cliente            |
 
 # Implantação
 
