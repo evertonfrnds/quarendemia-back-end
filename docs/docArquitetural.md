@@ -38,7 +38,7 @@ Este documento descreve a arquitetura proposta, descrevendo os padrões arquitet
 | Front-End            | Interface de comunicação com o usuário do portal.  | React JS                                     |
 | Build                | Programação da IDE para validação do código fonte. | Visual Studio Team System Foundation Server. |
 | Deploy               | Configuração da IDE de deploy.                     | Visual Studio Team System Foundation Server. |
-| Testes               | Aplicação para eecução dos testes no back-end      | Jest                                         |
+| Testes               | Aplicação para execução dos testes no back-end      | Jest                                         |
 | Rotas e server       | Modulo para subir o server e classificar rotas     | Express                                      |
 | ORM                  | Modulo de tradução do JS para query em BD          | TypeORM                                      |
 
