@@ -33,6 +33,7 @@ Este documento descreve a arquitetura proposta, descrevendo os padrões arquitet
 
 # Mecanismos arquiteturais
 
+<<<<<<< HEAD
 | Mecanismo de Análise | Mecanismo de Design                                | Mecanismo de Implementação |
 | -------------------- | -------------------------------------------------- | -------------------------- |
 | Front-End            | Interface de comunicação com o usuário do portal.  | React JS                   |
@@ -41,6 +42,16 @@ Este documento descreve a arquitetura proposta, descrevendo os padrões arquitet
 | Testes               | Aplicação para eecução dos testes no back-end      | Jest                       |
 | Rotas e server       | Módulo para subir o server e classificar rotas     | Express                    |
 | ORM                  | Módulo de tradução do JS para query em BD          | TypeORM                    |
+=======
+| Mecanismo de Análise | Mecanismo de Design                                | Mecanismo de Implementação                   |
+| -------------------- | -------------------------------------------------- | -------------------------------------------- |
+| Front-End            | Interface de comunicação com o usuário do portal.  | React JS                                     |
+| Build                | Programação da IDE para validação do código fonte. | Visual Studio Team System Foundation Server. |
+| Deploy               | Configuração da IDE de deploy.                     | Visual Studio Team System Foundation Server. |
+| Testes               | Aplicação para execução dos testes no back-end      | Jest                                         |
+| Rotas e server       | Modulo para subir o server e classificar rotas     | Express                                      |
+| ORM                  | Modulo de tradução do JS para query em BD          | TypeORM                                      |
+>>>>>>> 2356dc5c4a62809bb2e1cb43273363d09a6f1e2d
 
 ## Tecnologias
 
