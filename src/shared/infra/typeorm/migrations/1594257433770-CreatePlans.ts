@@ -1,10 +1,10 @@
 import { MigrationInterface, QueryRunner, Table } from 'typeorm'
 
-export default class CreateUsers1593439242707 implements MigrationInterface {
+export default class CreatePlans1594257433770 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
-        name: 'users',
+        name: 'plans',
         columns: [
           {
             name: 'id',
@@ -14,29 +14,22 @@ export default class CreateUsers1593439242707 implements MigrationInterface {
             default: 'uuid_generate_v4()',
           },
           {
+            name: 'user_id',
+            type: 'uuid',
+          },
+          {
             name: 'name',
             type: 'varchar',
             isNullable: false,
           },
           {
-            name: 'email',
-            type: 'varchar',
-            isNullable: false,
-            isUnique: true,
-          },
-          {
-            name: 'type',
+            name: 'description',
             type: 'varchar',
             isNullable: false,
           },
           {
-            name: 'isActive',
-            type: 'boolean',
-            isNullable: false,
-          },
-          {
-            name: 'password',
-            type: 'varchar',
+            name: 'value',
+            type: 'decimal',
             isNullable: false,
           },
           {
@@ -50,11 +43,21 @@ export default class CreateUsers1593439242707 implements MigrationInterface {
             default: 'now()',
           },
         ],
+        foreignKeys: [
+          {
+            name: 'PlansUser',
+            referencedTableName: 'users',
+            referencedColumnNames: ['id'],
+            columnNames: ['user_id'],
+            onDelete: 'CASCADE',
+            onUpdate: 'CASCADE',
+          },
+        ],
       }),
     )
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable('users')
+    await queryRunner.dropTable('plans')
   }
 }

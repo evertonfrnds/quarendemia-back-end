@@ -1,16 +1,20 @@
 import Plan from '@modules/plans/infra/typeorm/entities/Plan'
 import { injectable, inject } from 'tsyringe'
-import IPlansRepository from '../repositories/IPlansRepositories'
+import IPlansRepositories from '../repositories/IPlansRepositories'
+
+interface IRequest {
+  id: string
+}
 
 @injectable()
 class ListUsersService {
   constructor(
-    @inject('PlansRepository')
-    private plansRepository: IPlansRepository,
-  ) {}
+    @inject('PlansRepositories')
+    private plansRepositories: IPlansRepositories, // eslint-disable-next-line prettier/prettier
+  ) { }
 
-  public async execute(): Promise<Plan[]> {
-    const plans = await this.plansRepository.findAll()
+  public async execute({ id }: IRequest): Promise<Plan[]> {
+    const plans = await this.plansRepositories.findAllById(id)
 
     return plans
   }

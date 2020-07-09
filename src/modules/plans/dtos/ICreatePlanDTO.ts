@@ -1,5 +1,5 @@
 export default interface ICreatePlanDTO {
-  id_user: string
+  user_id: string
   name: string
   description: string
   value: number

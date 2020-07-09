@@ -1,13 +1,9 @@
-import User from '@modules/users/infra/typeorm/entities/User'
-
 import {
   Entity,
   Column,
   PrimaryGeneratedColumn,
   CreateDateColumn,
   UpdateDateColumn,
-  ManyToMany,
-  JoinColumn,
 } from 'typeorm'
 
 @Entity('plans')
@@ -15,9 +11,8 @@ class Plans {
   @PrimaryGeneratedColumn('uuid')
   id: string
 
-  @ManyToMany(() => User)
-  @JoinColumn({ name: 'id_user' })
-  user: User
+  @Column()
+  user_id: string
 
   @Column()
   name: string

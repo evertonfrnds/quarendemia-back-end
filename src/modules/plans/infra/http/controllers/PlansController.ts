@@ -9,26 +9,27 @@ import DeletePlanService from '@modules/plans/services/DeletePlanService'
 
 export default class PlansController {
   public async index(request: Request, response: Response): Promise<Response> {
+    const { id } = request.user
     const listPlans = container.resolve(ListPlanService)
 
-    const plans = await listPlans.execute()
+    const plans = await listPlans.execute({ id })
 
     return response.json(plans)
   }
 
   public async create(request: Request, response: Response): Promise<Response> {
-    const { id_user, name, description, value } = request.body
-
+    const { id } = request.user
+    const { name, description, value } = request.body
     const createPlan = container.resolve(CreatePlanService)
 
-    const user = await createPlan.execute({
-      id_user,
+    const plan = await createPlan.execute({
+      user_id: id,
       name,
       description,
       value,
     })
 
-    return response.json(classToClass(user))
+    return response.json(classToClass(plan))
   }
 
   public async update(request: Request, response: Response): Promise<Response> {
@@ -37,14 +38,14 @@ export default class PlansController {
 
     const updatePlan = container.resolve(UpdatePlanService)
 
-    const user = await updatePlan.execute({
+    const plan = await updatePlan.execute({
       plan_id: id,
       name,
       description,
       value,
     })
 
-    return response.json(classToClass(user))
+    return response.json(classToClass(plan))
   }
 
   public async delete(request: Request, response: Response): Promise<Response> {
