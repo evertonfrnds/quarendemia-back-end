@@ -11,7 +11,7 @@ interface ITokenPayload {
   type: string
 }
 
-export default function ensureAuthorizated(
+export default function ensureIsAdmin(
   request: Request,
   response: Response,
   next: NextFunction,
