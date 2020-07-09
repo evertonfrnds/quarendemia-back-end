@@ -1,7 +1,6 @@
 export default interface ICreatePlanDTO {
+  id_user: string
   name: string
-  email: string
-  type: string
-  isActive: boolean
-  password: string
+  description: string
+  value: number
 }
