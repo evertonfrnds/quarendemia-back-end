@@ -1,5 +1,5 @@
 import { injectable, inject } from 'tsyringe'
-import IPlansRepositories from '../repositories/IPlansRepositories'
+import IPlansRepository from '../repositories/IPlansRepository'
 
 interface IRequest {
   plan_id: string
@@ -8,12 +8,12 @@ interface IRequest {
 @injectable()
 class DeletePlanService {
   constructor(
-    @inject('PlansRepositories')
-    private plansRepositories: IPlansRepositories, // eslint-disable-next-line prettier/prettier
+    @inject('PlansRepository')
+    private plansRepository: IPlansRepository, // eslint-disable-next-line prettier/prettier
   ) { }
 
   public async execute({ plan_id }: IRequest): Promise<void> {
-    const plans = await this.plansRepositories.delete(plan_id)
+    const plans = await this.plansRepository.delete(plan_id)
 
     return plans
   }

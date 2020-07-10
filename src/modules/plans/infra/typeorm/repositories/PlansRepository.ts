@@ -1,6 +1,6 @@
 import { getRepository, Repository } from 'typeorm'
 
-import IPlansRepository from '@modules/plans/repositories/IPlansRepositories'
+import IPlansRepository from '@modules/plans/repositories/IPlansRepository'
 
 import ICreatePlanDTO from '@modules/plans/dtos/ICreatePlanDTO'
 

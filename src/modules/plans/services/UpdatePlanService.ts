@@ -2,7 +2,7 @@ import AppError from '@shared/errors/AppError'
 
 import Plan from '@modules/plans/infra/typeorm/entities/Plan'
 import { injectable, inject } from 'tsyringe'
-import IPlansRepositories from '../repositories/IPlansRepositories'
+import IPlansRepository from '../repositories/IPlansRepository'
 
 interface IRequest {
   plan_id: string
@@ -14,8 +14,8 @@ interface IRequest {
 @injectable()
 class UpdatePlanService {
   constructor(
-    @inject('PlansRepositories')
-    private plansRepositories: IPlansRepositories, // eslint-disable-next-line prettier/prettier
+    @inject('PlansRepository')
+    private plansRepository: IPlansRepository, // eslint-disable-next-line prettier/prettier
   ) { }
 
   public async execute({
@@ -24,7 +24,7 @@ class UpdatePlanService {
     description,
     value,
   }: IRequest): Promise<Plan> {
-    const plan = await this.plansRepositories.findById(plan_id)
+    const plan = await this.plansRepository.findById(plan_id)
 
     if (!plan) {
       throw new AppError('Plano não encontrado.')
@@ -34,7 +34,7 @@ class UpdatePlanService {
     plan.description = description
     plan.value = value
 
-    await this.plansRepositories.save(plan)
+    await this.plansRepository.save(plan)
 
     return plan
   }

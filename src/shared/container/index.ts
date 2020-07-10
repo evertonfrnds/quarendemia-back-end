@@ -9,8 +9,8 @@ import UsersRepository from '@modules/users/infra/typeorm/repositories/UsersRepo
 import IUserTokensRepository from '@modules/users/repositories/IUserTokensRepository'
 import UserTokensRepository from '@modules/users/infra/typeorm/repositories/UserTokensRepository'
 
-import IPlansRepositories from '@modules/plans/repositories/IPlansRepositories'
-import PlansRepositories from '@modules/plans/infra/typeorm/repositories/PlansRepositories'
+import IPlansRepository from '@modules/plans/repositories/IPlansRepository'
+import PlansRepository from '@modules/plans/infra/typeorm/repositories/PlansRepository'
 
 container.registerSingleton<IUsersRepository>(
   'UsersRepository',
@@ -22,7 +22,7 @@ container.registerSingleton<IUserTokensRepository>(
   UserTokensRepository,
 )
 
-container.registerSingleton<IPlansRepositories>(
-  'PlansRepositories',
-  PlansRepositories,
+container.registerSingleton<IPlansRepository>(
+  'PlansRepository',
+  PlansRepository,
 )
