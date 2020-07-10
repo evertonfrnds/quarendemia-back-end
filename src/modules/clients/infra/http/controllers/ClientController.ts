@@ -3,6 +3,11 @@ import { container } from 'tsyringe'
 import { classToClass } from 'class-transformer'
 
 import CreateClientService from '@modules/clients/services/CreateClientService'
+import ListClientService from '@modules/clients/services/ListClientService'
+import UpdateClientService from '@modules/clients/services/UpdateClientService'
+import ShowClientService from '@modules/clients/services/ShowClientService'
+import DeleteClientService from '@modules/clients/services/DeleteClientService'
+
 // import ListPlanService from '@modules/clients/services/ListPlanService'
 // import UpdatePlanService from '@modules/clients/services/UpdatePlanService'
 // import DeletePlanService from '@modules/clients/services/DeletePlanService'
@@ -10,15 +15,20 @@ import CreateClientService from '@modules/clients/services/CreateClientService'
 export default class ClientController {
   public async index(request: Request, response: Response): Promise<Response> {
     const { id } = request.user
-    const listPlans = container.resolve(ListPlanService)
+    const listClients = container.resolve(ListClientService)
 
-    const plans = await listPlans.execute({ id })
+    const clients = await listClients.execute({ user_id: id })
 
-    return response.json(plans)
+    return response.json(clients)
   }
 
   public async show(request: Request, response: Response): Promise<Response> {
-    return response.json({ message: 'olá' })
+    const { id } = request.params
+    const showClient = container.resolve(ShowClientService)
+
+    const client = await showClient.execute({ client_id: id })
+
+    return response.json(client)
   }
 
   public async create(request: Request, response: Response): Promise<Response> {
@@ -36,28 +46,27 @@ export default class ClientController {
   }
 
   public async update(request: Request, response: Response): Promise<Response> {
-    const { name, description, value } = request.body
+    const { name, email } = request.body
     const { id } = request.params
 
-    const updatePlan = container.resolve(UpdatePlanService)
+    const updateClient = container.resolve(UpdateClientService)
 
-    const plan = await updatePlan.execute({
-      plan_id: id,
+    const client = await updateClient.execute({
+      client_id: id,
       name,
-      description,
-      value,
+      email,
     })
 
-    return response.json(classToClass(plan))
+    return response.json(classToClass(client))
   }
 
   public async delete(request: Request, response: Response): Promise<Response> {
     const { id } = request.params
 
-    const deletePlan = container.resolve(DeletePlanService)
+    const deleteClient = container.resolve(DeleteClientService)
 
-    await deletePlan.execute({
-      plan_id: id,
+    await deleteClient.execute({
+      client_id: id,
     })
 
     return response.status(204).send()

@@ -1,3 +1,5 @@
+import AppError from '@shared/errors/AppError'
+
 import { injectable, inject } from 'tsyringe'
 import IClientRepository from '../repositories/IClientRepository'
 
@@ -13,9 +15,15 @@ class DeleteClientService {
   ) {}
 
   public async execute({ client_id }: IRequest): Promise<void> {
-    const clients = await this.clientRepository.delete(client_id)
+    const client = await this.clientRepository.findById(client_id)
 
-    return clients
+    if (!client) {
+      throw new AppError('Cliente não existe')
+    }
+
+    client.isActive = false
+
+    await this.clientRepository.save(client)
   }
 }
 
