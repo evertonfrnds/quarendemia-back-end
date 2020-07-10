@@ -2,10 +2,10 @@ import { Request, Response } from 'express'
 import { container } from 'tsyringe'
 import { classToClass } from 'class-transformer'
 
-import ListPlanService from '@modules/plans/services/ListPlanService'
-import CreatePlanService from '@modules/plans/services/CreatePlanService'
-import UpdatePlanService from '@modules/plans/services/UpdatePlanService'
-import DeletePlanService from '@modules/plans/services/DeletePlanService'
+import CreateClientService from '@modules/clients/services/CreateClientService'
+// import ListPlanService from '@modules/clients/services/ListPlanService'
+// import UpdatePlanService from '@modules/clients/services/UpdatePlanService'
+// import DeletePlanService from '@modules/clients/services/DeletePlanService'
 
 export default class ClientController {
   public async index(request: Request, response: Response): Promise<Response> {
@@ -23,17 +23,16 @@ export default class ClientController {
 
   public async create(request: Request, response: Response): Promise<Response> {
     const { id } = request.user
-    const { name, description, value } = request.body
-    const createPlan = container.resolve(CreatePlanService)
+    const { name, email } = request.body
+    const createClient = container.resolve(CreateClientService)
 
-    const plan = await createPlan.execute({
+    const client = await createClient.execute({
       user_id: id,
       name,
-      description,
-      value,
+      email,
     })
 
-    return response.json(classToClass(plan))
+    return response.json(classToClass(client))
   }
 
   public async update(request: Request, response: Response): Promise<Response> {
