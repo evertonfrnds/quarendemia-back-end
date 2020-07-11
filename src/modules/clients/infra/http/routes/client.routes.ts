@@ -30,6 +30,7 @@ clientRoutes.put(
   '/:id',
   celebrate({
     [Segments.BODY]: {
+      plan_id: Joi.string().required(),
       name: Joi.string().min(6).required(),
       email: Joi.string().required().email(),
     },

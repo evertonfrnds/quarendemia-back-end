@@ -14,7 +14,9 @@ class ClientRepository implements IClientRepository {
   }
 
   public async findAllById(id: string): Promise<Client[]> {
-    const client = await this.ormRepository.find({ where: { user_id: id } })
+    const client = await this.ormRepository.find({
+      where: { user_id: id, isActive: true },
+    })
     return client
   }
 
@@ -24,8 +26,8 @@ class ClientRepository implements IClientRepository {
     return client
   }
 
-  public async delete(client_id: string): Promise<void> {
-    this.ormRepository.delete(client_id)
+  public async isActive(client_id: string): Promise<boolean> {
+    return true
   }
 
   public async create(clientData: ICreateClientDTO): Promise<Client> {
