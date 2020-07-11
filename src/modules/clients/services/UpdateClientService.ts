@@ -8,6 +8,7 @@ interface IRequest {
   client_id: string
   name: string
   email: string
+  plan_id: string
 }
 
 @injectable()
@@ -17,7 +18,12 @@ class UpdateClientService {
     private clientRepository: IClientRepository,
   ) {}
 
-  public async execute({ client_id, name, email }: IRequest): Promise<Client> {
+  public async execute({
+    client_id,
+    plan_id,
+    name,
+    email,
+  }: IRequest): Promise<Client> {
     const client = await this.clientRepository.findById(client_id)
 
     if (!client) {
@@ -26,6 +32,7 @@ class UpdateClientService {
 
     client.name = name
     client.email = email
+    client.plan_id = plan_id
 
     await this.clientRepository.save(client)
 

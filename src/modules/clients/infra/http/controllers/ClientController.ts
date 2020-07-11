@@ -8,10 +8,6 @@ import UpdateClientService from '@modules/clients/services/UpdateClientService'
 import ShowClientService from '@modules/clients/services/ShowClientService'
 import DeleteClientService from '@modules/clients/services/DeleteClientService'
 
-// import ListPlanService from '@modules/clients/services/ListPlanService'
-// import UpdatePlanService from '@modules/clients/services/UpdatePlanService'
-// import DeletePlanService from '@modules/clients/services/DeletePlanService'
-
 export default class ClientController {
   public async index(request: Request, response: Response): Promise<Response> {
     const { id } = request.user
@@ -33,26 +29,28 @@ export default class ClientController {
 
   public async create(request: Request, response: Response): Promise<Response> {
     const { id } = request.user
-    const { name, email } = request.body
+    const { name, email, plan_id } = request.body
     const createClient = container.resolve(CreateClientService)
 
     const client = await createClient.execute({
       user_id: id,
       name,
       email,
+      plan_id,
     })
 
     return response.json(classToClass(client))
   }
 
   public async update(request: Request, response: Response): Promise<Response> {
-    const { name, email } = request.body
+    const { name, email, plan_id } = request.body
     const { id } = request.params
 
     const updateClient = container.resolve(UpdateClientService)
 
     const client = await updateClient.execute({
       client_id: id,
+      plan_id,
       name,
       email,
     })

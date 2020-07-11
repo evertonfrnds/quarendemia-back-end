@@ -12,6 +12,9 @@ import UserTokensRepository from '@modules/users/infra/typeorm/repositories/User
 import IPlansRepository from '@modules/plans/repositories/IPlansRepository'
 import PlansRepository from '@modules/plans/infra/typeorm/repositories/PlansRepository'
 
+import IClientRepository from '@modules/clients/repositories/IClientRepository'
+import ClientRepository from '@modules/clients/infra/typeorm/repositories/ClientRepository'
+
 container.registerSingleton<IUsersRepository>(
   'UsersRepository',
   UsersRepository,
@@ -25,4 +28,9 @@ container.registerSingleton<IUserTokensRepository>(
 container.registerSingleton<IPlansRepository>(
   'PlansRepository',
   PlansRepository,
+)
+
+container.registerSingleton<IClientRepository>(
+  'ClientRepository',
+  ClientRepository,
 )

@@ -4,6 +4,7 @@ import IClientRepository from '../repositories/IClientRepository'
 
 interface IRequest {
   user_id: string
+  plan_id: string
   name: string
   email: string
 }
@@ -15,11 +16,17 @@ class CreateClientService {
     private clientRepository: IClientRepository,
   ) {}
 
-  public async execute({ user_id, name, email }: IRequest): Promise<Client> {
+  public async execute({
+    user_id,
+    plan_id,
+    name,
+    email,
+  }: IRequest): Promise<Client> {
     const client = await this.clientRepository.create({
       user_id,
       name,
       email,
+      plan_id,
       isActive: true,
     })
 

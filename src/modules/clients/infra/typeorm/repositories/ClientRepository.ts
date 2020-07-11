@@ -29,11 +29,11 @@ class ClientRepository implements IClientRepository {
   }
 
   public async create(clientData: ICreateClientDTO): Promise<Client> {
-    const client = this.ormRepository.create(clientData)
+    const fodase = this.ormRepository.create(clientData)
 
-    await this.ormRepository.save(client)
+    await this.ormRepository.save(fodase)
 
-    return client
+    return fodase
   }
 
   public async save(client: Client): Promise<Client> {

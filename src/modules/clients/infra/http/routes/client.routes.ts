@@ -18,9 +18,9 @@ clientRoutes.post(
   '/',
   celebrate({
     [Segments.BODY]: {
+      plan_id: Joi.string().required(),
       name: Joi.string().min(6).required(),
       email: Joi.string().required().email(),
-      isActive: Joi.boolean().required(),
     },
   }),
   clientController.create,
