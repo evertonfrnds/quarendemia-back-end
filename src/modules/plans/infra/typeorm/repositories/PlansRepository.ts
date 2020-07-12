@@ -13,14 +13,8 @@ class PlansRepository implements IPlansRepository {
     this.ormRepository = getRepository(Plan)
   }
 
-<<<<<<< HEAD
-  public async findAll(): Promise<Plan[]> {
-    const plan = await this.ormRepository.find()
-
-=======
   public async findAllById(id: string): Promise<Plan[]> {
     const plan = await this.ormRepository.find({ where: { user_id: id } })
->>>>>>> e394a3756e34e91c1527e85b4e852c82e58fb175
     return plan
   }
 
