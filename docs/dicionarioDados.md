@@ -9,8 +9,11 @@
 #### EQUIPE JUREMASTEC SOCIAL
 
 **Douglas Pacelli Maia Baltazar**
+
 **Everton Ankelys Fernandes Bezerra**
+
 **Fernando José dos Santos**
+
 **José Rubens de Oliveira Júnior**
 
 # QUARENDEMIA: Dicionário de dados
