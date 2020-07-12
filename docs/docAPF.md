@@ -37,16 +37,16 @@ O Sistema Quarendemia foi criado para ajudar na administração de uma academia,
 
     Na contagem indicativa só é necessário analisar os ALIs (Arquivos Lógicos Internos) com o valor de 35 PF cada e os AIE (Arquivos de Interface Externa) com o valor de 15 PF cada.
 
-| **ALI**             | **Entidades Relacionadas** | **PF** |
-| :------------------ | :------------------------- | :----: |
-| Keep user           | User and Client            |   35   |
-| Recover password    | User and Client            |   35   |
-| Keep client         | User and Client            |   35   |
-| Keep Plans          | Plans and Client           |   35   |
-| Mantain measures    | Client and Measures        |   35   |
-| Keep monthly fees   | Client and Monthly fees    |   35   |
-| Contagem Indicativa |                            |  210   |
-|                     |                            |
+| **ALI**                  | **Entidades Relacionadas** | **PF** |
+| :----------------------- | :------------------------- | :----: |
+| US 01 -Keep user         | User and Client            |   35   |
+| US 02 -Recover password  | User and Client            |   35   |
+| US 03 -Keep client       | User and Client            |   35   |
+| US 04 -Keep Plans        | Plans and Client           |   35   |
+| US 05 -Mantain measures  | Client and Measures        |   35   |
+| US 06 -Keep monthly fees | Client and Monthly fees    |   35   |
+| Contagem Indicativa      |                            |  210   |
+|                          |                            |
 
 ### Contagem Estimativa (Ce)
 
@@ -55,12 +55,12 @@ O Sistema Quarendemia foi criado para ajudar na administração de uma academia,
 
 | **ALI**                              | **Tipos de Função** | **Complexidade** | **PF** |
 | :----------------------------------- | :-----------------: | :--------------: | :----: |
-| Keep user                            |         ALI         |      BAIXA       |   7    |
-| Recover password                     |         ALI         |      BAIXA       |   7    |
-| Keep client                          |         ALI         |      BAIXA       |   7    |
-| Keep Plans                           |         ALI         |      BAIXA       |   7    |
-| Mantain measures                     |         ALI         |      BAIXA       |   7    |
-| Keep monthly fees                    |         ALI         |      BAIXA       |   7    |
+| US 01 -Keep user                     |         ALI         |      BAIXA       |   7    |
+| US 02 -Recover password              |         ALI         |      BAIXA       |   7    |
+| US 03 -Keep client                   |         ALI         |      BAIXA       |   7    |
+| US 04 -Keep Plans                    |         ALI         |      BAIXA       |   7    |
+| US 05 -Mantain measures              |         ALI         |      BAIXA       |   7    |
+| US 06 -Keep monthly fees             |         ALI         |      BAIXA       |   7    |
 | Create Password                      |         EE          |      MÉDIA       |   4    |
 | Update Password                      |         CE          |      MÉDIA       |   4    |
 | Create User                          |         EE          |      MÉDIA       |   4    |
