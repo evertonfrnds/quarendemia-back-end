@@ -6,12 +6,14 @@
 
 ### CURSO DE BACHARELADO EM SISTEMAS DE INFORMAÇÃO
 
+#### EQUIPE JUREMASTEC SOCIAL
+
 **Douglas Pacelli Maia Baltazar**
 **Everton Ankelys Fernandes Bezerra**
 **Fernando José dos Santos**
 **José Rubens de Oliveira Júnior**
 
-# Quarendemia: Lista de User Stories
+# QUARENDEMIA: Lista de User Stories
 
 ## Descrição
 

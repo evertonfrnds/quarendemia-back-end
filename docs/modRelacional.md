@@ -1,11 +1,24 @@
-# Modelo Relacional
+### UNIVERSIDADE FEDERAL DO RIO GRANDE DO NORTE
+
+### CENTRO DE ENSINO SUPERIOR DO SERIDÓ
+
+### DEPARTAMENTO DE COMPUTAÇÃO E TECNOLOGIA
+
+### CURSO DE BACHARELADO EM SISTEMAS DE INFORMAÇÃO
+
+#### EQUIPE JUREMASTEC SOCIAL
+
+**Douglas Pacelli Maia Baltazar**
+**Everton Ankelys Fernandes Bezerra**
+**Fernando José dos Santos**
+**José Rubens de Oliveira Júnior**
+
+# QUARENDEMIA: Modelo Conceitual
 
 ![Modelo Relacional](diagramasIMGS/modRelacional.jpg)
 
 ```yml
 # Modelo Relacional
-
-# (Imagem em "docs/diagramasIMGS")
 
 // Cool Class Diagram by yUML alterado
 // ------------------
