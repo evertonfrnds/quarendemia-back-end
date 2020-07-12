@@ -6,9 +6,9 @@
 
 ### CURSO DE BACHARELADO EM SISTEMAS DE INFORMAÇÃO
 
-**Douglas Pacelli Maia Baltazar**  
-**Everton Ankelys Fernandes Bezerra**  
-**Fernando José dos Santos**  
+**Douglas Pacelli Maia Baltazar**
+**Everton Ankelys Fernandes Bezerra**
+**Fernando José dos Santos**
 **José Rubens de Oliveira Júnior**
 
 # Quarendemia: Lista de User Stories
@@ -21,10 +21,11 @@ O presente documento mostra uma breve descrição dos User Stories do sistema **
 
 | Data       | Versão | Descrição                                                       | Autor                             |
 | :--------- | :----: | :-------------------------------------------------------------- | :-------------------------------- |
-| 22/06/2020 |  1.0   | Template e descrição do documento; descrição do User Story US01 | José Rubens de Oliveira Junior    |
-| 23/06/2020 |  1.0   | descrição do User Story US02                                    | Everton Ankelys Fernandes Bezerra |
-| 23/06/2020 |  1.0   | Derscrição do User Story US03                                   | Douglas Pacelli Maia Baltazar     |
-| 24/06/2020 |  1.0   | Derscrição do User Story US04                                   | Fernando José dos Santos          |
+| 22/06/2020 | 0.0.1  | Template e descrição do documento; descrição do User Story US01 | José Rubens de Oliveira Junior    |
+| 23/06/2020 | 0.0.2  | descrição do User Story US02                                    | Everton Ankelys Fernandes Bezerra |
+| 23/06/2020 | 0.0.3  | Derscrição do User Story US03                                   | Douglas Pacelli Maia Baltazar     |
+| 24/06/2020 | 0.0.4  | Derscrição do User Story US04                                   | Fernando José dos Santos          |
+| 11/07/2020 | 1.0.0  | Derscrição do User Story US05                                   | Fernando José dos Santos          |
 
 ### **User Story US01 - Manter Usuário**
 
@@ -46,9 +47,8 @@ O presente documento mostra uma breve descrição dos User Stories do sistema **
 | **Prioridade**            | Essencial                                                                                                                                                                                                                                                                                       |
 | **Estimativa**            | 14h                                                                                                                                                                                                                                                                                             |
 | **Tempo Gasto (real):**   |                                                                                                                                                                                                                                                                                                 |
-| **Tamanho Funcional**     | 18 PF
-| **Estória do usuário**     | Quando o usuário esquecer a senha da sua conta. Na tela de login haverá uma opção de recuperação de senha, onde o usuário irá clicar e abrirar uma nova tela na qual ele vai digitar o email, logo após ele receberá um email contendo um link para alterar a senha.
-
+| **Tamanho Funcional**     | 18 PF                                                                                                                                                                                                                                                                                           |
+| **Estória do usuário**    | Quando o usuário esquecer a senha da sua conta. Na tela de login haverá uma opção de recuperação de senha, onde o usuário irá clicar e abrirar uma nova tela na qual ele vai digitar o email, logo após ele receberá um email contendo um link para alterar a senha.                            |
 
 ### **User Story US03 - Manter Cliente**
 
@@ -78,14 +78,27 @@ O presente documento mostra uma breve descrição dos User Stories do sistema **
 | **Requisitos envolvidos** | RF01, RF02, RF04, RF05, RNF01, RNF02 e RNF03                                                                                                                                                                                                                                                                                                                              |
 | **Prioridade**            | Essencial                                                                                                                                                                                                                                                                                                                                                                 |
 | **Estimativa**            | 8h                                                                                                                                                                                                                                                                                                                                                                        |
-| **Tempo Gasto (real):**   |                                                                                                                                                                                                                                                                                                                                                                           |
+| **Tempo Gasto (real):**   | 10h                                                                                                                                                                                                                                                                                                                                                                       |
 | **Tamanho Funcional**     |                                                                                                                                                                                                                                                                                                                                                                           |
 
 ### **Testes de Aceitação (TA)**
 
-| Código      | Descrição                                                                                            |
-| ----------- | ---------------------------------------------------------------------------------------------------- |
-| **TA01.01** | conseguir cadastrar um dos planos e aparecer uma mensagem de cadastro de plano realizado com sucesso |
-| **TA01.02** | Alterar a modalidade de plano do cliente e aparecer uma mensagem de alteração realizada com sucesso  |
-| **TA01.03** |                                                                                                      |
-| **TA01.04** |                                                                                                      |
+| Código      | Descrição                                                                                                  |
+| ----------- | ---------------------------------------------------------------------------------------------------------- |
+| **TA01.01** | Conseguir cadastrar um cliente e aparecer a mensagem "Cliente cadastrado com sucesso" ou mensagem similar. |
+| **TA01.02** | Conseguir alterar a senha de um cliente e aparecer a mensagem senha alterada                               |
+| **TA01.03** | Alterar a modalidade de plano do cliente e aparecer uma mensagem de alteração realizada com sucesso        |
+| **TA01.04** | conseguir cadastrar um dos planos e aparecer uma mensagem de cadastro de plano realizado com sucesso       |
+| **TA01.05** | conseguir cadastrar as medidas de um cliente e aparecer medidas cadstradas com sucesso                     |
+| **TA01.06** | conseguir visualizar os clientes que estão com débito no mês e aparecer a listagem                         |
+
+### **User Story US05 - Manter Medidas**
+
+|                           |                                                                                                                                        |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| **Descrição**             | O sistema deve conseguir manter as medidas dos clientes da academia e conseguir alterar as medidas de acordo com o tempo especificado. |
+| **Requisitos envolvidos** | RF01, RF02, RF04, RF05, RNF01, RNF02 e RNF03                                                                                           |
+| **Prioridade**            | Essencial                                                                                                                              |
+| **Estimativa**            | 8h                                                                                                                                     |
+| **Tempo Gasto (real):**   | 10h                                                                                                                                    |
+| **Tamanho Funcional**     |                                                                                                                                        |
