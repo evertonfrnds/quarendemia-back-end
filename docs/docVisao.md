@@ -67,6 +67,17 @@ O Sistema Quarendemia foi criado para ajudar na administração de uma academia,
 
 ### 2.3 Perfis dos usuários
 
+O Sistema será usado por apenas 2 tipos de usuarios.
+
+**Administrador**
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O Usuario administrador do sistema terá como objetivo gerenciar o sistema em geral, criar usuarios com perfis de Gerentes para gerenciar a Academia.
+
+**Gerente**
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O Usuario Gerente tem como objetivo cadastrar Clientes, criar planos, cadastrar as Mensalidades pagas ao longo do mês para ter um controle maior e ter um bom uso das ferramentas que o Sistema proporciona. 
+
 ### 2.4 Riscos
 
 O objetivo desta seção é o de produzir uma lista de riscos identificados em todas as fases do projeto e possíveis ações que poderiam ser tomadas para minimizar seus impactos.

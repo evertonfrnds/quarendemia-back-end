@@ -31,6 +31,7 @@ O presente documento mostra uma breve descrição dos User Stories do sistema **
 | 23/06/2020 | 0.0.3  | Derscrição do User Story US03                                   | Douglas Pacelli Maia Baltazar     |
 | 24/06/2020 | 0.0.4  | Derscrição do User Story US04                                   | Fernando José dos Santos          |
 | 11/07/2020 | 1.0.0  | Derscrição do User Story US05                                   | Fernando José dos Santos          |
+| 12/07/2020 | 1.0.0  | Derscrição do User Story US06                                   | Douglas Pacelli Maia Baltazar          |
 
 ### **User Story US01 - Manter Usuário**
 
@@ -107,3 +108,15 @@ O presente documento mostra uma breve descrição dos User Stories do sistema **
 | **Estimativa**            | 8 h                                                                                                                                    |
 | **Tempo Gasto (real):**   | 10 h                                                                                                                                   |
 | **Tamanho Funcional**     | 7 PF                                                                                                                                   |
+
+
+### **User Story US06 - Manter Mensalidades**
+
+|                           |                                                                                                                                        |
+| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| **Descrição**             | O sistema deve conseguir manter as mensalidades dos clientes da academia ao longo do mês para que o Gerente tenha controle financeiro e uma boa auditoria das finanças. |
+| **Requisitos envolvidos** | RF15, RF16, RF17, RF18, RNF01, RNF02 e RNF03                                                                                           |
+| **Prioridade**            | Essencial                                                                                                                              |
+| **Estimativa**            | XXX h                                                                                                                                    |
+| **Tempo Gasto (real):**   | XXX h                                                                                                                                   |
+| **Tamanho Funcional**     | XXX PF                                                                                                                                   |
