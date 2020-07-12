@@ -13,7 +13,7 @@
 **Fernando José dos Santos**
 **José Rubens de Oliveira Júnior**
 
-# QUARENDEMIA: Modelo Conceitual
+# QUARENDEMIA: Modelo Relacional
 
 ![Modelo Relacional](diagramasIMGS/modRelacional.jpg)
 
