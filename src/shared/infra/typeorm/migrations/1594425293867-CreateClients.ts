@@ -1,10 +1,10 @@
 import { MigrationInterface, QueryRunner, Table } from 'typeorm'
 
-export default class CreateUsers1593439242707 implements MigrationInterface {
+export default class CreateClients1594425293867 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
-        name: 'users',
+        name: 'clients',
         columns: [
           {
             name: 'id',
@@ -12,6 +12,15 @@ export default class CreateUsers1593439242707 implements MigrationInterface {
             isPrimary: true,
             generationStrategy: 'uuid',
             default: 'uuid_generate_v4()',
+          },
+          {
+            name: 'user_id',
+            type: 'uuid',
+            isNullable: false,
+          },
+          {
+            name: 'plan_id',
+            type: 'uuid',
           },
           {
             name: 'name',
@@ -22,21 +31,10 @@ export default class CreateUsers1593439242707 implements MigrationInterface {
             name: 'email',
             type: 'varchar',
             isNullable: false,
-            isUnique: true,
-          },
-          {
-            name: 'type',
-            type: 'varchar',
-            isNullable: false,
           },
           {
             name: 'isActive',
             type: 'boolean',
-            isNullable: false,
-          },
-          {
-            name: 'password',
-            type: 'varchar',
             isNullable: false,
           },
           {
@@ -50,11 +48,29 @@ export default class CreateUsers1593439242707 implements MigrationInterface {
             default: 'now()',
           },
         ],
+        foreignKeys: [
+          {
+            name: 'ClientUser',
+            referencedTableName: 'users',
+            referencedColumnNames: ['id'],
+            columnNames: ['user_id'],
+            onDelete: 'CASCADE',
+            onUpdate: 'CASCADE',
+          },
+          {
+            name: 'ClientPlan',
+            referencedTableName: 'plans',
+            referencedColumnNames: ['id'],
+            columnNames: ['plan_id'],
+            onDelete: 'CASCADE',
+            onUpdate: 'CASCADE',
+          },
+        ],
       }),
     )
   }
 
   public async down(queryRunner: QueryRunner): Promise<void> {
-    await queryRunner.dropTable('users')
+    await queryRunner.dropTable('clients')
   }
 }

@@ -15,8 +15,13 @@ interface IRequest {
 class UpdatePlanService {
   constructor(
     @inject('PlansRepository')
+<<<<<<< HEAD
     private plansRepository: IPlansRepository,
   ) {}
+=======
+    private plansRepository: IPlansRepository, // eslint-disable-next-line prettier/prettier
+  ) { }
+>>>>>>> e394a3756e34e91c1527e85b4e852c82e58fb175
 
   public async execute({
     plan_id,
