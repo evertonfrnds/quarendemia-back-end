@@ -19,7 +19,9 @@ class PlansRepository implements IPlansRepository {
   }
 
   public async findById(id: string): Promise<Plan | undefined> {
-    const plan = await this.ormRepository.findOne(id)
+    const plan = await this.ormRepository.findOne(id, {
+      select: ['id', 'name', 'description', 'value'],
+    })
 
     return plan
   }
