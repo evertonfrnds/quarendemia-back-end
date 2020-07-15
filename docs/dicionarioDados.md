@@ -38,7 +38,7 @@
 | **id**         | Integer   | NNNNNN      | 6          | 1                         |
 | **id_usuario** | Interger  | NNNNN       | 6          | 1                         |
 | **nome**       | Text      |             | 32         | Completo                  |
-| **descricao**  | Text      |             | 64         | Todos os planos atribuido |
+| **descricao**  | Text      |             | 64         | Todos os planos atribuído |
 | **valor**      | Float     | NNN,NN      | 10         | 50,00                     |
 
 ## Clientes:
