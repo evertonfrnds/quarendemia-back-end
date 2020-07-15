@@ -10,7 +10,7 @@ const usersController = new UsersController()
 
 usersRouter.use(ensureIsAdmin)
 
-usersRouter.get('/', usersController.show)
+usersRouter.get('/', usersController.index)
 
 usersRouter.post(
   '/',

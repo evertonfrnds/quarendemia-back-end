@@ -8,7 +8,7 @@ import UpdateUserService from '@modules/users/services/UpdateUserService'
 import DeleteUserService from '@modules/users/services/DeleteUserService'
 
 export default class UsersController {
-  public async show(request: Request, response: Response): Promise<Response> {
+  public async index(request: Request, response: Response): Promise<Response> {
     const listUsers = container.resolve(ListUsersService)
 
     const users = await listUsers.execute()

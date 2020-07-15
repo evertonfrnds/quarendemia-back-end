@@ -6,12 +6,17 @@
 
 ### CURSO DE BACHARELADO EM SISTEMAS DE INFORMAÇÃO
 
-**Douglas Pacelli Maia Baltazar**  
-**Everton Ankelys Fernandes Bezerra**  
-**Fernando José dos Santos**  
+#### EQUIPE JUREMASTEC SOCIAL
+
+**Douglas Pacelli Maia Baltazar**
+
+**Everton Ankelys Fernandes Bezerra**
+
+**Fernando José dos Santos**
+
 **José Rubens de Oliveira Júnior**
 
-# Quarendemia: Documento de Visão
+# QUARENDEMIA: Documento de Visão
 
 ## 1. Introdução
 
@@ -21,7 +26,7 @@ Este documento visa a apresentação do sistema **Quarendemia** produzido pela e
 
 ### 1.2 Escopo do Produto
 
-O Sistema Quarendemia foi criado para ajudar na administração de uma academia, com funcionalidades relevante para o administrado dela, facilitando o controle de fluxo de clientes e a contabilidade da empresa.
+O Sistema Quarendemia foi criado para ajudar na administração de uma academia, com funcionalidades relevantes para o administrador, facilitando o controle de fluxo de clientes e a contabilidade da empresa.
 
 ## 2. Descrição Geral
 
@@ -62,6 +67,17 @@ O Sistema Quarendemia foi criado para ajudar na administração de uma academia,
 
 ### 2.3 Perfis dos usuários
 
+O Sistema será usado por apenas 2 tipos de usuarios.
+
+**Administrador**
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O Usuario administrador do sistema terá como objetivo gerenciar o sistema em geral, criar usuarios com perfis de Gerentes para gerenciar a Academia.
+
+**Gerente**
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O Usuario Gerente tem como objetivo cadastrar Clientes, criar planos, cadastrar as Mensalidades pagas ao longo do mês para ter um controle maior e ter um bom uso das ferramentas que o Sistema proporciona. 
+
 ### 2.4 Riscos
 
 O objetivo desta seção é o de produzir uma lista de riscos identificados em todas as fases do projeto e possíveis ações que poderiam ser tomadas para minimizar seus impactos.
@@ -83,13 +99,13 @@ O objetivo desta seção é o de produzir uma lista de riscos identificados em t
 3. Riscos Tecnológicos
    |CÓDIGO|Risco |Plano de Ação |
    |---------|---------|---------|
-   |RS07|Testes do sistema não serem efetivos | Criar um planejamento detalhado dos testes|
+   |RS08|Testes do sistema não serem efetivos | Criar um planejamento detalhado dos testes|
 
 ## 3. Histórico de Revisões
 
 | Data       | Versão | Descrição          | Autor                              |
 | ---------- | ------ | ------------------ | ---------------------------------- |
 | 21/06/2020 | 0.0.1  | Documento Inicial  | **JuremasTEC Social**              |
-| 22/06/2020 | 0.0.2  | Primeira Alteração | **José Rubens de Oliveira Junior** |
-| --/--/2020 |        |                    |                                    |
-| --/--/2020 |        |                    |                                    |
+| 22/06/2020 | 1.0.2  | Primeira Alteração | **José Rubens de Oliveira Junior** |
+| 11/07/2020 | 1.0.3  | Revisão            | Fernando José dos Santos           |
+|            |        |                    |                                    |

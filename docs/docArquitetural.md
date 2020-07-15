@@ -6,12 +6,17 @@
 
 ### CURSO DE BACHARELADO EM SISTEMAS DE INFORMAÇÃO
 
+#### EQUIPE JUREMASTEC SOCIAL
+
 **Douglas Pacelli Maia Baltazar**
+
 **Everton Ankelys Fernandes Bezerra**
+
 **Fernando José dos Santos**
+
 **José Rubens de Oliveira Júnior**
 
-# Quarendemia: Projeto Arquitetural
+# QUARENDEMIA: Projeto Arquitetural
 
 # Descrição
 
