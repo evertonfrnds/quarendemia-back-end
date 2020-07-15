@@ -3,6 +3,7 @@ import { container } from 'tsyringe'
 import { classToClass } from 'class-transformer'
 
 import ListPlanService from '@modules/plans/services/ListPlanService'
+import ShowPlanService from '@modules/plans/services/ShowPlanService'
 import CreatePlanService from '@modules/plans/services/CreatePlanService'
 import UpdatePlanService from '@modules/plans/services/UpdatePlanService'
 import DeletePlanService from '@modules/plans/services/DeletePlanService'
@@ -15,6 +16,15 @@ export default class PlansController {
     const plans = await listPlans.execute({ id })
 
     return response.json(plans)
+  }
+
+  public async show(request: Request, response: Response): Promise<Response> {
+    const { id } = request.params
+    const showPlan = container.resolve(ShowPlanService)
+
+    const plan = await showPlan.execute({ id })
+
+    return response.json(plan)
   }
 
   public async create(request: Request, response: Response): Promise<Response> {

@@ -1,3 +1,5 @@
+import AppError from '@shared/errors/AppError'
+
 import Plan from '@modules/plans/infra/typeorm/entities/Plan'
 import { injectable, inject } from 'tsyringe'
 import IPlansRepository from '../repositories/IPlansRepository'
@@ -7,17 +9,21 @@ interface IRequest {
 }
 
 @injectable()
-class ListPlanService {
+class ShowPlanService {
   constructor(
     @inject('PlansRepository')
     private plansRepository: IPlansRepository, // eslint-disable-next-line prettier/prettier
   ) { }
 
-  public async execute({ id }: IRequest): Promise<Plan[]> {
-    const plans = await this.plansRepository.findAllById(id)
+  public async execute({ id }: IRequest): Promise<Plan> {
+    const plan = await this.plansRepository.findById(id)
 
-    return plans
+    if (!plan) {
+      throw new AppError('Plano não encontrado')
+    }
+
+    return plan
   }
 }
 
-export default ListPlanService
+export default ShowPlanService

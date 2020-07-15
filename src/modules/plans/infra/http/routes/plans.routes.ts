@@ -12,6 +12,8 @@ plansRouter.use(ensureAuthenticated)
 
 plansRouter.get('/', plansController.index)
 
+plansRouter.get('/:id', plansController.show)
+
 plansRouter.post(
   '/',
   celebrate({
