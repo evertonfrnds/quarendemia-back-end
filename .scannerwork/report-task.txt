@@ -1,8 +1,0 @@
-organization=bsi-es-20205
-projectKey=quarendemia-back-end
-serverUrl=https://sonarcloud.io
-serverVersion=8.0.0.9547
-branch=master
-dashboardUrl=https://sonarcloud.io/dashboard?id=quarendemia-back-end&branch=master
-ceTaskId=AXM0eq63BqciRpkny9My
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXM0eq63BqciRpkny9My
