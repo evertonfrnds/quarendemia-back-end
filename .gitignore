@@ -113,7 +113,7 @@ dist
 
 ormconfig.json
 # End of https://www.toptal.com/developers/gitignore/api/node
-.scannerwork/*
+
 sonar-project.properties
 .idea
 node_modules/
