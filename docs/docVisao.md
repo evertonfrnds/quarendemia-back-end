@@ -67,16 +67,15 @@ O Sistema Quarendemia foi criado para ajudar na administração de uma academia,
 
 ### 2.3 Perfis dos usuários
 
-O Sistema será usado por apenas 2 tipos de usuarios.
+O Sistema será usado por apenas 2 tipos de usuários.
 
 **Administrador**
 
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O Usuario administrador do sistema terá como objetivo gerenciar o sistema em geral, criar usuarios com perfis de Gerentes para gerenciar a Academia.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O usuário administrador do sistema terá como objetivo gerenciar o sistema em geral, criar usuários com perfis de Gerentes para gerenciar a Academia.
 
 **Gerente**
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O Usuario Gerente tem como objetivo cadastrar Clientes, criar planos, cadastrar as Mensalidades pagas ao longo do mês para ter um controle maior e ter um bom uso das ferramentas que o Sistema proporciona. 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; O usuário Gerente tem como objetivo cadastrar Clientes, criar planos, cadastrar as Mensalidades pagas ao longo do mês para ter um controle maior e ter um bom uso das ferramentas que o Sistema proporciona.
 
 ### 2.4 Riscos
 
@@ -86,7 +85,7 @@ O objetivo desta seção é o de produzir uma lista de riscos identificados em t
    |CÓDIGO|Risco |Plano de Ação |
    |---------|---------|---------|
    |RS01|Sistema não estar alinhado com o negócio | Elaborar uma documentação detalhada e levantamento de requisitos de qualidade|
-   |RS02|Tempo necessário pra codificação for insufuciente. | Planejar e estimar com atecedência o tempo de cada fase do projeto|
+   |RS02|Tempo necessário pra codificação for insuficiente. | Planejar e estimar com antecedência o tempo de cada fase do projeto|
    |RS03|Cliente pedir novas funcionalidades | Aumentar o tempo para a entrega|
    |RS04|Membro da equipe ficar doente por mais de 2 dias | Realocar as tarefas do membro pra equipe para os demais membros |
    |RS05|Falta de suporte técnico pós implantação | Inclusão desta cláusula no contrato|

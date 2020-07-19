@@ -33,7 +33,7 @@ Este documento descreve a arquitetura proposta, descrevendo os padrões arquitet
 | RNF                    | Descrição                                                                                                                        |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
 | Conexão com a internet | O Sistema deve manter uma conexão ativa com a Internet. Assim não terá perda nos dados que estão sendo manipulados pelo Sistema. |
-| Sistema operacional    | O Sistema é portado para Sistemas Operacionais especificos, então deve se comportar perfeitamente neles.                         |
+| Sistema operacional    | O Sistema é portado para Sistemas Operacionais específicos, então deve se comportar perfeitamente neles.                         |
 | Navegador              | O Sistema deve ter um comportamento responsivo nos navegadores sejam Mobile ou Desktop. Já que o acesso se dará via Navegadores. |
 
 # Mecanismos arquiteturais
@@ -43,14 +43,14 @@ Este documento descreve a arquitetura proposta, descrevendo os padrões arquitet
 | Front-End            | Interface de comunicação com o usuário do portal.  | React JS                   |
 | Build                | Programação da IDE para validação do código fonte. | Visual Studio Code         |
 | Deploy               | Configuração da IDE de deploy.                     | Visual Studio Code         |
-| Testes               | Aplicação para eecução dos testes no back-end      | Jest                       |
+| Testes               | Aplicação para execução dos testes no back-end     | Jest                       |
 | Rotas e server       | Módulo para subir o server e classificar rotas     | Express                    |
 | ORM                  | Módulo de tradução do JS para query em BD          | TypeORM                    |
 
 ## Tecnologias
 
-1. React JS: Bibloteca JS para criação de aplicações SPA;
-2. Visual Studio Code: IDE para de denvolvimento;
+1. React JS: Biblioteca JS para criação de aplicações SPA;
+2. Visual Studio Code: IDE para de desenvolvimento;
 3. Jest: Framework para execução de testes em projetos JS;
 4. Espress: Modulo para criação de server http em JS;
 5. TypeORM: ORM para projetos javascript ou typescript;
@@ -59,8 +59,8 @@ Este documento descreve a arquitetura proposta, descrevendo os padrões arquitet
 
 #### Fundamentação:
 
-Diante das especificações do Projeto, decidimos aplicar a arquiteura Model-View-Controller(MVC), ela se torna melhor diante do pouco tempo de implementação e o desenvolvimento paralelo fica mais eficiente. Arquiteturas em n camadas e microserviços descartamos pois o projeto é de pequeno porte e não faz sentido aplicar.
-Decidimos usar um banco de daods relacional por haver muitos relacionamentos entre as entidades.Em relação a um banco de dados não relacional se torna melhor para o nosso sistema.
+Diante das especificações do Projeto, decidimos aplicar a arquitetura Model-View-Controller(MVC), ela se torna melhor diante do pouco tempo de implementação e o desenvolvimento paralelo fica mais eficiente. Arquiteturas em n camadas e microserviços descartamos pois o projeto é de pequeno porte e não faz sentido aplicar.
+Decidimos usar um banco de dados relacional por haver muitos relacionamentos entre as entidades.Em relação a um banco de dados não relacional se torna melhor para o nosso sistema.
 
 # Validação com Casos de Teste
 

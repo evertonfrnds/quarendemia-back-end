@@ -28,10 +28,10 @@ O presente documento mostra uma breve descrição dos User Stories do sistema **
 | :--------- | :----: | :-------------------------------------------------------------- | :-------------------------------- |
 | 22/06/2020 | 0.0.1  | Template e descrição do documento; descrição do User Story US01 | José Rubens de Oliveira Junior    |
 | 23/06/2020 | 0.0.2  | descrição do User Story US02                                    | Everton Ankelys Fernandes Bezerra |
-| 23/06/2020 | 0.0.3  | Derscrição do User Story US03                                   | Douglas Pacelli Maia Baltazar     |
-| 24/06/2020 | 0.0.4  | Derscrição do User Story US04                                   | Fernando José dos Santos          |
-| 11/07/2020 | 1.0.0  | Derscrição do User Story US05                                   | Fernando José dos Santos          |
-| 12/07/2020 | 1.0.0  | Derscrição do User Story US06                                   | Douglas Pacelli Maia Baltazar          |
+| 23/06/2020 | 0.0.3  | Descrição do User Story US03                                    | Douglas Pacelli Maia Baltazar     |
+| 24/06/2020 | 0.0.4  | Descrição do User Story US04                                    | Fernando José dos Santos          |
+| 11/07/2020 | 1.0.0  | Descrição do User Story US05                                    | Fernando José dos Santos          |
+| 12/07/2020 | 1.0.0  | Descrição do User Story US06                                    | Douglas Pacelli Maia Baltazar     |
 
 ### **User Story US01 - Manter Usuário**
 
@@ -48,19 +48,19 @@ O presente documento mostra uma breve descrição dos User Stories do sistema **
 
 |                           |                                                                                                                                                                                                                                                                                                 |
 | ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Descrição**             | O sistema deve promover a funcionalidade de recuperação de senha do usuário, onde na tela de login inicial, o sistema promova uma opção de recuperação de senha, na qual o usuario vai informar o email de cadastro, e a partir disso o sistema retorna uma pagina para a redefinição de senha; |
+| **Descrição**             | O sistema deve promover a funcionalidade de recuperação de senha do usuário, onde na tela de login inicial, o sistema promova uma opção de recuperação de senha, na qual o usuário vai informar o email de cadastro, e a partir disso o sistema retorna uma pagina para a redefinição de senha; |
 | **Requisitos envolvidos** | RF01, RF02, RF05, RNF03                                                                                                                                                                                                                                                                         |
 | **Prioridade**            | Essencial                                                                                                                                                                                                                                                                                       |
 | **Estimativa**            | 8 h                                                                                                                                                                                                                                                                                             |
 | **Tempo Gasto (real):**   | 5 h                                                                                                                                                                                                                                                                                             |
 | **Tamanho Funcional**     | 7 PF                                                                                                                                                                                                                                                                                            |
-| **Estória do usuário**    | Quando o usuário esquecer a senha da sua conta. Na tela de login haverá uma opção de recuperação de senha, onde o usuário irá clicar e abrirar uma nova tela na qual ele vai digitar o email, logo após ele receberá um email contendo um link para alterar a senha.                            |
+| **Estória do usuário**    | Quando o usuário esquecer a senha da sua conta. Na tela de login haverá uma opção de recuperação de senha, onde o usuário irá clicar e abrir uma nova tela na qual ele vai digitar o email, logo após ele receberá um email contendo um link para alterar a senha.                              |
 
 ### **User Story US03 - Manter Cliente**
 
 |                           |                                                                                                                                                                                                                                                                                                                                            |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Descrição**             | O sistema deve manter um cadastro de clientes para que o Usuario tenha acesso. Um Cliente tem os atributos id, nome, email, status. O cliente terá uma ligação com a mensalidade e assim o Usuario saberá quais os clientes que estão com debitos, quais estão aptos a frequentar. O Cliente tambem tem ligações com Planos e com Medidas. |
+| **Descrição**             | O sistema deve manter um cadastro de clientes para que o usuário tenha acesso. Um Cliente tem os atributos id, nome, email, status. O cliente terá uma ligação com a mensalidade e assim o usuário saberá quais os clientes que estão com débitos, quais estão aptos a frequentar. O Cliente também tem ligações com Planos e com Medidas. |
 | **Requisitos envolvidos** | RF11, RF12, RF13, RF14, RF15, RNF01, RNF03                                                                                                                                                                                                                                                                                                 |
 | **Prioridade**            | Essencial                                                                                                                                                                                                                                                                                                                                  |
 | **Estimativa**            | 8h                                                                                                                                                                                                                                                                                                                                         |
@@ -109,14 +109,13 @@ O presente documento mostra uma breve descrição dos User Stories do sistema **
 | **Tempo Gasto (real):**   | 10 h                                                                                                                                   |
 | **Tamanho Funcional**     | 7 PF                                                                                                                                   |
 
-
 ### **User Story US06 - Manter Mensalidades**
 
-|                           |                                                                                                                                        |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+|                           |                                                                                                                                                                         |
+| ------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Descrição**             | O sistema deve conseguir manter as mensalidades dos clientes da academia ao longo do mês para que o Gerente tenha controle financeiro e uma boa auditoria das finanças. |
-| **Requisitos envolvidos** | RF15, RF16, RF17, RF18, RNF01, RNF02 e RNF03                                                                                           |
-| **Prioridade**            | Essencial                                                                                                                              |
-| **Estimativa**            | XXX h                                                                                                                                    |
-| **Tempo Gasto (real):**   | XXX h                                                                                                                                   |
-| **Tamanho Funcional**     | XXX PF                                                                                                                                   |
+| **Requisitos envolvidos** | RF15, RF16, RF17, RF18, RNF01, RNF02 e RNF03                                                                                                                            |
+| **Prioridade**            | Essencial                                                                                                                                                               |
+| **Estimativa**            | XXX h                                                                                                                                                                   |
+| **Tempo Gasto (real):**   | XXX h                                                                                                                                                                   |
+| **Tamanho Funcional**     | XXX PF                                                                                                                                                                  |
