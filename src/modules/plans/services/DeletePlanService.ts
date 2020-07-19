@@ -9,8 +9,8 @@ interface IRequest {
 class DeletePlanService {
   constructor(
     @inject('PlansRepository')
-    private plansRepository: IPlansRepository, // eslint-disable-next-line prettier/prettier
-  ) { }
+    private plansRepository: IPlansRepository,
+  ) {}
 
   public async execute({ plan_id }: IRequest): Promise<void> {
     const plans = await this.plansRepository.delete(plan_id)

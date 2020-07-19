@@ -15,6 +15,9 @@ import PlansRepository from '@modules/plans/infra/typeorm/repositories/PlansRepo
 import IClientRepository from '@modules/clients/repositories/IClientRepository'
 import ClientRepository from '@modules/clients/infra/typeorm/repositories/ClientRepository'
 
+import IPaymentRepository from '@modules/payment/repositories/IPaymentRepository'
+import PaymentRepository from '@modules/payment/infra/typeorm/repositories/PaymentRepository'
+
 container.registerSingleton<IUsersRepository>(
   'UsersRepository',
   UsersRepository,
@@ -33,4 +36,9 @@ container.registerSingleton<IPlansRepository>(
 container.registerSingleton<IClientRepository>(
   'ClientRepository',
   ClientRepository,
+)
+
+container.registerSingleton<IPaymentRepository>(
+  'PaymentRepository',
+  PaymentRepository,
 )
