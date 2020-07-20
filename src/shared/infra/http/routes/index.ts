@@ -18,8 +18,6 @@ routes.use('/password', passwordRouter)
 routes.use('/plans', planRouter)
 routes.use('/clients', clientRouter)
 routes.use('/payments', paymentRouter)
-=======
 routes.use('/meansures', meansuresRouter)
->>>>>>> test
 
 export default routes
