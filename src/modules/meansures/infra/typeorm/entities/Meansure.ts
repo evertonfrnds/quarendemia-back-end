@@ -12,7 +12,7 @@ class Meansure {
   id: string
 
   @Column()
-  id_client: string
+  client_id: string
 
   @Column()
   height: number
