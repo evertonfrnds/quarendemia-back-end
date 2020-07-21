@@ -12,7 +12,7 @@ interface IRequest {
 }
 
 @injectable()
-class UpdateMeansureService {
+class UpdateMeansuresService {
   constructor(
     @inject('MeansuresRepository')
     private meansuresRepository: IMeansuresRepository, // eslint-disable-next-line prettier/prettier
@@ -40,4 +40,4 @@ class UpdateMeansureService {
   }
 }
 
-export default UpdateMeansureService
+export default UpdateMeansuresService

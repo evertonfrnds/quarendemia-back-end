@@ -2,7 +2,7 @@ import { Request, Response } from 'express'
 import { container } from 'tsyringe'
 import { classToClass } from 'class-transformer'
 
-import ListMeasureService from '@modules/meansures/services/ListMeansuresService'
+import ListMeasuresService from '@modules/meansures/services/ListMeansuresService'
 import ShowMeansuresService from '@modules/meansures/services/ShowMeansuresService'
 import CreateMeansuresService from '@modules/meansures/services/CreateMeansuresService'
 import UpdateMeansuresService from '@modules/meansures/services/UpdateMeansuresService'
@@ -11,7 +11,7 @@ import DeleteMeansuresService from '@modules/meansures/services/DeleteMeansuresS
 export default class MeansuresController {
   public async index(request: Request, response: Response): Promise<Response> {
     const { id } = request.user
-    const listMeansures = container.resolve(ListMeasureService)
+    const listMeansures = container.resolve(ListMeasuresService)
 
     const meansures = await listMeansures.execute({ id })
 
@@ -32,14 +32,14 @@ export default class MeansuresController {
     const { name, description, value } = request.body
     const createMeansures = container.resolve(CreateMeansuresService)
 
-    const meansures = await createMeansures.execute({
-      user_id: id,
+    const meansure = await createMeansures.execute({
+      id,
       name,
       description,
       value,
     })
 
-    return response.json(classToClass(meansures))
+    return response.json(classToClass(meansure))
   }
 
   public async update(request: Request, response: Response): Promise<Response> {
@@ -48,23 +48,23 @@ export default class MeansuresController {
 
     const updateMeansures = container.resolve(UpdateMeansuresService)
 
-    const meansures = await updateMeansures.execute({
-      meansures_id: id,
+    const meansure = await updateMeansures.execute({
+      id,
       name,
       description,
       value,
     })
 
-    return response.json(classToClass(meansures))
+    return response.json(classToClass(meansure))
   }
 
   public async delete(request: Request, response: Response): Promise<Response> {
     const { id } = request.params
 
-    const deleteMeansures = container.resolve(DeleteMeansuresService)
+    const deleteMeansure = container.resolve(DeleteMeansuresService)
 
-    await deleteMeansures.execute({
-      meansures_id: id,
+    await deleteMeansure.execute({
+      meansure_id: id,
     })
 
     return response.status(204).send()

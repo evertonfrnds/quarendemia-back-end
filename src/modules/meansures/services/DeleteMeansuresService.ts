@@ -6,7 +6,7 @@ interface IRequest {
 }
 
 @injectable()
-class DeleteMeansureService {
+class DeleteMeansuresService {
   constructor(
     @inject('MeansuresRepository')
     private meansuresRepository: IMeansuresRepository,
@@ -19,4 +19,4 @@ class DeleteMeansureService {
   }
 }
 
-export default DeleteMeansureService
+export default DeleteMeansuresService

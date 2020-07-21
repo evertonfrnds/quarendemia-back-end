@@ -2,9 +2,9 @@ import Meansure from '../infra/typeorm/entities/Meansure'
 import ICreateMeansureDTO from '../dtos/ICreateMeansureDTO'
 
 export default interface IMeansuresRepository {
-  // findAllById(id: string): Promise<Meansure[]>
-  // findById(id: string): Promise<Meansure | undefined>
+  findAllById(id: string): Promise<Meansure[]>
+  findById(id: string): Promise<Meansure | undefined>
   delete(client_id: string): Promise<void> // verificar
   create(data: ICreateMeansureDTO): Promise<Meansure>
-  // save(meansure: Meansure): Promise<Meansure>
+  save(meansure: Meansure): Promise<Meansure>
 }

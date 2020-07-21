@@ -20,7 +20,7 @@ class MeansuresRepository implements IMeansuresRepository {
 
   public async findById(id: string): Promise<Meansure | undefined> {
     const meansure = await this.ormRepository.findOne(id, {
-      select: ['id', 'id_client'],
+      select: ['id', 'client_id'],
     })
 
     return meansure

@@ -10,7 +10,7 @@ class ListMeansuresService {
   ) {}
 
   public async execute(): Promise<Meansure[]> {
-    const meansures = await this.meansuresRepository.findAll()
+    const meansures = await this.meansuresRepository.findAllById(id)
 
     return meansures
   }
