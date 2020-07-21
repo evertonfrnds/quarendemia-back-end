@@ -49,6 +49,11 @@ export default class CreateMeansures1595286264596
             isNullable: false,
           },
           {
+            name: 'waist',
+            type: 'decimal',
+            isNullable: false,
+          },
+          {
             name: 'abdomen',
             type: 'decimal',
             isNullable: false,
