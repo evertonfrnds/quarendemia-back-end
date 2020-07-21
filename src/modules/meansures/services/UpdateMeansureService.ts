@@ -5,14 +5,14 @@ import { injectable, inject } from 'tsyringe'
 import IMeansuresRepository from '../repositories/IMeansuresRepository'
 
 interface IRequest {
-  meansure_id: string
+  plan_id: string
   name: string
   description: string
   value: number
 }
 
 @injectable()
-class UpdateMeansuresService {
+class UpdateMeansureService {
   constructor(
     @inject('MeansuresRepository')
     private meansuresRepository: IMeansuresRepository, // eslint-disable-next-line prettier/prettier
@@ -40,4 +40,4 @@ class UpdateMeansuresService {
   }
 }
 
-export default UpdateMeansuresService
+export default UpdateMeansureService
