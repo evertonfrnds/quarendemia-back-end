@@ -1,7 +1,7 @@
 import Meansure from '@modules/meansures/infra/typeorm/entities/Meansure'
 import { injectable, inject } from 'tsyringe'
 import IMeansuresRepository from '../repositories/IMeansuresRepository'
-// Lista oo histórico de Medidas
+
 @injectable()
 class ListMeansuresService {
   constructor(

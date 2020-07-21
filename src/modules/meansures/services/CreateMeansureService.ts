@@ -4,7 +4,7 @@ import Meansure from '../infra/typeorm/entities/Meansure'
 
 interface IRequest {
   id: string
-  client_id: string
+  id_client: string
   height: number
   weight: number
   neck: number
@@ -25,7 +25,7 @@ interface IRequest {
 }
 
 @injectable()
-class CreateMeansuresService {
+class CreateMeansureService {
   constructor(
     @inject('MeansuresRepository')
     private meansuresRepository: IMeansuresRepository, // eslint-disable-next-line prettier/prettier
@@ -33,7 +33,7 @@ class CreateMeansuresService {
 
   public async execute({
     id,
-    client_id,
+    id_client,
     height,
     weight,
     neck,
@@ -54,7 +54,7 @@ class CreateMeansuresService {
   }: IRequest): Promise<Meansure> {
     const meansures = await this.meansuresRepository.create({
       id,
-      client_id,
+      id_client,
       height,
       weight,
       neck,
@@ -78,4 +78,4 @@ class CreateMeansuresService {
   }
 }
 
-export default CreateMeansuresService
+export default CreateMeansureService
