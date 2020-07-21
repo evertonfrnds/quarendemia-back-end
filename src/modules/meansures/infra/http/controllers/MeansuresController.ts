@@ -2,12 +2,11 @@ import { Request, Response } from 'express'
 import { container } from 'tsyringe'
 import { classToClass } from 'class-transformer'
 
-import ListMeasureService from '@modules/meansures/services/ListMeasureService'
-import ShowPlanService from '@modules/plans/services/ShowPlanService'
-import CreatePlanService from '@modules/plans/services/CreatePlanService'
-import UpdatePlanService from '@modules/plans/services/UpdatePlanService'
-import DeletePlanService from '@modules/plans/services/DeletePlanService'
-import meansuresRouter from '../routes/meansures.routes'
+import ListMeasureService from '@modules/meansures/services/ListMeansuresService'
+import ShowMeansuresService from '@modules/meansures/services/ShowMeansuresService'
+import CreateMeansuresService from '@modules/meansures/services/CreateMeansuresService'
+import UpdateMeansuresService from '@modules/meansures/services/UpdateMeansuresService'
+import DeleteMeansuresService from '@modules/meansures/services/DeleteMeansuresService'
 
 export default class MeansuresController {
   public async index(request: Request, response: Response): Promise<Response> {
@@ -21,51 +20,51 @@ export default class MeansuresController {
 
   public async show(request: Request, response: Response): Promise<Response> {
     const { id } = request.params
-    const showPlan = container.resolve(ShowPlanService)
+    const showMeansures = container.resolve(ShowMeansuresService)
 
-    const plan = await showPlan.execute({ id })
+    const meansures = await showMeansures.execute({ id })
 
-    return response.json(plan)
+    return response.json(meansures)
   }
 
   public async create(request: Request, response: Response): Promise<Response> {
     const { id } = request.user
     const { name, description, value } = request.body
-    const createPlan = container.resolve(CreatePlanService)
+    const createMeansures = container.resolve(CreateMeansuresService)
 
-    const plan = await createPlan.execute({
+    const meansures = await createMeansures.execute({
       user_id: id,
       name,
       description,
       value,
     })
 
-    return response.json(classToClass(plan))
+    return response.json(classToClass(meansures))
   }
 
   public async update(request: Request, response: Response): Promise<Response> {
     const { name, description, value } = request.body
     const { id } = request.params
 
-    const updatePlan = container.resolve(UpdatePlanService)
+    const updateMeansures = container.resolve(UpdateMeansuresService)
 
-    const plan = await updatePlan.execute({
-      plan_id: id,
+    const meansures = await updateMeansures.execute({
+      meansures_id: id,
       name,
       description,
       value,
     })
 
-    return response.json(classToClass(plan))
+    return response.json(classToClass(meansures))
   }
 
   public async delete(request: Request, response: Response): Promise<Response> {
     const { id } = request.params
 
-    const deletePlan = container.resolve(DeletePlanService)
+    const deleteMeansures = container.resolve(DeleteMeansuresService)
 
-    await deletePlan.execute({
-      plan_id: id,
+    await deleteMeansures.execute({
+      meansures_id: id,
     })
 
     return response.status(204).send()
