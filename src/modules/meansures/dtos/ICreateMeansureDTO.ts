@@ -1,6 +1,6 @@
 export default interface ICreateMeansureDTO {
   id: string
-  id_client: string
+  client_id: string
   height: number
   weight: number
   neck: number
