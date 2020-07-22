@@ -62,7 +62,7 @@ export default class CreateClients1594425293867 implements MigrationInterface {
             referencedTableName: 'plans',
             referencedColumnNames: ['id'],
             columnNames: ['plan_id'],
-            onDelete: 'CASCADE',
+            onDelete: 'SET NULL',
             onUpdate: 'CASCADE',
           },
         ],
