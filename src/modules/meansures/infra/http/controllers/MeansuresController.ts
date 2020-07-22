@@ -28,15 +28,46 @@ export default class MeansuresController {
   }
 
   public async create(request: Request, response: Response): Promise<Response> {
-    const { id } = request.user
-    const { name, description, value } = request.body
+    const {
+      client_id,
+      height,
+      weight,
+      neck,
+      torax_sup,
+      torax_inf,
+      bust,
+      waist,
+      abdomen,
+      qualdril,
+      thigh_left,
+      thigh_right,
+      calf_left,
+      calf_right,
+      arm_left,
+      arm_right,
+      forearm_left,
+      forearm_right,
+    } = request.body
     const createMeansures = container.resolve(CreateMeansuresService)
 
     const meansure = await createMeansures.execute({
-      id,
-      name,
-      description,
-      value,
+      height,
+      weight,
+      neck,
+      torax_sup,
+      torax_inf,
+      bust,
+      waist,
+      abdomen,
+      qualdril,
+      thigh_left,
+      thigh_right,
+      calf_left,
+      calf_right,
+      arm_left,
+      arm_right,
+      forearm_left,
+      forearm_right,
     })
 
     return response.json(classToClass(meansure))
