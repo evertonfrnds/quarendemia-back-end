@@ -14,6 +14,11 @@ export default class CreatePayments1595181229007 implements MigrationInterface {
             default: 'uuid_generate_v4()',
           },
           {
+            name: 'user_id',
+            type: 'uuid',
+            isNullable: false,
+          },
+          {
             name: 'client_id',
             type: 'uuid',
             isNullable: false,
@@ -50,6 +55,14 @@ export default class CreatePayments1595181229007 implements MigrationInterface {
             referencedTableName: 'clients',
             referencedColumnNames: ['id'],
             columnNames: ['client_id'],
+            onDelete: 'CASCADE',
+            onUpdate: 'CASCADE',
+          },
+          {
+            name: 'PaymentUser',
+            referencedTableName: 'users',
+            referencedColumnNames: ['id'],
+            columnNames: ['user_id'],
             onDelete: 'CASCADE',
             onUpdate: 'CASCADE',
           },

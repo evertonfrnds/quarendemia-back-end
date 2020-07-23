@@ -4,7 +4,10 @@ import {
   PrimaryGeneratedColumn,
   CreateDateColumn,
   UpdateDateColumn,
+  ManyToOne,
+  JoinColumn,
 } from 'typeorm'
+import User from '@modules/users/infra/typeorm/entities/User'
 
 @Entity('plans')
 class Plans {
@@ -13,6 +16,10 @@ class Plans {
 
   @Column()
   user_id: string
+
+  @ManyToOne(() => User)
+  @JoinColumn({ name: 'user_id' })
+  user: User
 
   @Column()
   name: string

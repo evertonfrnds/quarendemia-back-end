@@ -13,8 +13,8 @@ export default class PaymentRepository implements IPaymentRepository {
     this.ormRepository = getRepository(Payment)
   }
 
-  async findAll(id: string): Promise<Payment[]> {
-    const payments = await this.ormRepository.find({ where: { client_id: id } })
+  async findAll(user_id: string): Promise<Payment[]> {
+    const payments = await this.ormRepository.find({ where: { user_id } })
     return payments
   }
 

@@ -121,7 +121,7 @@ export default class CreateMeasures1595441851294 implements MigrationInterface {
             referencedTableName: 'clients',
             referencedColumnNames: ['id'],
             columnNames: ['client_id'],
-            onDelete: 'SET NULL',
+            onDelete: 'CASCADE',
             onUpdate: 'CASCADE',
           },
         ],

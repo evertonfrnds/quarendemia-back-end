@@ -4,7 +4,10 @@ import {
   PrimaryGeneratedColumn,
   CreateDateColumn,
   UpdateDateColumn,
+  ManyToOne,
+  JoinColumn,
 } from 'typeorm'
+import Client from '@modules/clients/infra/typeorm/entities/Client'
 
 @Entity('measures')
 class Measure {
@@ -13,6 +16,10 @@ class Measure {
 
   @Column()
   client_id: string
+
+  @ManyToOne(() => Client)
+  @JoinColumn({ name: 'client_id' })
+  client: Client
 
   @Column()
   height: number

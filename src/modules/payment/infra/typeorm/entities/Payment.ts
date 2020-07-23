@@ -4,7 +4,11 @@ import {
   PrimaryGeneratedColumn,
   CreateDateColumn,
   UpdateDateColumn,
+  JoinColumn,
+  ManyToOne,
 } from 'typeorm'
+import Client from '@modules/clients/infra/typeorm/entities/Client'
+import User from '@modules/users/infra/typeorm/entities/User'
 
 @Entity('payments')
 class Payments {
@@ -13,6 +17,17 @@ class Payments {
 
   @Column()
   client_id: string
+
+  @ManyToOne(() => Client)
+  @JoinColumn({ name: 'client_id' })
+  client: Client
+
+  @Column()
+  user_id: string
+
+  @ManyToOne(() => User)
+  @JoinColumn({ name: 'user_id' })
+  user: User
 
   @Column('decimal')
   month: number

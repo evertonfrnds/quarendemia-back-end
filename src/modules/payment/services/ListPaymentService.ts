@@ -3,7 +3,7 @@ import { injectable, inject } from 'tsyringe'
 import IPaymentRepository from '../repositories/IPaymentRepository'
 
 interface IRequest {
-  id: string
+  user_id: string
 }
 
 @injectable()
@@ -13,8 +13,8 @@ class ListPaymentService {
     private paymentRepository: IPaymentRepository,
   ) {}
 
-  public async execute({ id }: IRequest): Promise<Payment[]> {
-    const payments = await this.paymentRepository.findAll(id)
+  public async execute({ user_id }: IRequest): Promise<Payment[]> {
+    const payments = await this.paymentRepository.findAll(user_id)
 
     return payments
   }
