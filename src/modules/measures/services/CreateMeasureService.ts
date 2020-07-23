@@ -1,6 +1,6 @@
 import { injectable, inject } from 'tsyringe'
-import IMeansuresRepository from '../repositories/IMeansuresRepository'
-import Meansure from '../infra/typeorm/entities/Meansure'
+import IMeasuresRepository from '../repositories/IMeasuresRepository'
+import Measure from '../infra/typeorm/entities/Measure'
 
 interface IRequest {
   id: string
@@ -8,12 +8,12 @@ interface IRequest {
   height: number
   weight: number
   neck: number
-  torax_sup: number
-  torax_inf: number
+  torax_top: number
+  torax_bottom: number
   bust: number
   waist: number
   abdomen: number
-  qualdril: number
+  hip: number
   thigh_left: number
   thigh_right: number
   calf_left: number
@@ -25,10 +25,10 @@ interface IRequest {
 }
 
 @injectable()
-class CreateMeansuresService {
+class CreateMeasureService {
   constructor(
-    @inject('MeansuresRepository')
-    private meansuresRepository: IMeansuresRepository, // eslint-disable-next-line prettier/prettier
+    @inject('MeasuresRepository')
+    private measuresRepository: IMeasuresRepository, // eslint-disable-next-line prettier/prettier
   ) {}
 
   public async execute({
@@ -37,12 +37,12 @@ class CreateMeansuresService {
     height,
     weight,
     neck,
-    torax_sup,
-    torax_inf,
+    torax_top,
+    torax_bottom,
     bust,
     waist,
     abdomen,
-    qualdril,
+    hip,
     thigh_left,
     thigh_right,
     calf_left,
@@ -51,19 +51,19 @@ class CreateMeansuresService {
     arm_right,
     forearm_left,
     forearm_right,
-  }: IRequest): Promise<Meansure> {
-    const meansures = await this.meansuresRepository.create({
+  }: IRequest): Promise<Measure> {
+    const measures = await this.measuresRepository.create({
       id,
       client_id,
       height,
       weight,
       neck,
-      torax_sup,
-      torax_inf,
+      torax_top,
+      torax_bottom,
       bust,
       waist,
       abdomen,
-      qualdril,
+      hip,
       thigh_left,
       thigh_right,
       calf_left,
@@ -74,8 +74,8 @@ class CreateMeansuresService {
       forearm_right,
     })
 
-    return meansures
+    return measures
   }
 }
 
-export default CreateMeansuresService
+export default CreateMeasureService

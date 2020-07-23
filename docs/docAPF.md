@@ -84,10 +84,10 @@ O Sistema Quarendemia foi criado para ajudar na administração de uma academia,
 | Update monthlyFees                   |         EE          |      MÉDIA       |   4    |
 | Delete monthlyFees                   |         EE          |      MÉDIA       |   4    |
 | View monthlyFees                     |         CE          |      MÉDIA       |   4    |
-| Create Meansures                     |         EE          |      MÉDIA       |   4    |
-| Update Meansures                     |         EE          |      MÉDIA       |   4    |
-| Delete Meansures                     |         EE          |      MÉDIA       |   4    |
-| View Meansures                       |         CE          |      MÉDIA       |   4    |
+| Create Measures                      |         EE          |      MÉDIA       |   4    |
+| Update Measures                      |         EE          |      MÉDIA       |   4    |
+| Delete Measures                      |         EE          |      MÉDIA       |   4    |
+| View Measures                        |         CE          |      MÉDIA       |   4    |
 | **Contagem Estimativa não ajustada** |                     |                  |  130   |
 
 ### Contagem Detalhada (Cd)
