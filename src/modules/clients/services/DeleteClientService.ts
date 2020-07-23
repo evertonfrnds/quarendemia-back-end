@@ -21,7 +21,7 @@ class DeleteClientService {
       throw new AppError('Cliente não existe')
     }
 
-    client.isActive = false
+    client.is_active = false
 
     await this.clientRepository.save(client)
   }

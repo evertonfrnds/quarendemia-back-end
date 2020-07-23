@@ -6,5 +6,4 @@ export default interface IClientRepository {
   findById(id: string): Promise<Client | undefined>
   create(data: ICreateClientDTO): Promise<Client>
   save(client: Client): Promise<Client>
-  isActive(id: string): Promise<boolean>
 }

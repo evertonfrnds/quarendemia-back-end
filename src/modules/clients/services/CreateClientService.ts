@@ -27,7 +27,7 @@ class CreateClientService {
       name,
       email,
       plan_id,
-      isActive: true,
+      is_active: true,
     })
 
     return client

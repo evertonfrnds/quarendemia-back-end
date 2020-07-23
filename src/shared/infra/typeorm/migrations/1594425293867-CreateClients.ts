@@ -33,7 +33,7 @@ export default class CreateClients1594425293867 implements MigrationInterface {
             isNullable: false,
           },
           {
-            name: 'isActive',
+            name: 'is_active',
             type: 'boolean',
             isNullable: false,
           },

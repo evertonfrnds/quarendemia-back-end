@@ -24,7 +24,7 @@ class Client {
   email: string
 
   @Column()
-  isActive: boolean
+  is_active: boolean
 
   @CreateDateColumn()
   created_at: Date
