@@ -12,7 +12,7 @@ interface IRequest {
 class ShowMeasureService {
   constructor(
     @inject('MeasuresRepository')
-    private measuresRepository: IMeasuresRepository, // eslint-disable-next-line prettier/prettier
+    private measuresRepository: IMeasuresRepository,
   ) {}
 
   public async execute({ id }: IRequest): Promise<Measure> {
