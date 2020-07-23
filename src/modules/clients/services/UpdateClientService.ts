@@ -6,9 +6,9 @@ import IClientRepository from '../repositories/IClientRepository'
 
 interface IRequest {
   client_id: string
+  plan_id: string
   name: string
   email: string
-  plan_id: string
 }
 
 @injectable()
@@ -27,12 +27,13 @@ class UpdateClientService {
     const client = await this.clientRepository.findById(client_id)
 
     if (!client) {
-      throw new AppError('Plano não encontrado.')
+      throw new AppError('Cliente não encontrado.')
     }
 
     client.name = name
     client.email = email
     client.plan_id = plan_id
+    client.plan.id = plan_id
 
     await this.clientRepository.save(client)
 
