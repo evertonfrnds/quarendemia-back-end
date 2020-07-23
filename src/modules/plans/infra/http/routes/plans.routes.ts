@@ -18,8 +18,8 @@ plansRouter.post(
   '/',
   celebrate({
     [Segments.BODY]: {
-      name: Joi.string().min(6).required(),
-      description: Joi.string().required(),
+      name: Joi.string().required(),
+      description: Joi.string(),
       value: Joi.number().required(),
     },
   }),
@@ -30,8 +30,8 @@ plansRouter.put(
   '/:id',
   celebrate({
     [Segments.BODY]: {
-      name: Joi.string().min(6).required(),
-      description: Joi.string().required(),
+      name: Joi.string().required(),
+      description: Joi.string(),
       value: Joi.number().required(),
     },
   }),

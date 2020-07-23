@@ -25,7 +25,7 @@ export default class CreatePlans1594257433770 implements MigrationInterface {
           {
             name: 'description',
             type: 'varchar',
-            isNullable: false,
+            isNullable: true,
           },
           {
             name: 'value',
