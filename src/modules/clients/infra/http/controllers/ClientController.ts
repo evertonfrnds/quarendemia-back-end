@@ -15,7 +15,7 @@ export default class ClientController {
 
     const clients = await listClients.execute({ user_id: id })
 
-    return response.json(clients)
+    return response.json(classToClass(clients))
   }
 
   public async show(request: Request, response: Response): Promise<Response> {
@@ -24,7 +24,7 @@ export default class ClientController {
 
     const client = await showClient.execute({ client_id: id })
 
-    return response.json(client)
+    return response.json(classToClass(client))
   }
 
   public async create(request: Request, response: Response): Promise<Response> {
