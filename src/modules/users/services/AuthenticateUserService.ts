@@ -35,6 +35,10 @@ class AuthenticateUserService {
       throw new AppError('Combinação de email/senha incorreto.', 401)
     }
 
+    if (user.isActive === false) {
+      throw new AppError('Usuário bloqueado.', 401)
+    }
+
     const passwordMatched = await this.hashProvider.compareHash(
       password,
       user.password,
