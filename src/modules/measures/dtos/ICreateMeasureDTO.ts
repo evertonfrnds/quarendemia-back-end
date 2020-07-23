@@ -1,15 +1,15 @@
-export default interface ICreateMeansureDTO {
+export default interface ICreateMeasureDTO {
   id: string
   client_id: string
   height: number
   weight: number
   neck: number
-  torax_sup: number
-  torax_inf: number
+  torax_top: number
+  torax_bottom: number
   bust: number
   waist: number
   abdomen: number
-  qualdril: number
+  hip: number
   thigh_left: number
   thigh_right: number
   calf_left: number
