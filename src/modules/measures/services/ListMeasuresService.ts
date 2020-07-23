@@ -3,7 +3,7 @@ import { injectable, inject } from 'tsyringe'
 import IMeasuresRepository from '../repositories/IMeasuresRepository'
 
 interface IRequest {
-  id: string
+  client_id: string
 }
 @injectable()
 class ListMeasuresService {
@@ -12,8 +12,8 @@ class ListMeasuresService {
     private measuresRepository: IMeasuresRepository,
   ) {}
 
-  public async execute({ id }: IRequest): Promise<Measure[]> {
-    const measures = await this.measuresRepository.findAllByClient_id(id)
+  public async execute({ client_id }: IRequest): Promise<Measure[]> {
+    const measures = await this.measuresRepository.findAllByClientId(client_id)
 
     return measures
   }

@@ -10,10 +10,10 @@ import DeleteMeasureService from '@modules/measures/services/DeleteMeasureServic
 
 export default class MeasuresController {
   public async index(request: Request, response: Response): Promise<Response> {
-    const { id } = request.user
+    const { client_id } = request.query
     const listMeasures = container.resolve(ListMeasuresService)
 
-    const measures = await listMeasures.execute({ id })
+    const measures = await listMeasures.execute({ client_id })
 
     return response.json(measures)
   }
@@ -28,8 +28,9 @@ export default class MeasuresController {
   }
 
   public async create(request: Request, response: Response): Promise<Response> {
-    const { client_id } = request.user
     const {
+      id,
+      client_id,
       height,
       weight,
       neck,
@@ -52,6 +53,7 @@ export default class MeasuresController {
 
     const measure = await createMeasure.execute({
       id,
+      client_id,
       height,
       weight,
       neck,
@@ -85,7 +87,7 @@ export default class MeasuresController {
       bust,
       waist,
       abdomen,
-      qualdril,
+      hip,
       thigh_left,
       thigh_right,
       calf_left,
@@ -109,7 +111,7 @@ export default class MeasuresController {
       bust,
       waist,
       abdomen,
-      qualdril,
+      hip,
       thigh_left,
       thigh_right,
       calf_left,

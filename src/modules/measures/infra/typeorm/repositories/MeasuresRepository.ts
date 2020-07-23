@@ -13,8 +13,8 @@ class MeasuresRepository implements IMeasuresRepository {
     this.ormRepository = getRepository(Measure)
   }
 
-  public async findAllByClient_id(id: string): Promise<Measure[]> {
-    const measure = await this.ormRepository.find({ where: { user_id: id } })
+  public async findAllByClientId(client_id: string): Promise<Measure[]> {
+    const measure = await this.ormRepository.find({ where: { client_id } })
     return measure
   }
 
