@@ -39,6 +39,6 @@
 // Adicionando as tabelas.
 [Usuario|+id: Integer;+nome: VARCHAR;+email: VARCHAR;+cargo: Integer;-password: VARCHAR;+status: Integer;+token: Integer;+valid_date_token: DATE]
 [Planos|+id: Integer; +nome: VARCHAR; +descricao: VARCHAR; +valor: Double][Cliente|+id: integer; +nome: varchar; +email: varchar; +status: integer]
-[Medidas|+id: Integer; +altura: Integer; +peso: Float; +pescoco: Float; +torax_sup: Float; +torax_inf: Float;+busto: Float; +cintura: Float; +abdomen: Float; +quadril: Float; +coxa: VARCHAR; +panturrilha: VARCHAR; +braco: VARCHAR; +antebraco: VARCHAR; +created_at: Date]
+[Medidas|+id: Integer; +altura: Integer; +peso: Float; +pescoco: Float; +torax_bottom: Float; +torax_bottom: Float;+busto: Float; +cintura: Float; +abdomen: Float; +hip: Float; +coxa: VARCHAR; +panturrilha: VARCHAR; +braco: VARCHAR; +antebraco: VARCHAR; +created_at: Date]
 [mensalidade|+id: integer; +mes: integer; +ano: integer; +status: integer]
 ```

@@ -70,12 +70,12 @@
 | **altura**          | Integer      |             | 32         | 180        |
 | **peso**            | Float        |             | 64         | 84         |
 | **pescoco**         | Float        |             | 1          | 34         |
-| **torax_sup**       | Float        |             | 21         | 99         |
-| **torax_inf**       | Float        |             | 1          | 89         |
+| **torax_bottom**    | Float        |             | 21         | 99         |
+| **torax_bottom**    | Float        |             | 1          | 89         |
 | **busto**           | Float        |             | 64         | 111        |
 | **cintura**         | Float        |             | 10         | 90         |
 | **abdomen**         | Float        |             | 10         | 94         |
-| **quadril**         | Float        |             | 10         | 103        |
+| **hip**             | Float        |             | 10         | 103        |
 | **coxa_esq**        | Float        |             | 10         | 66         |
 | **coxa_dir**        | Float        |             | 10         | 66         |
 | **panturrilha_esq** | Float        |             | 10         | 41         |

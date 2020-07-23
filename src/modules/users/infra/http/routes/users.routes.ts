@@ -10,6 +10,7 @@ const usersController = new UsersController()
 
 usersRouter.use(ensureIsAdmin)
 
+usersRouter.get('/:id', usersController.show)
 usersRouter.get('/', usersController.index)
 
 usersRouter.post(
@@ -33,7 +34,7 @@ usersRouter.put(
       email: Joi.string().email().required(),
       type: Joi.string().required(),
       isActive: Joi.boolean().required(),
-      password: Joi.string().min(6),
+      password: Joi.string(),
     },
   }),
   usersController.update,

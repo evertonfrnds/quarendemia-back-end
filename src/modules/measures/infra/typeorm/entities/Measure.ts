@@ -6,8 +6,8 @@ import {
   UpdateDateColumn,
 } from 'typeorm'
 
-@Entity('meansures')
-class Meansure {
+@Entity('measures')
+class Measure {
   @PrimaryGeneratedColumn('uuid')
   id: string
 
@@ -24,10 +24,10 @@ class Meansure {
   neck: number
 
   @Column('decimal')
-  torax_sup: number
+  torax_top: number
 
   @Column('decimal')
-  torax_inf: number
+  torax_bottom: number
 
   @Column('decimal')
   bust: number
@@ -39,7 +39,7 @@ class Meansure {
   abdomen: number
 
   @Column('decimal')
-  quadril: number
+  hip: number
 
   @Column('decimal')
   thigh_left: number
@@ -72,4 +72,4 @@ class Meansure {
   updated_at: Date
 }
 
-export default Meansure
+export default Measure

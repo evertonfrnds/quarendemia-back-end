@@ -18,8 +18,8 @@ import ClientRepository from '@modules/clients/infra/typeorm/repositories/Client
 import IPaymentRepository from '@modules/payment/repositories/IPaymentRepository'
 import PaymentRepository from '@modules/payment/infra/typeorm/repositories/PaymentRepository'
 
-import IMeansuresRepository from '@modules/meansures/repositories/IMeansuresRepository'
-import MeansuresRepository from '@modules/meansures/infra/typeorm/repositories/MeansuresRepository'
+import IMeasuresRepository from '@modules/measures/repositories/IMeasuresRepository'
+import MeasuresRepository from '@modules/measures/infra/typeorm/repositories/MeasuresRepository'
 
 container.registerSingleton<IUsersRepository>(
   'UsersRepository',
@@ -45,7 +45,7 @@ container.registerSingleton<IPaymentRepository>(
   'PaymentRepository',
   PaymentRepository,
 )
-container.registerSingleton<IMeansuresRepository>(
-  'MeansuresRepository',
-  MeansuresRepository,
+container.registerSingleton<IMeasuresRepository>(
+  'MeasuresRepository',
+  MeasuresRepository,
 )

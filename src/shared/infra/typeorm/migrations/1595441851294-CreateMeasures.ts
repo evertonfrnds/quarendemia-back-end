@@ -1,6 +1,6 @@
 import { MigrationInterface, QueryRunner, Table } from 'typeorm'
 
-export default class CreateMeasures1595286264596 implements MigrationInterface {
+export default class CreateMeasures1595441851294 implements MigrationInterface {
   public async up(queryRunner: QueryRunner): Promise<void> {
     await queryRunner.createTable(
       new Table({
@@ -16,6 +16,7 @@ export default class CreateMeasures1595286264596 implements MigrationInterface {
           {
             name: 'client_id',
             type: 'uuid',
+            isNullable: false,
           },
           {
             name: 'height',
@@ -30,78 +31,78 @@ export default class CreateMeasures1595286264596 implements MigrationInterface {
           {
             name: 'neck',
             type: 'decimal',
-            isNullable: false,
+            isNullable: true,
           },
           {
             name: 'torax_top',
             type: 'decimal',
-            isNullable: false,
+            isNullable: true,
           },
           {
             name: 'torax_bottom',
             type: 'decimal',
-            isNullable: false,
+            isNullable: true,
           },
           {
             name: 'bust',
             type: 'decimal',
-            isNullable: false,
+            isNullable: true,
           },
           {
             name: 'waist',
             type: 'decimal',
-            isNullable: false,
+            isNullable: true,
           },
           {
             name: 'abdomen',
             type: 'decimal',
-            isNullable: false,
+            isNullable: true,
           },
           {
-            name: 'qualdril',
+            name: 'hip',
             type: 'decimal',
-            isNullable: false,
+            isNullable: true,
           },
           {
             name: 'thigh_left',
             type: 'decimal',
-            isNullable: false,
+            isNullable: true,
           },
           {
             name: 'thigh_right',
             type: 'decimal',
-            isNullable: false,
+            isNullable: true,
           },
 
           {
             name: 'calf_left',
             type: 'decimal',
-            isNullable: false,
+            isNullable: true,
           },
           {
             name: 'calf_right',
             type: 'decimal',
-            isNullable: false,
+            isNullable: true,
           },
           {
             name: 'arm_left',
             type: 'decimal',
-            isNullable: false,
+            isNullable: true,
           },
           {
             name: 'arm_right',
             type: 'decimal',
-            isNullable: false,
+            isNullable: true,
           },
           {
             name: 'forearm_left',
             type: 'decimal',
-            isNullable: false,
+            isNullable: true,
           },
           {
-            name: 'foearm_right',
+            name: 'forearm_right',
             type: 'decimal',
-            isNullable: false,
+            isNullable: true,
           },
           {
             name: 'created_at',
@@ -120,7 +121,7 @@ export default class CreateMeasures1595286264596 implements MigrationInterface {
             referencedTableName: 'clients',
             referencedColumnNames: ['id'],
             columnNames: ['client_id'],
-            onDelete: 'CASCADE',
+            onDelete: 'SET NULL',
             onUpdate: 'CASCADE',
           },
         ],

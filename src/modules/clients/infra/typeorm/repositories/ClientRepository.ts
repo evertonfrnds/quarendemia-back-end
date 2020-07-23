@@ -21,17 +21,20 @@ class ClientRepository implements IClientRepository {
   }
 
   public async findById(id: string): Promise<Client | undefined> {
-    const client = await this.ormRepository.findOne(id)
+    const client = await this.ormRepository.findOne({
+      where: { id },
+      relations: ['plan'],
+    })
 
     return client
   }
 
   public async create(clientData: ICreateClientDTO): Promise<Client> {
-    const fodase = this.ormRepository.create(clientData)
+    const client = this.ormRepository.create(clientData)
 
-    await this.ormRepository.save(fodase)
+    await this.ormRepository.save(client)
 
-    return fodase
+    return client
   }
 
   public async save(client: Client): Promise<Client> {

@@ -2,12 +2,23 @@ import { Request, Response } from 'express'
 import { container } from 'tsyringe'
 import { classToClass } from 'class-transformer'
 
+import ShowUserService from '@modules/users/services/ShowUserService'
 import ListUsersService from '@modules/users/services/ListUsersService'
 import CreateUserService from '@modules/users/services/CreateUserService'
 import UpdateUserService from '@modules/users/services/UpdateUserService'
 import DeleteUserService from '@modules/users/services/DeleteUserService'
 
 export default class UsersController {
+  public async show(request: Request, response: Response): Promise<Response> {
+    const { id } = request.params
+
+    const showUserService = container.resolve(ShowUserService)
+
+    const user = await showUserService.execute({ id })
+
+    return response.json(classToClass(user))
+  }
+
   public async index(request: Request, response: Response): Promise<Response> {
     const listUsers = container.resolve(ListUsersService)
 
