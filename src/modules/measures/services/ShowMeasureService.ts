@@ -16,13 +16,13 @@ class ShowMeasureService {
   ) {}
 
   public async execute({ id }: IRequest): Promise<Measure> {
-    const measure = await this.measuresRepository.findAllByClient_id(id)
+    const measures = await this.measuresRepository.findAllByClient_id(id)
 
-    if (!measure) {
+    if (!measures) {
       throw new AppError('Medidas não encontradas')
     }
 
-    return measure
+    return measures
   }
 }
 

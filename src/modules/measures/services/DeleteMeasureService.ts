@@ -13,9 +13,9 @@ class DeleteMeasureService {
   ) {}
 
   public async execute({ measure_id }: IRequest): Promise<void> {
-    const measure = await this.measuresRepository.delete(measure_id)
+    const measures = await this.measuresRepository.delete(measure_id)
 
-    return measure
+    return measures
   }
 }
 
