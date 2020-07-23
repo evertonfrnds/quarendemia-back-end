@@ -11,9 +11,12 @@ import DeleteMeasureService from '@modules/measures/services/DeleteMeasureServic
 export default class MeasuresController {
   public async index(request: Request, response: Response): Promise<Response> {
     const { client_id } = request.query
+
+    const clientId = client_id ? client_id.toString() : ''
+
     const listMeasures = container.resolve(ListMeasuresService)
 
-    const measures = await listMeasures.execute({ client_id })
+    const measures = await listMeasures.execute({ client_id: clientId })
 
     return response.json(measures)
   }
@@ -97,11 +100,12 @@ export default class MeasuresController {
       forearm_left,
       forearm_right,
     } = request.body
-    const { client_id } = request.params
+    const { id } = request.params
 
     const updateMeasure = container.resolve(UpdateMeasureService)
 
     const measure = await updateMeasure.execute({
+      id,
       client_id,
       height,
       weight,
@@ -126,11 +130,11 @@ export default class MeasuresController {
   }
 
   public async delete(request: Request, response: Response): Promise<Response> {
-    const { client_id } = request.params
+    const { id } = request.params
 
     const deleteMeasure = container.resolve(DeleteMeasureService)
 
-    await deleteMeasure.execute({})
+    await deleteMeasure.execute({ id })
 
     return response.status(204).send()
   }

@@ -34,6 +34,8 @@ class UpdateMeasureService {
   ) {}
 
   public async execute({
+    id,
+    client_id,
     height,
     weight,
     neck,
@@ -52,12 +54,13 @@ class UpdateMeasureService {
     forearm_left,
     forearm_right,
   }: IRequest): Promise<Measure> {
-    const measure = await this.measuresRepository.findByClient_id(id)
+    const measure = await this.measuresRepository.findById(id)
 
     if (!measure) {
       throw new AppError('Medida não encontrada.')
     }
 
+    measure.client_id = client_id
     measure.height = height
     measure.weight = weight
     measure.neck = neck
@@ -75,6 +78,7 @@ class UpdateMeasureService {
     measure.arm_right = arm_right
     measure.forearm_left = forearm_left
     measure.forearm_right = forearm_right
+
     await this.measuresRepository.save(measure)
 
     return measure

@@ -10,7 +10,15 @@ const measuresController = new MeasuresController()
 
 measuresRouter.use(ensureAuthenticated)
 
-measuresRouter.get('/', measuresController.index)
+measuresRouter.get(
+  '/',
+  celebrate({
+    [Segments.QUERY]: {
+      client_id: Joi.string().required(),
+    },
+  }),
+  measuresController.index,
+)
 
 measuresRouter.get('/:id', measuresController.show)
 

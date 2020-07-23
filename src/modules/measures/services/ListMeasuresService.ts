@@ -3,8 +3,9 @@ import { injectable, inject } from 'tsyringe'
 import IMeasuresRepository from '../repositories/IMeasuresRepository'
 
 interface IRequest {
-  client_id: string
+  client_id: string | undefined
 }
+
 @injectable()
 class ListMeasuresService {
   constructor(

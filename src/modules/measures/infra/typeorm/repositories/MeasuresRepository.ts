@@ -19,9 +19,7 @@ class MeasuresRepository implements IMeasuresRepository {
   }
 
   public async findById(id: string): Promise<Measure | undefined> {
-    const measure = await this.ormRepository.findOne(id, {
-      select: ['id', 'client_id'],
-    })
+    const measure = await this.ormRepository.findOne(id)
 
     return measure
   }
