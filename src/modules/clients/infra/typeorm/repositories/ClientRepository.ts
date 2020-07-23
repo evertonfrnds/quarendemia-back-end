@@ -15,7 +15,7 @@ class ClientRepository implements IClientRepository {
 
   public async findAllById(id: string): Promise<Client[]> {
     const client = await this.ormRepository.find({
-      where: { user_id: id, isActive: true },
+      where: { user_id: id },
       relations: ['plan'],
     })
     return client
