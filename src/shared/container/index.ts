@@ -15,6 +15,9 @@ import PlansRepository from '@modules/plans/infra/typeorm/repositories/PlansRepo
 import IClientRepository from '@modules/clients/repositories/IClientRepository'
 import ClientRepository from '@modules/clients/infra/typeorm/repositories/ClientRepository'
 
+import IDueClientsRepository from '@modules/clients/repositories/IDueClients'
+import DueClientRepository from '@modules/clients/infra/typeorm/repositories/DueClientRepository'
+
 import IPaymentRepository from '@modules/payment/repositories/IPaymentRepository'
 import PaymentRepository from '@modules/payment/infra/typeorm/repositories/PaymentRepository'
 
@@ -48,4 +51,8 @@ container.registerSingleton<IPaymentRepository>(
 container.registerSingleton<IMeasuresRepository>(
   'MeasuresRepository',
   MeasuresRepository,
+)
+container.registerSingleton<IDueClientsRepository>(
+  'DueClientsRepository',
+  DueClientRepository,
 )

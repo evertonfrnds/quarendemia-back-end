@@ -6,6 +6,7 @@ import sessionsRouter from '@modules/users/infra/http/routes/sessions.routes'
 import passwordRouter from '@modules/users/infra/http/routes/password.routes'
 import planRouter from '@modules/plans/infra/http/routes/plans.routes'
 import clientRouter from '@modules/clients/infra/http/routes/client.routes'
+import dueClientRouter from '@modules/clients/infra/http/routes/due-clients.routes'
 import paymentRouter from '@modules/payment/infra/http/routes/payment.routes'
 import measuresRouter from '@modules/measures/infra/http/routes/measures.routes'
 
@@ -19,5 +20,6 @@ routes.use('/plans', planRouter)
 routes.use('/clients', clientRouter)
 routes.use('/payments', paymentRouter)
 routes.use('/measures', measuresRouter)
+routes.use('/due-clients', dueClientRouter)
 
 export default routes
