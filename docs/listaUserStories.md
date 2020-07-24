@@ -116,6 +116,6 @@ O presente documento mostra uma breve descrição dos User Stories do sistema **
 | **Descrição**             | O sistema deve conseguir manter as mensalidades dos clientes da academia ao longo do mês para que o Gerente tenha controle financeiro e uma boa auditoria das finanças. |
 | **Requisitos envolvidos** | RF15, RF16, RF17, RF18, RNF01, RNF02 e RNF03                                                                                                                            |
 | **Prioridade**            | Essencial                                                                                                                                                               |
-| **Estimativa**            | XXX h                                                                                                                                                                   |
-| **Tempo Gasto (real):**   | XXX h                                                                                                                                                                   |
-| **Tamanho Funcional**     | XXX PF                                                                                                                                                                  |
+| **Estimativa**            | 8 h h                                                                                                                                                                   |
+| **Tempo Gasto (real):**   | 10 h h                                                                                                                                                                   |
+| **Tamanho Funcional**     | 7 PF PF                                                                                                                                                                  |
