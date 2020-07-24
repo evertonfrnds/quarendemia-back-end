@@ -32,6 +32,16 @@ class UpdateClientService {
       throw new AppError('Cliente não encontrado.')
     }
 
+    if (client.email !== email) {
+      const checkClientsExists = await this.clientsRepository.findByEmail(email)
+
+      if (checkClientsExists && checkClientsExists.user_id === client.user_id) {
+        throw new AppError(
+          'O usuário já possui um cliente com o e-mail selecionado.',
+        )
+      }
+    }
+
     client.name = name
     client.email = email
     client.plan_id = plan_id

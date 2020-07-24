@@ -1,5 +1,5 @@
 import { injectable, inject } from 'tsyringe'
-import IPaymentRepository from '../repositories/IPaymentRepository'
+import IPaymentsRepository from '../repositories/IPaymentsRepository'
 
 interface IRequest {
   user_id: string
@@ -10,12 +10,12 @@ interface IRequest {
 @injectable()
 class GetTotalPaymentService {
   constructor(
-    @inject('PaymentRepository')
-    private paymentRepository: IPaymentRepository,
+    @inject('PaymentsRepository')
+    private paymentsRepository: IPaymentsRepository,
   ) {}
 
   public async execute({ user_id, month, year }: IRequest): Promise<number> {
-    const payments = await this.paymentRepository.getTotalPaymentFromMonth({
+    const payments = await this.paymentsRepository.getTotalPaymentFromMonth({
       user_id,
       month,
       year,

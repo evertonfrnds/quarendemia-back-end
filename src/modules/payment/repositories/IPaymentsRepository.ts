@@ -3,7 +3,7 @@ import Payment from '../infra/typeorm/entities/Payment'
 import IGetTotalPaymentDTO from '../dtos/IGetTotalPaymentDTO'
 import IListPaymentsDTO from '../dtos/IListPaymentsDTO'
 
-export default interface IPaymentRepository {
+export default interface IPaymentsRepository {
   getTotalPaymentFromMonth(data: IGetTotalPaymentDTO): Promise<number>
   findAll(data: IListPaymentsDTO): Promise<Payment[]>
   findById(id: string): Promise<Payment | undefined>

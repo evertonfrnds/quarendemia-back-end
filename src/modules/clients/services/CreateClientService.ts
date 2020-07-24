@@ -1,5 +1,6 @@
 import Client from '@modules/clients/infra/typeorm/entities/Client'
 import { injectable, inject } from 'tsyringe'
+import AppError from '@shared/errors/AppError'
 import IClientsRepository from '../repositories/IClientsRepository'
 
 interface IRequest {
@@ -22,6 +23,14 @@ class CreateClientService {
     name,
     email,
   }: IRequest): Promise<Client> {
+    const checkClientsExists = await this.clientsRepository.findByEmail(email)
+
+    if (checkClientsExists && checkClientsExists.user_id === user_id) {
+      throw new AppError(
+        'O usuário já possui um cliente com o e-mail selecionado.',
+      )
+    }
+
     const client = await this.clientsRepository.create({
       user_id,
       name,

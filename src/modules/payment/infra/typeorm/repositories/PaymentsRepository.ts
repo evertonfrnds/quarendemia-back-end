@@ -1,6 +1,6 @@
 import { getRepository, Repository } from 'typeorm'
 
-import IPaymentRepository from '@modules/payment/repositories/IPaymentRepository'
+import IPaymentsRepository from '@modules/payment/repositories/IPaymentsRepository'
 
 import ICreatePaymentDTO from '@modules/payment/dtos/ICreatePaymentDTO'
 
@@ -8,7 +8,7 @@ import IGetTotalPaymentDTO from '@modules/payment/dtos/IGetTotalPaymentDTO'
 import IListPaymentsDTO from '@modules/payment/dtos/IListPaymentsDTO'
 import Payment from '../entities/Payment'
 
-export default class PaymentRepository implements IPaymentRepository {
+export default class PaymentsRepository implements IPaymentsRepository {
   private ormRepository: Repository<Payment>
 
   constructor() {

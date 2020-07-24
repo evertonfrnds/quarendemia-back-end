@@ -1,13 +1,13 @@
 import { Request, Response } from 'express'
 import { container } from 'tsyringe'
 
-import ListDueClients from '@modules/clients/services/ListDueClients'
+import ListDueClientsService from '@modules/clients/services/ListDueClientsService'
 
 export default class ClientPaymentController {
   public async index(request: Request, response: Response): Promise<Response> {
     const { id } = request.user
     const { month, year } = request.params
-    const listDueClients = container.resolve(ListDueClients)
+    const listDueClients = container.resolve(ListDueClientsService)
 
     const clients = await listDueClients.execute({
       user_id: id,

@@ -30,6 +30,14 @@ class ClientRepository implements IClientRepository {
     return client
   }
 
+  public async findByEmail(email: string): Promise<Client | undefined> {
+    const client = await this.ormRepository.findOne({
+      where: { email },
+    })
+
+    return client
+  }
+
   public async create(clientData: ICreateClientDTO): Promise<Client> {
     const client = this.ormRepository.create(clientData)
 
