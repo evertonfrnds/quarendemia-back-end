@@ -2,15 +2,15 @@ import { Router } from 'express'
 import { celebrate, Segments, Joi } from 'celebrate'
 
 import ensureAuthenticated from '@modules/users/infra/http/middlewares/ensureAuthenticated'
-import PaymentController from '../controllers/PaymentController'
+import PaymentsController from '../controllers/PaymentsController'
 
 const paymentRouter = Router()
-const paymentController = new PaymentController()
+const paymentsController = new PaymentsController()
 
 paymentRouter.use(ensureAuthenticated)
 
-paymentRouter.get('/payment-total/:month/:year', paymentController.show)
-paymentRouter.get('/:month/:year', paymentController.index)
+paymentRouter.get('/payment-total/:month/:year', paymentsController.show)
+paymentRouter.get('/:month/:year', paymentsController.index)
 
 paymentRouter.post(
   '/',
@@ -21,9 +21,9 @@ paymentRouter.post(
       year: Joi.number().required(),
     },
   }),
-  paymentController.create,
+  paymentsController.create,
 )
 
-paymentRouter.delete('/:id', paymentController.delete)
+paymentRouter.delete('/:id', paymentsController.delete)
 
 export default paymentRouter

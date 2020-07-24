@@ -2,12 +2,12 @@ import { Request, Response } from 'express'
 import { container } from 'tsyringe'
 import { classToClass } from 'class-transformer'
 
-import ListPaymentService from '@modules/payment/services/ListPaymentService'
+import ListPaymentsService from '@modules/payment/services/ListPaymentsService'
 import CreatePaymentService from '@modules/payment/services/CreatePaymentService'
 import DeletePaymentService from '@modules/payment/services/DeletePaymentService'
 import GetTotalPaymentService from '@modules/payment/services/GetTotalPaymentService'
 
-export default class PaymentController {
+export default class PaymentsController {
   public async show(request: Request, response: Response): Promise<Response> {
     const { id } = request.user
     const { month, year } = request.params
@@ -25,9 +25,9 @@ export default class PaymentController {
   public async index(request: Request, response: Response): Promise<Response> {
     const { id } = request.user
     const { month, year } = request.params
-    const listPayment = container.resolve(ListPaymentService)
+    const listPayments = container.resolve(ListPaymentsService)
 
-    const payments = await listPayment.execute({
+    const payments = await listPayments.execute({
       user_id: id,
       month: Number(month),
       year: Number(year),
