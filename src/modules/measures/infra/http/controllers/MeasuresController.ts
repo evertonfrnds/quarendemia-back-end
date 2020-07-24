@@ -12,11 +12,11 @@ export default class MeasuresController {
   public async index(request: Request, response: Response): Promise<Response> {
     const { client_id } = request.query
 
-    const clientId = client_id ? client_id.toString() : ''
-
     const listMeasures = container.resolve(ListMeasuresService)
 
-    const measures = await listMeasures.execute({ client_id: clientId })
+    const measures = await listMeasures.execute({
+      client_id: client_id ? client_id.toString() : '',
+    })
 
     return response.json(measures)
   }
@@ -32,7 +32,6 @@ export default class MeasuresController {
 
   public async create(request: Request, response: Response): Promise<Response> {
     const {
-      id,
       client_id,
       height,
       weight,
@@ -55,7 +54,6 @@ export default class MeasuresController {
     const createMeasure = container.resolve(CreateMeasureService)
 
     const measure = await createMeasure.execute({
-      id,
       client_id,
       height,
       weight,

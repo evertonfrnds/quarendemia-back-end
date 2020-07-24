@@ -3,7 +3,7 @@ import { container } from 'tsyringe'
 import { classToClass } from 'class-transformer'
 
 import CreateClientService from '@modules/clients/services/CreateClientService'
-import ListClientService from '@modules/clients/services/ListClientService'
+import ListClientsService from '@modules/clients/services/ListClientsService'
 import UpdateClientService from '@modules/clients/services/UpdateClientService'
 import ShowClientService from '@modules/clients/services/ShowClientService'
 import DeleteClientService from '@modules/clients/services/DeleteClientService'
@@ -11,7 +11,7 @@ import DeleteClientService from '@modules/clients/services/DeleteClientService'
 export default class ClientController {
   public async index(request: Request, response: Response): Promise<Response> {
     const { id } = request.user
-    const listClients = container.resolve(ListClientService)
+    const listClients = container.resolve(ListClientsService)
 
     const clients = await listClients.execute({ user_id: id })
 
@@ -22,7 +22,7 @@ export default class ClientController {
     const { id } = request.params
     const showClient = container.resolve(ShowClientService)
 
-    const client = await showClient.execute({ client_id: id })
+    const client = await showClient.execute({ id })
 
     return response.json(classToClass(client))
   }
@@ -43,16 +43,17 @@ export default class ClientController {
   }
 
   public async update(request: Request, response: Response): Promise<Response> {
-    const { name, email, plan_id } = request.body
+    const { name, email, plan_id, is_active } = request.body
     const { id } = request.params
 
     const updateClient = container.resolve(UpdateClientService)
 
     const client = await updateClient.execute({
-      client_id: id,
+      id,
       plan_id,
       name,
       email,
+      is_active,
     })
 
     return response.json(classToClass(client))
@@ -64,7 +65,7 @@ export default class ClientController {
     const deleteClient = container.resolve(DeleteClientService)
 
     await deleteClient.execute({
-      client_id: id,
+      id,
     })
 
     return response.status(204).send()

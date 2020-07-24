@@ -12,14 +12,14 @@ import UserTokensRepository from '@modules/users/infra/typeorm/repositories/User
 import IPlansRepository from '@modules/plans/repositories/IPlansRepository'
 import PlansRepository from '@modules/plans/infra/typeorm/repositories/PlansRepository'
 
-import IClientRepository from '@modules/clients/repositories/IClientRepository'
-import ClientRepository from '@modules/clients/infra/typeorm/repositories/ClientRepository'
+import IClientsRepository from '@modules/clients/repositories/IClientsRepository'
+import ClientsRepository from '@modules/clients/infra/typeorm/repositories/ClientsRepository'
 
-import IDueClientsRepository from '@modules/clients/repositories/IDueClients'
-import DueClientRepository from '@modules/clients/infra/typeorm/repositories/DueClientRepository'
+import IDueClientsRepository from '@modules/clients/repositories/IDueClientsRepository'
+import DueClientsRepository from '@modules/clients/infra/typeorm/repositories/DueClientsRepository'
 
-import IPaymentRepository from '@modules/payment/repositories/IPaymentRepository'
-import PaymentRepository from '@modules/payment/infra/typeorm/repositories/PaymentRepository'
+import IPaymentsRepository from '@modules/payment/repositories/IPaymentsRepository'
+import PaymentsRepository from '@modules/payment/infra/typeorm/repositories/PaymentsRepository'
 
 import IMeasuresRepository from '@modules/measures/repositories/IMeasuresRepository'
 import MeasuresRepository from '@modules/measures/infra/typeorm/repositories/MeasuresRepository'
@@ -39,20 +39,22 @@ container.registerSingleton<IPlansRepository>(
   PlansRepository,
 )
 
-container.registerSingleton<IClientRepository>(
-  'ClientRepository',
-  ClientRepository,
+container.registerSingleton<IClientsRepository>(
+  'ClientsRepository',
+  ClientsRepository,
 )
 
-container.registerSingleton<IPaymentRepository>(
-  'PaymentRepository',
-  PaymentRepository,
+container.registerSingleton<IPaymentsRepository>(
+  'PaymentsRepository',
+  PaymentsRepository,
 )
+
 container.registerSingleton<IMeasuresRepository>(
   'MeasuresRepository',
   MeasuresRepository,
 )
+
 container.registerSingleton<IDueClientsRepository>(
   'DueClientsRepository',
-  DueClientRepository,
+  DueClientsRepository,
 )

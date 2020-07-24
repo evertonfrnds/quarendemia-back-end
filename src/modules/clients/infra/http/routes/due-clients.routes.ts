@@ -2,7 +2,7 @@ import { Router } from 'express'
 
 import ensureAuthenticated from '@modules/users/infra/http/middlewares/ensureAuthenticated'
 
-import ClientPaymentController from '../controllers/ClientPaymentController'
+import ClientPaymentController from '../controllers/ClientPaymentsController'
 
 const dueClientRoutes = Router()
 const clientPaymentController = new ClientPaymentController()

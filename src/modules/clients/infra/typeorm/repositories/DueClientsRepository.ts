@@ -1,10 +1,10 @@
 import { getRepository, Repository } from 'typeorm'
 
-import IDueClients from '@modules/clients/repositories/IDueClients'
+import IDueClientsRepository from '@modules/clients/repositories/IDueClientsRepository'
 
 import Client from '../entities/Client'
 
-class DueClientRepository implements IDueClients {
+class DueClientRepository implements IDueClientsRepository {
   private ormRepository: Repository<Client>
 
   constructor() {

@@ -42,7 +42,7 @@ class CreateUserService {
       email,
       type,
       password: hashedPassword,
-      isActive: true,
+      is_active: true,
     })
 
     return user

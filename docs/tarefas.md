@@ -4,13 +4,13 @@ Este plano de iteração será usado como exemplo da disciplina Engenharia de So
 
 ## Calendário da Iterações
 
-| Iteração | Data início | Data Final | Apresentação | Gerente   |
-| -------- | ----------- | ---------- | ------------ | --------- |
-| It1      | 19/06/2020  | 24/06/2020 | 26/06/2020   | Everton   |
-| It2      | 24/06/2020  | 02/07/2020 | 03/07/2020   | Fernando  |
-| It3      | 02/07/2020  | 09/07/2020 | 10/07/2020   | Douglas   |
-| It4      | 09/07/2020  | 16/07/2020 | 17/07/2020   | José Rubens | 
-| It5      | 16/07/2020  | 23/07/2020 | 24/07/2020   | Gerente 5 |
+| Iteração | Data início | Data Final | Apresentação | Gerente     |
+| -------- | ----------- | ---------- | ------------ | ----------- |
+| It1      | 19/06/2020  | 24/06/2020 | 26/06/2020   | Everton     |
+| It2      | 24/06/2020  | 02/07/2020 | 03/07/2020   | Fernando    |
+| It3      | 02/07/2020  | 09/07/2020 | 10/07/2020   | Douglas     |
+| It4      | 09/07/2020  | 16/07/2020 | 17/07/2020   | José Rubens |
+| It5      | 16/07/2020  | 23/07/2020 | 24/07/2020   | José Rubens |
 
 ## Descrição das Tarefas em cada Iteração
 
@@ -93,7 +93,6 @@ A Iteração 3 começou dia 03/07/2020 e vai até 12/07/2020. As atividades dess
 - Por ser mais experiente, continuou dando suporte aos outros desenvolvedores;
 - Commitou tudo que foi pedido por seu Gerente;
 
-
 ### T04 - Iteração 4 - Desenvolvimento Final
 
 A Iteração 4 começou dia 15/07/2020 e vai até 22/07/2020. As atividades dessa tarefa foram:
@@ -121,3 +120,29 @@ A Iteração 4 começou dia 15/07/2020 e vai até 22/07/2020. As atividades dess
 - Trabalhou junto ao Gerente no Front-end;
 - Fez alguns testes de aceitação para ver se o Sistema estava de acordo com o proposto;
 - Commitou tudo que foi pedido por seu Gerente;
+
+### T05 - Iteração 5 - Ajustes Finais e Envio.
+
+A Iteração 5 começou dia 22/07/2020 e vai até 26/07/2020. As atividades dessa tarefa foram:
+
+#### Gerente It05 ( José Rubens )
+
+- Correção do BackEnd de Usuarios;
+- Correção do FrontEnd de Usuarios;
+- Por ser mais experiente corrigiu alguns codesmells;
+
+#### Analista / Desenvolvedor It05 ( Douglas )
+
+- BackEnd de Pagamentos;
+- FrontEnd de Pagamentos;
+- Modelo Conceitual;
+
+#### Desenvolvedor It05 ( Fernando )
+
+- BackEnd de Medidas;
+- FrontEnd de Medidas;
+
+#### Desenvolvedor It05 ( Everton )
+
+- BackEnd de Clientes;
+- FrontEnd de Clientes;

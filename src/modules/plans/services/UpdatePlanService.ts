@@ -5,7 +5,7 @@ import { injectable, inject } from 'tsyringe'
 import IPlansRepository from '../repositories/IPlansRepository'
 
 interface IRequest {
-  plan_id: string
+  id: string
   name: string
   description: string
   value: number
@@ -15,16 +15,16 @@ interface IRequest {
 class UpdatePlanService {
   constructor(
     @inject('PlansRepository')
-    private plansRepository: IPlansRepository, // eslint-disable-next-line prettier/prettier
-  ) { }
+    private plansRepository: IPlansRepository,
+  ) {}
 
   public async execute({
-    plan_id,
+    id,
     name,
     description,
     value,
   }: IRequest): Promise<Plan> {
-    const plan = await this.plansRepository.findById(plan_id)
+    const plan = await this.plansRepository.findById(id)
 
     if (!plan) {
       throw new AppError('Plano não encontrado.')

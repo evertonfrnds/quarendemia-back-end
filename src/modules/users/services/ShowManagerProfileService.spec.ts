@@ -18,12 +18,12 @@ describe('ShowManagerProfile', () => {
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'common',
-      isActive: true,
+      is_active: true,
       password: '12345678',
     })
 
     const profile = await showManagerProfile.execute({
-      user_id: user.id,
+      id: user.id,
     })
 
     expect(profile.name).toBe('Joseph Monkey')
@@ -33,7 +33,7 @@ describe('ShowManagerProfile', () => {
   it('should not be able to show manager profile from non-existing user', async () => {
     await expect(
       showManagerProfile.execute({
-        user_id: 'non-existing-user',
+        id: 'non-existing-user',
       }),
     ).rejects.toBeInstanceOf(AppError)
   })

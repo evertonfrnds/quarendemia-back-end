@@ -1,8 +1,9 @@
 import { injectable, inject } from 'tsyringe'
+import AppError from '@shared/errors/AppError'
 import IPlansRepository from '../repositories/IPlansRepository'
 
 interface IRequest {
-  plan_id: string
+  id: string
 }
 
 @injectable()
@@ -12,10 +13,14 @@ class DeletePlanService {
     private plansRepository: IPlansRepository,
   ) {}
 
-  public async execute({ plan_id }: IRequest): Promise<void> {
-    const plans = await this.plansRepository.delete(plan_id)
+  public async execute({ id }: IRequest): Promise<void> {
+    const plan = await this.plansRepository.findById(id)
 
-    return plans
+    if (!plan) {
+      throw new AppError('Plano não encontrado')
+    }
+
+    await this.plansRepository.delete(id)
   }
 }
 

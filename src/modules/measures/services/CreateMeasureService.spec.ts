@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import AppError from '@shared/errors/AppError'
 
 import FakeMeasuresRepository from '../repositories/fakes/FakeMeasuresRepository'
@@ -6,45 +7,43 @@ import CreateMeasureService from './CreateMeasureService'
 
 let fakeMeasuresRepository: FakeMeasuresRepository
 
+=======
+import FakeMeasuresRepository from '../repositories/fakes/FakeMeasuresRepository'
+import CreateMeasureService from './CreateMeasureService'
+
+let fakeMeasuresRepository: FakeMeasuresRepository
+>>>>>>> 546c9a2a9198cc3fd3cff4df67718a8b8a484e6c
 let createMeasure: CreateMeasureService
 
 describe('CreateMeasure', () => {
   beforeEach(() => {
     fakeMeasuresRepository = new FakeMeasuresRepository()
-    fakeHashProvider = new FakeHashProvider()
 
-    createMeasure = new CreateMeasureService(
-      fakeMeasuresRepository,
-      fakeHashProvider,
-    )
+    createMeasure = new CreateMeasureService(fakeMeasuresRepository)
   })
 
-  it('should be able to create a new user', async () => {
-    const user = await createMeasure.execute({
-      name: 'Joseph Monkey',
-      email: 'josephmonkey@gmail.com',
-      type: 'common',
-      password: '12345678',
+  it('should be able to create a new measure', async () => {
+    const measure = await createMeasure.execute({
+      client_id: 'valid-client-id',
+      height: 100,
+      weight: 100,
+      neck: 100,
+      abdomen: 100,
+      arm_left: 100,
+      arm_right: 100,
+      bust: 100,
+      calf_left: 100,
+      calf_right: 100,
+      forearm_left: 100,
+      forearm_right: 100,
+      hip: 100,
+      thigh_left: 100,
+      thigh_right: 100,
+      torax_bottom: 100,
+      torax_top: 100,
+      waist: 100,
     })
 
-    expect(user).toHaveProperty('id')
-  })
-
-  it('should not be able to create a new user with existing email', async () => {
-    await createMeasure.execute({
-      name: 'Joseph Monkey',
-      email: 'josephmonkey@gmail.com',
-      type: 'common',
-      password: '12345678',
-    })
-
-    await expect(
-      createMeasure.execute({
-        name: 'Joseph Monkey',
-        email: 'josephmonkey@gmail.com',
-        type: 'common',
-        password: '12345678',
-      }),
-    ).rejects.toBeInstanceOf(AppError)
+    expect(measure).toHaveProperty('id')
   })
 })

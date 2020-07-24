@@ -43,17 +43,17 @@ export default class UsersController {
   }
 
   public async update(request: Request, response: Response): Promise<Response> {
-    const { name, email, type, isActive, password } = request.body
+    const { name, email, type, is_active, password } = request.body
     const { id } = request.params
 
     const updateUser = container.resolve(UpdateUserService)
 
     const user = await updateUser.execute({
-      user_id: id,
+      id,
       name,
       email,
       type,
-      isActive,
+      is_active,
       password,
     })
 

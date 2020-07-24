@@ -31,7 +31,7 @@ class DeleteUserService {
       }
     }
 
-    user.isActive = false
+    user.is_active = false
 
     await this.usersRepository.save(user)
   }

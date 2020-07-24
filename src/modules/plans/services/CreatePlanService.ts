@@ -13,8 +13,8 @@ interface IRequest {
 class CreatePlanService {
   constructor(
     @inject('PlansRepository')
-    private plansRepository: IPlansRepository, // eslint-disable-next-line prettier/prettier
-  ) { }
+    private plansRepository: IPlansRepository,
+  ) {}
 
   public async execute({
     user_id,

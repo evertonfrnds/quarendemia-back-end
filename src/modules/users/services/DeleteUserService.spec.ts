@@ -18,7 +18,7 @@ describe('DeleteUser', () => {
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'common',
-      isActive: true,
+      is_active: true,
       password: '12345678',
     })
 
@@ -26,7 +26,7 @@ describe('DeleteUser', () => {
       user_id: user.id,
     })
 
-    expect(user.isActive).toBe(false)
+    expect(user.is_active).toBe(false)
   })
 
   it('should be able to delete a admin if have suficient admins', async () => {
@@ -34,7 +34,7 @@ describe('DeleteUser', () => {
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'admin',
-      isActive: true,
+      is_active: true,
       password: '12345678',
     })
 
@@ -42,7 +42,7 @@ describe('DeleteUser', () => {
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'admin',
-      isActive: true,
+      is_active: true,
       password: '12345678',
     })
 
@@ -50,7 +50,7 @@ describe('DeleteUser', () => {
       user_id: user.id,
     })
 
-    expect(user.isActive).toBe(false)
+    expect(user.is_active).toBe(false)
   })
 
   it('should not be able to delete a non-existing user', async () => {
@@ -66,7 +66,7 @@ describe('DeleteUser', () => {
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'admin',
-      isActive: true,
+      is_active: true,
       password: '12345678',
     })
 

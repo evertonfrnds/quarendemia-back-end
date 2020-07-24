@@ -16,7 +16,7 @@ describe('ListUser', () => {
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'common',
-      isActive: true,
+      is_active: true,
       password: '12345678',
     })
 
@@ -24,7 +24,7 @@ describe('ListUser', () => {
       name: 'Guilherme Pocoyi',
       email: 'guilhermepocoyo@gmail.com',
       type: 'common',
-      isActive: true,
+      is_active: true,
       password: '12345678',
     })
 

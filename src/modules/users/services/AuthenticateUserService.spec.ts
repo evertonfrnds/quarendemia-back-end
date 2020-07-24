@@ -24,7 +24,7 @@ describe('AuthenticateUser', () => {
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'common',
-      isActive: true,
+      is_active: true,
       password: '12345678',
     })
 
@@ -51,7 +51,7 @@ describe('AuthenticateUser', () => {
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'common',
-      isActive: true,
+      is_active: true,
       password: '12345678',
     })
 
@@ -59,6 +59,23 @@ describe('AuthenticateUser', () => {
       authenticateUser.execute({
         email: 'josephmonkey@gmail.com',
         password: 'wrong-password',
+      }),
+    ).rejects.toBeInstanceOf(AppError)
+  })
+
+  it('should not be able to authenticate if user blocked', async () => {
+    await fakeUsersRepository.create({
+      name: 'Joseph Monkey',
+      email: 'josephmonkey@gmail.com',
+      type: 'common',
+      is_active: false,
+      password: '12345678',
+    })
+
+    await expect(
+      authenticateUser.execute({
+        email: 'josephmonkey@gmail.com',
+        password: '12345678',
       }),
     ).rejects.toBeInstanceOf(AppError)
   })

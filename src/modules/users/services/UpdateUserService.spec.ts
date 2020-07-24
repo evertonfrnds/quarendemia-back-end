@@ -20,16 +20,16 @@ describe('UpdateUser', () => {
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'common',
-      isActive: true,
+      is_active: true,
       password: '12345678',
     })
 
     const updatedUser = await updateUser.execute({
-      user_id: user.id,
+      id: user.id,
       name: 'Joseph Alterado',
       email: 'josephalterado@gmail.com',
       type: 'common',
-      isActive: true,
+      is_active: true,
     })
 
     expect(updatedUser.name).toBe('Joseph Alterado')
@@ -41,16 +41,16 @@ describe('UpdateUser', () => {
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'common',
-      isActive: true,
+      is_active: true,
       password: '12345678',
     })
 
     const updatedUser = await updateUser.execute({
-      user_id: user.id,
+      id: user.id,
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'common',
-      isActive: true,
+      is_active: true,
       password: 'nova-senha',
     })
 
@@ -62,7 +62,7 @@ describe('UpdateUser', () => {
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'admin',
-      isActive: true,
+      is_active: true,
       password: '12345678',
     })
 
@@ -70,31 +70,31 @@ describe('UpdateUser', () => {
       name: 'Guilherme Pocoyo',
       email: 'guilhermepocoyi@gmail.com',
       type: 'admin',
-      isActive: true,
+      is_active: true,
       password: '12345678',
     })
 
     const updatedUser = await updateUser.execute({
-      user_id: user.id,
+      id: user.id,
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'common',
-      isActive: false,
+      is_active: false,
       password: '12345678',
     })
 
     expect(updatedUser.type).toBe('common')
-    expect(updatedUser.isActive).toBe(false)
+    expect(updatedUser.is_active).toBe(false)
   })
 
   it('should not be able to update a non-existing user', async () => {
     await expect(
       updateUser.execute({
-        user_id: 'non-existing-userid',
+        id: 'non-existing-userid',
         name: 'Joseph Monkey',
         email: 'josephmonkey@gmail.com',
         type: 'common',
-        isActive: true,
+        is_active: true,
         password: '1234567890',
       }),
     ).rejects.toBeInstanceOf(AppError)
@@ -105,7 +105,7 @@ describe('UpdateUser', () => {
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'common',
-      isActive: true,
+      is_active: true,
       password: '12345678',
     })
 
@@ -113,17 +113,17 @@ describe('UpdateUser', () => {
       name: 'João Pé de Feijão',
       email: 'joaofeijao@gmail.com',
       type: 'common',
-      isActive: true,
+      is_active: true,
       password: '123456789',
     })
 
     await expect(
       updateUser.execute({
-        user_id: user.id,
+        id: user.id,
         name: 'João pé de Algodão',
         email: 'josephmonkey@gmail.com',
         type: 'common',
-        isActive: true,
+        is_active: true,
         password: '123456789',
       }),
     ).rejects.toBeInstanceOf(AppError)
@@ -134,27 +134,27 @@ describe('UpdateUser', () => {
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'admin',
-      isActive: true,
+      is_active: true,
       password: '12345678',
     })
 
     await expect(
       updateUser.execute({
-        user_id: user.id,
+        id: user.id,
         name: 'Joseph Monkey',
         email: 'josephmonkey@gmail.com',
         type: 'common',
-        isActive: true,
+        is_active: true,
         password: '12345678',
       }),
     ).rejects.toBeInstanceOf(AppError)
     await expect(
       updateUser.execute({
-        user_id: user.id,
+        id: user.id,
         name: 'Joseph Monkey',
         email: 'josephmonkey@gmail.com',
         type: 'admin',
-        isActive: false,
+        is_active: false,
         password: '12345678',
       }),
     ).rejects.toBeInstanceOf(AppError)

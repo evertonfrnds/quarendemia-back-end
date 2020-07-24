@@ -5,20 +5,40 @@ import { classToClass } from 'class-transformer'
 import ListPaymentService from '@modules/payment/services/ListPaymentService'
 import CreatePaymentService from '@modules/payment/services/CreatePaymentService'
 import DeletePaymentService from '@modules/payment/services/DeletePaymentService'
+import GetTotalPaymentService from '@modules/payment/services/GetTotalPaymentService'
 
 export default class PaymentController {
+  public async show(request: Request, response: Response): Promise<Response> {
+    const { id } = request.user
+    const { month, year } = request.params
+    const getTotalPayment = container.resolve(GetTotalPaymentService)
+
+    const totalPayment = await getTotalPayment.execute({
+      user_id: id,
+      month: Number(month),
+      year: Number(year),
+    })
+
+    return response.json(totalPayment)
+  }
+
   public async index(request: Request, response: Response): Promise<Response> {
     const { id } = request.user
+    const { month, year } = request.params
     const listPayment = container.resolve(ListPaymentService)
 
-    const payments = await listPayment.execute({ user_id: id })
+    const payments = await listPayment.execute({
+      user_id: id,
+      month: Number(month),
+      year: Number(year),
+    })
 
     return response.json(payments)
   }
 
   public async create(request: Request, response: Response): Promise<Response> {
     const { id } = request.user
-    const { client_id, month, year, value } = request.body
+    const { client_id, month, year } = request.body
 
     const createPayment = container.resolve(CreatePaymentService)
 
@@ -27,7 +47,6 @@ export default class PaymentController {
       client_id,
       month,
       year,
-      value,
     })
 
     return response.json(classToClass(payment))
@@ -38,7 +57,7 @@ export default class PaymentController {
 
     const deletePayment = container.resolve(DeletePaymentService)
 
-    await deletePayment.execute({ payment_id: id })
+    await deletePayment.execute({ id })
 
     return response.status(204).send()
   }

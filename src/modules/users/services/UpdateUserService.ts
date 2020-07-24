@@ -6,11 +6,11 @@ import IHashProvider from '../providers/HashProvider/models/IHashProvider'
 import IUsersRepository from '../repositories/IUsersRepository'
 
 interface IRequest {
-  user_id: string
+  id: string
   name: string
   email: string
   type: string
-  isActive: boolean
+  is_active: boolean
   password?: string
 }
 
@@ -25,14 +25,14 @@ class UpdateUserService {
   ) {}
 
   public async execute({
-    user_id,
+    id,
     name,
     email,
     type,
-    isActive,
+    is_active,
     password,
   }: IRequest): Promise<User> {
-    const user = await this.usersRepository.findById(user_id)
+    const user = await this.usersRepository.findById(id)
 
     if (!user) {
       throw new AppError('Usuário não encontrado.')
@@ -54,7 +54,7 @@ class UpdateUserService {
 
     if (
       (type && type !== 'admin' && user.type === 'admin') ||
-      (isActive === false && user.type === 'admin')
+      (is_active === false && user.type === 'admin')
     ) {
       const admsCount = await this.usersRepository.countAdms(user.id)
 
@@ -68,7 +68,7 @@ class UpdateUserService {
     user.name = name
     user.email = email
     user.type = type
-    user.isActive = isActive
+    user.is_active = is_active
 
     await this.usersRepository.save(user)
 

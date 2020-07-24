@@ -18,4 +18,4 @@
 
 # QUARENDEMIA: Modelo Conceitual
 
-# FALTA FAZER
+![Modelo Relacional](diagramasIMGS/modConceitual.jpg)

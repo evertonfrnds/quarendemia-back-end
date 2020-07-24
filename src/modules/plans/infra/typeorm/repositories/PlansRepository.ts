@@ -13,8 +13,8 @@ class PlansRepository implements IPlansRepository {
     this.ormRepository = getRepository(Plan)
   }
 
-  public async findAllById(id: string): Promise<Plan[]> {
-    const plan = await this.ormRepository.find({ where: { user_id: id } })
+  public async findAllByUserId(user_id: string): Promise<Plan[]> {
+    const plan = await this.ormRepository.find({ where: { user_id } })
     return plan
   }
 
@@ -26,8 +26,8 @@ class PlansRepository implements IPlansRepository {
     return plan
   }
 
-  public async delete(plan_id: string): Promise<void> {
-    this.ormRepository.delete(plan_id)
+  public async delete(id: string): Promise<void> {
+    this.ormRepository.delete(id)
   }
 
   public async create(planData: ICreatePlanDTO): Promise<Plan> {

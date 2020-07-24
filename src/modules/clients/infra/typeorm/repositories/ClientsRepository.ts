@@ -1,6 +1,6 @@
 import { getRepository, Repository } from 'typeorm'
 
-import IClientRepository from '@modules/clients/repositories/IClientRepository'
+import IClientRepository from '@modules/clients/repositories/IClientsRepository'
 
 import ICreateClientDTO from '@modules/clients/dtos/ICreateClientDTO'
 
@@ -13,9 +13,9 @@ class ClientRepository implements IClientRepository {
     this.ormRepository = getRepository(Client)
   }
 
-  public async findAllById(id: string): Promise<Client[]> {
+  public async findAllByUserId(user_id: string): Promise<Client[]> {
     const client = await this.ormRepository.find({
-      where: { user_id: id },
+      where: { user_id },
       relations: ['plan'],
     })
     return client
@@ -25,6 +25,14 @@ class ClientRepository implements IClientRepository {
     const client = await this.ormRepository.findOne({
       where: { id },
       relations: ['plan'],
+    })
+
+    return client
+  }
+
+  public async findByEmail(email: string): Promise<Client | undefined> {
+    const client = await this.ormRepository.findOne({
+      where: { email },
     })
 
     return client

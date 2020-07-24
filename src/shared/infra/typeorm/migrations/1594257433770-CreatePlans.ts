@@ -29,7 +29,7 @@ export default class CreatePlans1594257433770 implements MigrationInterface {
           },
           {
             name: 'value',
-            type: 'decimal',
+            type: 'float',
             isNullable: false,
           },
           {

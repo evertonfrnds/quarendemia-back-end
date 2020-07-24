@@ -3,7 +3,7 @@ import { celebrate, Segments, Joi } from 'celebrate'
 
 import ensureAuthenticated from '@modules/users/infra/http/middlewares/ensureAuthenticated'
 
-import ClientController from '../controllers/ClientController'
+import ClientController from '../controllers/ClientsController'
 
 const clientRoutes = Router()
 const clientController = new ClientController()
@@ -33,6 +33,7 @@ clientRoutes.put(
       plan_id: Joi.string().required(),
       name: Joi.string().min(6).required(),
       email: Joi.string().required().email(),
+      is_active: Joi.boolean().required(),
     },
   }),
   clientController.update,

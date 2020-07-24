@@ -10,10 +10,11 @@ class FakeMeasuresRepository implements IMeasuresRepository {
   private measures: Measure[] = []
 
   public async findAllByClientId(client_id: string): Promise<Measure[]> {
-    const measures = this.measures.filter(
+    const findMeasure = this.measures.filter(
       measure => measure.client_id === client_id,
     )
-    return measures
+
+    return findMeasure
   }
 
   public async findById(id: string): Promise<Measure | undefined> {
@@ -30,6 +31,14 @@ class FakeMeasuresRepository implements IMeasuresRepository {
     this.measures.push(measure)
 
     return measure
+  }
+
+  public async delete(id: string): Promise<void> {
+    const findIndex = this.measures.findIndex(
+      findMeasure => findMeasure.id === id,
+    )
+
+    this.measures.splice(findIndex, 1)
   }
 
   public async save(measure: Measure): Promise<Measure> {

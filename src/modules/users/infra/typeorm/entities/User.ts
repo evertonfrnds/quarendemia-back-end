@@ -23,7 +23,7 @@ class User {
   type: string
 
   @Column('boolean')
-  isActive: boolean
+  is_active: boolean
 
   @Column()
   @Exclude()

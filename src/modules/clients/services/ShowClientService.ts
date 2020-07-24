@@ -2,21 +2,21 @@ import AppError from '@shared/errors/AppError'
 
 import Client from '@modules/clients/infra/typeorm/entities/Client'
 import { injectable, inject } from 'tsyringe'
-import IClientRepository from '../repositories/IClientRepository'
+import IClientsRepository from '../repositories/IClientsRepository'
 
 interface IRequest {
-  client_id: string
+  id: string
 }
 
 @injectable()
 class ShowClientService {
   constructor(
-    @inject('ClientRepository')
-    private clientRepository: IClientRepository,
+    @inject('ClientsRepository')
+    private clientsRepository: IClientsRepository,
   ) {}
 
-  public async execute({ client_id }: IRequest): Promise<Client> {
-    const client = await this.clientRepository.findById(client_id)
+  public async execute({ id }: IRequest): Promise<Client> {
+    const client = await this.clientsRepository.findById(id)
 
     if (!client) {
       throw new AppError('Cliente não encontrado')

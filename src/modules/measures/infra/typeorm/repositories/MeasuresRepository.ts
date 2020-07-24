@@ -24,8 +24,8 @@ class MeasuresRepository implements IMeasuresRepository {
     return measure
   }
 
-  public async delete(measure_id: string): Promise<void> {
-    this.ormRepository.delete(measure_id)
+  public async delete(id: string): Promise<void> {
+    this.ormRepository.delete(id)
   }
 
   public async create(measureData: ICreateMeasureDTO): Promise<Measure> {

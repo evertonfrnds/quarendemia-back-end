@@ -33,7 +33,7 @@ usersRouter.put(
       name: Joi.string().min(6).required(),
       email: Joi.string().email().required(),
       type: Joi.string().required(),
-      isActive: Joi.boolean().required(),
+      is_active: Joi.boolean().required(),
       password: Joi.string(),
     },
   }),

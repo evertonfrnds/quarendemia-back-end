@@ -8,7 +8,7 @@ import IUsersRepository from '../repositories/IUsersRepository'
 import User from '../infra/typeorm/entities/User'
 
 interface IRequest {
-  user_id: string
+  id: string
   name: string
   email: string
   old_password?: string
@@ -26,13 +26,13 @@ class UpdateManagerProfileService {
   ) {}
 
   public async execute({
-    user_id,
+    id,
     name,
     email,
     old_password,
     password,
   }: IRequest): Promise<User> {
-    const user = await this.usersRepository.findById(user_id)
+    const user = await this.usersRepository.findById(id)
 
     if (!user) {
       throw new AppError('Usuário não encontrado')
@@ -40,7 +40,7 @@ class UpdateManagerProfileService {
 
     const userWithUpdatedEmail = await this.usersRepository.findByEmail(email)
 
-    if (userWithUpdatedEmail && userWithUpdatedEmail.id !== user_id) {
+    if (userWithUpdatedEmail && userWithUpdatedEmail.id !== id) {
       throw new AppError('O e-mail passado já existe na base de dados')
     }
 
