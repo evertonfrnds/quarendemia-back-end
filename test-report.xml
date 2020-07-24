@@ -1,56 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
-  <file path="/Users/fjose/projectsBSI/quarendemia-back-end/src/modules/users/services/UpdateManagerProfileService.spec.ts">
-    <testCase name="UpdateManagerProfile should be able to update user profile" duration="25"/>
-    <testCase name="UpdateManagerProfile should not be able to update profile from non-existing user" duration="2"/>
-    <testCase name="UpdateManagerProfile should not be able to change user email if new email already exists" duration="10"/>
-    <testCase name="UpdateManagerProfile should be able to update the password" duration="1"/>
-    <testCase name="UpdateManagerProfile should not be able to update the password without old password" duration="1"/>
+  <file path="/Users/fjose/projectsBSI/ESII/quarendemia-back-end/src/modules/users/services/UpdateManagerProfileService.spec.ts">
+    <testCase name="UpdateManagerProfile should be able to update user profile" duration="20"/>
+    <testCase name="UpdateManagerProfile should not be able to update profile from non-existing user" duration="7"/>
+    <testCase name="UpdateManagerProfile should not be able to change user email if new email already exists" duration="6"/>
+    <testCase name="UpdateManagerProfile should be able to update the password" duration="7"/>
+    <testCase name="UpdateManagerProfile should not be able to update the password without old password" duration="6"/>
     <testCase name="UpdateManagerProfile should not be able to update the password with wrong old password" duration="1"/>
   </file>
-  <file path="/Users/fjose/projectsBSI/quarendemia-back-end/src/modules/users/services/UpdateUserService.spec.ts">
-    <testCase name="UpdateUser should be able to update a user" duration="14"/>
-    <testCase name="UpdateUser should be able to update the password" duration="1"/>
+  <file path="/Users/fjose/projectsBSI/ESII/quarendemia-back-end/src/modules/users/services/UpdateUserService.spec.ts">
+    <testCase name="UpdateUser should be able to update a user" duration="8"/>
+    <testCase name="UpdateUser should be able to update the password" duration="2"/>
     <testCase name="UpdateUser should be able to disable a admin if have suficient admins" duration="1"/>
     <testCase name="UpdateUser should not be able to update a non-existing user" duration="1"/>
     <testCase name="UpdateUser should not be able to change a user email if new email already exists" duration="1"/>
-    <testCase name="UpdateUser should not be able to disable a admin if dont have suficient admins" duration="4"/>
+    <testCase name="UpdateUser should not be able to disable a admin if dont have suficient admins" duration="1"/>
   </file>
-  <file path="/Users/fjose/projectsBSI/quarendemia-back-end/src/modules/users/services/ResetPasswordService.spec.ts">
-    <testCase name="ResetForgotPassword should be able to reset the password" duration="12"/>
-    <testCase name="ResetForgotPassword should not be able to reset the password with non-existing token" duration="3"/>
-    <testCase name="ResetForgotPassword should not be able to reset the password with non-existing user" duration="1"/>
-    <testCase name="ResetForgotPassword should not be able to reset the password if passed more then two hours" duration="3"/>
+  <file path="/Users/fjose/projectsBSI/ESII/quarendemia-back-end/src/modules/users/services/ResetPasswordService.spec.ts">
+    <testCase name="ResetForgotPassword should be able to reset the password" duration="23"/>
+    <testCase name="ResetForgotPassword should not be able to reset the password with non-existing token" duration="1"/>
+    <testCase name="ResetForgotPassword should not be able to reset the password with non-existing user" duration="2"/>
+    <testCase name="ResetForgotPassword should not be able to reset the password if passed more then two hours" duration="7"/>
   </file>
-  <file path="/Users/fjose/projectsBSI/quarendemia-back-end/src/modules/users/services/SignUpManagerService.spec.ts">
-    <testCase name="SignUpManager should be able to sign up" duration="7"/>
-    <testCase name="SignUpManager should not be able to sign up with existing email" duration="1"/>
+  <file path="/Users/fjose/projectsBSI/ESII/quarendemia-back-end/src/modules/users/services/DeleteUserService.spec.ts">
+    <testCase name="DeleteUser should be able to delete a existing user" duration="5"/>
+    <testCase name="DeleteUser should be able to delete a admin if have suficient admins" duration="1"/>
+    <testCase name="DeleteUser should not be able to delete a non-existing user" duration="3"/>
+    <testCase name="DeleteUser should not be able to delete a admin if do not have suficient admins" duration="1"/>
   </file>
-  <file path="/Users/fjose/projectsBSI/quarendemia-back-end/src/modules/users/services/AuthenticateUserService.spec.ts">
-    <testCase name="AuthenticateUser should be able to authenticate" duration="35"/>
-    <testCase name="AuthenticateUser should not be able to authenticate with non existing user" duration="1"/>
+  <file path="/Users/fjose/projectsBSI/ESII/quarendemia-back-end/src/modules/users/services/AuthenticateUserService.spec.ts">
+    <testCase name="AuthenticateUser should be able to authenticate" duration="28"/>
+    <testCase name="AuthenticateUser should not be able to authenticate with non existing user" duration="2"/>
     <testCase name="AuthenticateUser should not be able to authenticate with wrong password" duration="0"/>
   </file>
-  <file path="/Users/fjose/projectsBSI/quarendemia-back-end/src/modules/users/services/SendForgotPasswordEmailService.spec.ts">
-    <testCase name="SendForgotPasswordEmail should be able to recover password using email" duration="9"/>
-    <testCase name="SendForgotPasswordEmail should not be able to recover a non-existing user" duration="1"/>
-    <testCase name="SendForgotPasswordEmail should generate a forgot password token" duration="2"/>
+  <file path="/Users/fjose/projectsBSI/ESII/quarendemia-back-end/src/modules/users/services/SendForgotPasswordEmailService.spec.ts">
+    <testCase name="SendForgotPasswordEmail should be able to recover password using email" duration="7"/>
+    <testCase name="SendForgotPasswordEmail should not be able to recover a non-existing user" duration="3"/>
+    <testCase name="SendForgotPasswordEmail should generate a forgot password token" duration="4"/>
   </file>
-  <file path="/Users/fjose/projectsBSI/quarendemia-back-end/src/modules/users/services/DeleteUserService.spec.ts">
-    <testCase name="DeleteUser should be able to delete a existing user" duration="5"/>
-    <testCase name="DeleteUser should be able to delete a admin if have suficient admins" duration="2"/>
-    <testCase name="DeleteUser should not be able to delete a non-existing user" duration="1"/>
-    <testCase name="DeleteUser should not be able to delete a admin if do not have suficient admins" duration="2"/>
+  <file path="/Users/fjose/projectsBSI/ESII/quarendemia-back-end/src/modules/users/services/CreateUserService.spec.ts">
+    <testCase name="CreateUser should be able to create a new user" duration="7"/>
+    <testCase name="CreateUser should not be able to create a new user with existing email" duration="2"/>
   </file>
-  <file path="/Users/fjose/projectsBSI/quarendemia-back-end/src/modules/users/services/CreateUserService.spec.ts">
-    <testCase name="CreateUser should be able to create a new user" duration="8"/>
-    <testCase name="CreateUser should not be able to create a new user with existing email" duration="1"/>
+  <file path="/Users/fjose/projectsBSI/ESII/quarendemia-back-end/src/modules/users/services/ShowManagerProfileService.spec.ts">
+    <testCase name="ShowManagerProfile should be able to show manager profile" duration="16"/>
+    <testCase name="ShowManagerProfile should not be able to show manager profile from non-existing user" duration="3"/>
   </file>
-  <file path="/Users/fjose/projectsBSI/quarendemia-back-end/src/modules/users/services/ListUsersService.spec.ts">
+  <file path="/Users/fjose/projectsBSI/ESII/quarendemia-back-end/src/modules/users/services/SignUpManagerService.spec.ts">
+    <testCase name="SignUpManager should be able to sign up" duration="28"/>
+    <testCase name="SignUpManager should not be able to sign up with existing email" duration="2"/>
+  </file>
+  <file path="/Users/fjose/projectsBSI/ESII/quarendemia-back-end/src/modules/users/services/ListUsersService.spec.ts">
     <testCase name="ListUser should be able to list all users" duration="7"/>
   </file>
-  <file path="/Users/fjose/projectsBSI/quarendemia-back-end/src/modules/users/services/ShowManagerProfileService.spec.ts">
-    <testCase name="ShowManagerProfile should be able to show manager profile" duration="5"/>
-    <testCase name="ShowManagerProfile should not be able to show manager profile from non-existing user" duration="1"/>
+  <file path="/Users/fjose/projectsBSI/ESII/quarendemia-back-end/src/modules/measures/services/CreateMeasureService.spec.ts">
   </file>
 </testExecutions>
