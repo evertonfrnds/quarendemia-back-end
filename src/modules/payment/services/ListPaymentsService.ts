@@ -9,7 +9,7 @@ interface IRequest {
 }
 
 @injectable()
-class ListPaymentService {
+class ListPaymentsService {
   constructor(
     @inject('PaymentsRepository')
     private paymentsRepository: IPaymentsRepository,
@@ -26,4 +26,4 @@ class ListPaymentService {
   }
 }
 
-export default ListPaymentService
+export default ListPaymentsService
