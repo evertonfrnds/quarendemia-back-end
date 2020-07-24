@@ -9,12 +9,12 @@ import ShowManagerProfileService from '@modules/users/services/ShowManagerProfil
 
 export default class ManagersController {
   public async show(request: Request, response: Response): Promise<Response> {
-    const user_id = request.user.id
+    const { id } = request.user
 
     const showManagerProfile = container.resolve(ShowManagerProfileService)
 
     const user = await showManagerProfile.execute({
-      user_id,
+      id,
     })
 
     return response.json(classToClass(user))
@@ -35,13 +35,13 @@ export default class ManagersController {
   }
 
   public async update(request: Request, response: Response): Promise<Response> {
-    const user_id = request.user.id
+    const { id } = request.user
     const { name, email, old_password, password } = request.body
 
     const updateManagerProfile = container.resolve(UpdateManagerProfileService)
 
     const user = await updateManagerProfile.execute({
-      user_id,
+      id,
       name,
       email,
       old_password,

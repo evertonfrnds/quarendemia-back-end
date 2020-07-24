@@ -12,8 +12,8 @@ interface IRequest {
 class ShowPlanService {
   constructor(
     @inject('PlansRepository')
-    private plansRepository: IPlansRepository, // eslint-disable-next-line prettier/prettier
-  ) { }
+    private plansRepository: IPlansRepository,
+  ) {}
 
   public async execute({ id }: IRequest): Promise<Plan> {
     const plan = await this.plansRepository.findById(id)

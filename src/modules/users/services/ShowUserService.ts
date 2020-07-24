@@ -12,7 +12,7 @@ interface IRequest {
 class ShowUserService {
   constructor(
     @inject('UsersRepository')
-    private usersRepository: IUsersRepository, // eslint-disable-next-line prettier/prettier
+    private usersRepository: IUsersRepository,
   ) {}
 
   public async execute({ id }: IRequest): Promise<User> {

@@ -1,19 +1,19 @@
 import AppError from '@shared/errors/AppError'
 
 import FakeUsersRepository from '../repositories/fakes/FakeUsersRepository'
-import ShowManagerProfileService from './ShowManagerProfileService'
+import ShowUserService from './ShowUserService'
 
 let fakeUsersRepository: FakeUsersRepository
-let showManagerProfile: ShowManagerProfileService
+let showUser: ShowUserService
 
-describe('ShowManagerProfile', () => {
+describe('ShowUser', () => {
   beforeEach(() => {
     fakeUsersRepository = new FakeUsersRepository()
 
-    showManagerProfile = new ShowManagerProfileService(fakeUsersRepository)
+    showUser = new ShowUserService(fakeUsersRepository)
   })
 
-  it('should be able to show manager profile', async () => {
+  it('should be able to show user', async () => {
     const user = await fakeUsersRepository.create({
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
@@ -22,7 +22,7 @@ describe('ShowManagerProfile', () => {
       password: '12345678',
     })
 
-    const profile = await showManagerProfile.execute({
+    const profile = await showUser.execute({
       id: user.id,
     })
 
@@ -30,9 +30,9 @@ describe('ShowManagerProfile', () => {
     expect(profile.email).toBe('josephmonkey@gmail.com')
   })
 
-  it('should not be able to show manager profile from non-existing user', async () => {
+  it('should not be able to show user from non-existing user', async () => {
     await expect(
-      showManagerProfile.execute({
+      showUser.execute({
         id: 'non-existing-user',
       }),
     ).rejects.toBeInstanceOf(AppError)

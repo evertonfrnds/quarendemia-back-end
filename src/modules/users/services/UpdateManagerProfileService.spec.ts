@@ -23,12 +23,12 @@ describe('UpdateManagerProfile', () => {
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'common',
-      isActive: true,
+      is_active: true,
       password: '12345678',
     })
 
     const updatedUser = await updateManagerProfile.execute({
-      user_id: user.id,
+      id: user.id,
       name: 'Joseph Alterado',
       email: 'josephalterado@gmail.com',
     })
@@ -40,7 +40,7 @@ describe('UpdateManagerProfile', () => {
   it('should not be able to update profile from non-existing user', async () => {
     await expect(
       updateManagerProfile.execute({
-        user_id: 'non-existing-userid',
+        id: 'non-existing-userid',
         name: 'Joseph Monkey',
         email: 'josephmonkey@gmail.com',
       }),
@@ -52,7 +52,7 @@ describe('UpdateManagerProfile', () => {
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'common',
-      isActive: true,
+      is_active: true,
       password: '12345678',
     })
 
@@ -60,13 +60,13 @@ describe('UpdateManagerProfile', () => {
       name: 'João Pé de Feijão',
       email: 'joaofeijao@gmail.com',
       type: 'common',
-      isActive: true,
+      is_active: true,
       password: '123456789',
     })
 
     await expect(
       updateManagerProfile.execute({
-        user_id: user.id,
+        id: user.id,
         name: 'João pé de Algodão',
         email: 'josephmonkey@gmail.com',
       }),
@@ -78,12 +78,12 @@ describe('UpdateManagerProfile', () => {
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'common',
-      isActive: true,
+      is_active: true,
       password: '12345678',
     })
 
     const updatedUser = await updateManagerProfile.execute({
-      user_id: user.id,
+      id: user.id,
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       old_password: '12345678',
@@ -98,13 +98,13 @@ describe('UpdateManagerProfile', () => {
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'common',
-      isActive: true,
+      is_active: true,
       password: '12345678',
     })
 
     await expect(
       updateManagerProfile.execute({
-        user_id: user.id,
+        id: user.id,
         name: 'Joseph Monkey',
         email: 'josephmonkey@gmail.com',
         password: 'nova-senha',
@@ -117,13 +117,13 @@ describe('UpdateManagerProfile', () => {
       name: 'Joseph Monkey',
       email: 'josephmonkey@gmail.com',
       type: 'common',
-      isActive: true,
+      is_active: true,
       password: '12345678',
     })
 
     await expect(
       updateManagerProfile.execute({
-        user_id: user.id,
+        id: user.id,
         name: 'Joseph Monkey',
         email: 'josephmonkey@gmail.com',
         old_password: 'wrong-old-password',

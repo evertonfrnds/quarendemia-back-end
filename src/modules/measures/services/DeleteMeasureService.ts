@@ -1,4 +1,5 @@
 import { injectable, inject } from 'tsyringe'
+import AppError from '@shared/errors/AppError'
 import IMeasuresRepository from '../repositories/IMeasuresRepository'
 
 interface IRequest {
@@ -13,9 +14,13 @@ class DeleteMeasureService {
   ) {}
 
   public async execute({ id }: IRequest): Promise<void> {
-    const measures = await this.measuresRepository.delete(id)
+    const measure = await this.measuresRepository.findById(id)
 
-    return measures
+    if (!measure) {
+      throw new AppError('Medida não encontrada')
+    }
+
+    await this.measuresRepository.delete(id)
   }
 }
 

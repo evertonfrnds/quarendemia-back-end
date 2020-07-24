@@ -33,6 +33,7 @@ clientRoutes.put(
       plan_id: Joi.string().required(),
       name: Joi.string().min(6).required(),
       email: Joi.string().required().email(),
+      is_active: Joi.boolean().required(),
     },
   }),
   clientController.update,

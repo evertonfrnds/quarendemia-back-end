@@ -4,7 +4,7 @@ import { injectable, inject } from 'tsyringe'
 import IClientsRepository from '../repositories/IClientsRepository'
 
 interface IRequest {
-  client_id: string
+  id: string
 }
 
 @injectable()
@@ -14,11 +14,11 @@ class DeleteClientService {
     private clientsRepository: IClientsRepository,
   ) {}
 
-  public async execute({ client_id }: IRequest): Promise<void> {
-    const client = await this.clientsRepository.findById(client_id)
+  public async execute({ id }: IRequest): Promise<void> {
+    const client = await this.clientsRepository.findById(id)
 
     if (!client) {
-      throw new AppError('Cliente não existe')
+      throw new AppError('Cliente não encontrado')
     }
 
     client.is_active = false

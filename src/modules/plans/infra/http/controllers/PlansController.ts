@@ -2,7 +2,7 @@ import { Request, Response } from 'express'
 import { container } from 'tsyringe'
 import { classToClass } from 'class-transformer'
 
-import ListPlanService from '@modules/plans/services/ListPlanService'
+import ListPlansService from '@modules/plans/services/ListPlansService'
 import ShowPlanService from '@modules/plans/services/ShowPlanService'
 import CreatePlanService from '@modules/plans/services/CreatePlanService'
 import UpdatePlanService from '@modules/plans/services/UpdatePlanService'
@@ -11,9 +11,9 @@ import DeletePlanService from '@modules/plans/services/DeletePlanService'
 export default class PlansController {
   public async index(request: Request, response: Response): Promise<Response> {
     const { id } = request.user
-    const listPlans = container.resolve(ListPlanService)
+    const listPlans = container.resolve(ListPlansService)
 
-    const plans = await listPlans.execute({ id })
+    const plans = await listPlans.execute({ user_id: id })
 
     return response.json(plans)
   }
@@ -49,7 +49,7 @@ export default class PlansController {
     const updatePlan = container.resolve(UpdatePlanService)
 
     const plan = await updatePlan.execute({
-      plan_id: id,
+      id,
       name,
       description,
       value,
@@ -64,7 +64,7 @@ export default class PlansController {
     const deletePlan = container.resolve(DeletePlanService)
 
     await deletePlan.execute({
-      plan_id: id,
+      id,
     })
 
     return response.status(204).send()

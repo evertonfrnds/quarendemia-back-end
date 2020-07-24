@@ -5,10 +5,11 @@ import { injectable, inject } from 'tsyringe'
 import IClientsRepository from '../repositories/IClientsRepository'
 
 interface IRequest {
-  client_id: string
+  id: string
   plan_id: string
   name: string
   email: string
+  is_active: boolean
 }
 
 @injectable()
@@ -19,12 +20,13 @@ class UpdateClientService {
   ) {}
 
   public async execute({
-    client_id,
+    id,
     plan_id,
     name,
     email,
+    is_active,
   }: IRequest): Promise<Client> {
-    const client = await this.clientsRepository.findById(client_id)
+    const client = await this.clientsRepository.findById(id)
 
     if (!client) {
       throw new AppError('Cliente não encontrado.')
@@ -34,6 +36,7 @@ class UpdateClientService {
     client.email = email
     client.plan_id = plan_id
     client.plan.id = plan_id
+    client.is_active = is_active
 
     await this.clientsRepository.save(client)
 

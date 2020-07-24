@@ -14,7 +14,7 @@ class ListClientService {
   ) {}
 
   public async execute({ user_id }: IRequest): Promise<Client[]> {
-    const clients = await this.clientsRepository.findAllById(user_id)
+    const clients = await this.clientsRepository.findAllByUserId(user_id)
 
     return clients
   }

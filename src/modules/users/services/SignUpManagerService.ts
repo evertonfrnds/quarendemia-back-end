@@ -36,7 +36,7 @@ class SignUpManagerService {
       name,
       email,
       type: 'common',
-      isActive: true,
+      is_active: true,
       password: hashedPassword,
     })
 

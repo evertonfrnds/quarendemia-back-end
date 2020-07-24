@@ -35,7 +35,7 @@ class AuthenticateUserService {
       throw new AppError('Combinação de email/senha incorreto.', 401)
     }
 
-    if (user.isActive === false) {
+    if (user.is_active === false) {
       throw new AppError('Usuário bloqueado.', 401)
     }
 

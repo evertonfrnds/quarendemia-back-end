@@ -16,7 +16,7 @@ class UsersRepository implements IUsersRepository {
 
   public async findAll(): Promise<User[]> {
     const user = await this.ormRepository.find({
-      select: ['id', 'name', 'email', 'type', 'isActive', 'created_at'],
+      select: ['id', 'name', 'email', 'type', 'is_active', 'created_at'],
     })
 
     return user
@@ -36,7 +36,7 @@ class UsersRepository implements IUsersRepository {
 
   public async countAdms(user_id: string): Promise<number> {
     const count = await this.ormRepository.count({
-      where: { isActive: true, type: 'admin', id: Not(user_id) },
+      where: { is_active: true, type: 'admin', id: Not(user_id) },
     })
 
     return count

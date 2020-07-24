@@ -57,7 +57,7 @@ export default class PaymentController {
 
     const deletePayment = container.resolve(DeletePaymentService)
 
-    await deletePayment.execute({ payment_id: id })
+    await deletePayment.execute({ id })
 
     return response.status(204).send()
   }

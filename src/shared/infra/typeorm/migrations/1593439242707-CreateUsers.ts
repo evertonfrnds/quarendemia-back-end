@@ -30,7 +30,7 @@ export default class CreateUsers1593439242707 implements MigrationInterface {
             isNullable: false,
           },
           {
-            name: 'isActive',
+            name: 'is_active',
             type: 'boolean',
             isNullable: false,
           },

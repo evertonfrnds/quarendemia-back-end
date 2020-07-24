@@ -1,8 +1,9 @@
 import { injectable, inject } from 'tsyringe'
+import AppError from '@shared/errors/AppError'
 import IPaymentRepository from '../repositories/IPaymentRepository'
 
 interface IRequest {
-  payment_id: string
+  id: string
 }
 
 @injectable()
@@ -12,10 +13,14 @@ class DeletePaymentService {
     private paymentRepository: IPaymentRepository,
   ) {}
 
-  public async execute({ payment_id }: IRequest): Promise<void> {
-    const payment = await this.paymentRepository.delete(payment_id)
+  public async execute({ id }: IRequest): Promise<void> {
+    const payment = await this.paymentRepository.findById(id)
 
-    return payment
+    if (!payment) {
+      throw new AppError('Pagamento não encontrada')
+    }
+
+    await this.paymentRepository.delete(id)
   }
 }
 

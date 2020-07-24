@@ -13,9 +13,9 @@ class ClientRepository implements IClientRepository {
     this.ormRepository = getRepository(Client)
   }
 
-  public async findAllById(id: string): Promise<Client[]> {
+  public async findAllByUserId(user_id: string): Promise<Client[]> {
     const client = await this.ormRepository.find({
-      where: { user_id: id },
+      where: { user_id },
       relations: ['plan'],
     })
     return client

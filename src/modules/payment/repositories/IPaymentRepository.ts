@@ -6,7 +6,8 @@ import IListPaymentsDTO from '../dtos/IListPaymentsDTO'
 export default interface IPaymentRepository {
   getTotalPaymentFromMonth(data: IGetTotalPaymentDTO): Promise<number>
   findAll(data: IListPaymentsDTO): Promise<Payment[]>
-  delete(payment_id: string): Promise<void>
+  findById(id: string): Promise<Payment | undefined>
+  delete(id: string): Promise<void>
   create(data: ICreatePayment): Promise<Payment>
   save(payment: Payment): Promise<Payment>
 }

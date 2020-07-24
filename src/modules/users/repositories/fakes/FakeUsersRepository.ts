@@ -29,7 +29,7 @@ class FakeUsersRepository implements IUsersRepository {
   public async countAdms(user_id: string): Promise<number> {
     const admUsers = this.users.filter(
       user =>
-        user.type === 'admin' && user.isActive === true && user.id !== user_id,
+        user.type === 'admin' && user.is_active === true && user.id !== user_id,
     )
 
     return admUsers.length

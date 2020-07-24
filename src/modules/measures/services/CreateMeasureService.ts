@@ -3,7 +3,6 @@ import IMeasuresRepository from '../repositories/IMeasuresRepository'
 import Measure from '../infra/typeorm/entities/Measure'
 
 interface IRequest {
-  id: string
   client_id: string
   height: number
   weight: number
@@ -32,7 +31,6 @@ class CreateMeasureService {
   ) {}
 
   public async execute({
-    id,
     client_id,
     height,
     weight,
@@ -53,7 +51,6 @@ class CreateMeasureService {
     forearm_right,
   }: IRequest): Promise<Measure> {
     const measures = await this.measuresRepository.create({
-      id,
       client_id,
       height,
       weight,

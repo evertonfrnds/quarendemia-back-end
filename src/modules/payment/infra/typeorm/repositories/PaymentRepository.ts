@@ -29,6 +29,12 @@ export default class PaymentRepository implements IPaymentRepository {
     return totalPayment
   }
 
+  public async findById(id: string): Promise<Payment | undefined> {
+    const measure = await this.ormRepository.findOne(id)
+
+    return measure
+  }
+
   async findAll({
     user_id,
     month,
@@ -41,8 +47,8 @@ export default class PaymentRepository implements IPaymentRepository {
     return payments
   }
 
-  async delete(payment_id: string): Promise<void> {
-    this.ormRepository.delete(payment_id)
+  async delete(id: string): Promise<void> {
+    this.ormRepository.delete(id)
   }
 
   async create(data: ICreatePaymentDTO): Promise<Payment> {
