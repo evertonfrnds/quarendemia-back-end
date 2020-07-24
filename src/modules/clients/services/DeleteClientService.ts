@@ -1,7 +1,7 @@
 import AppError from '@shared/errors/AppError'
 
 import { injectable, inject } from 'tsyringe'
-import IClientRepository from '../repositories/IClientRepository'
+import IClientsRepository from '../repositories/IClientsRepository'
 
 interface IRequest {
   client_id: string
@@ -10,12 +10,12 @@ interface IRequest {
 @injectable()
 class DeleteClientService {
   constructor(
-    @inject('ClientRepository')
-    private clientRepository: IClientRepository,
+    @inject('ClientsRepository')
+    private clientsRepository: IClientsRepository,
   ) {}
 
   public async execute({ client_id }: IRequest): Promise<void> {
-    const client = await this.clientRepository.findById(client_id)
+    const client = await this.clientsRepository.findById(client_id)
 
     if (!client) {
       throw new AppError('Cliente não existe')
@@ -23,7 +23,7 @@ class DeleteClientService {
 
     client.is_active = false
 
-    await this.clientRepository.save(client)
+    await this.clientsRepository.save(client)
   }
 }
 

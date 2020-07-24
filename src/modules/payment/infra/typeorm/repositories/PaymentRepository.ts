@@ -4,6 +4,8 @@ import IPaymentRepository from '@modules/payment/repositories/IPaymentRepository
 
 import ICreatePaymentDTO from '@modules/payment/dtos/ICreatePaymentDTO'
 
+import IGetTotalPaymentDTO from '@modules/payment/dtos/IGetTotalPaymentDTO'
+import IListPaymentsDTO from '@modules/payment/dtos/IListPaymentsDTO'
 import Payment from '../entities/Payment'
 
 export default class PaymentRepository implements IPaymentRepository {
@@ -13,8 +15,29 @@ export default class PaymentRepository implements IPaymentRepository {
     this.ormRepository = getRepository(Payment)
   }
 
-  async findAll(user_id: string): Promise<Payment[]> {
-    const payments = await this.ormRepository.find({ where: { user_id } })
+  async getTotalPaymentFromMonth({
+    user_id,
+    month,
+    year,
+  }: IGetTotalPaymentDTO): Promise<number> {
+    const payments = await this.ormRepository.find({
+      where: { user_id, month, year },
+    })
+    const totalPayment = payments.reduce((total: number, { value }) => {
+      return total + value
+    }, 0)
+    return totalPayment
+  }
+
+  async findAll({
+    user_id,
+    month,
+    year,
+  }: IListPaymentsDTO): Promise<Payment[]> {
+    const payments = await this.ormRepository.find({
+      where: { user_id, month, year },
+      relations: ['client'],
+    })
     return payments
   }
 

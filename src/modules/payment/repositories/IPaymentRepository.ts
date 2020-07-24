@@ -1,8 +1,11 @@
 import ICreatePayment from '@modules/payment/dtos/ICreatePaymentDTO'
 import Payment from '../infra/typeorm/entities/Payment'
+import IGetTotalPaymentDTO from '../dtos/IGetTotalPaymentDTO'
+import IListPaymentsDTO from '../dtos/IListPaymentsDTO'
 
 export default interface IPaymentRepository {
-  findAll(user_id: string): Promise<Payment[]>
+  getTotalPaymentFromMonth(data: IGetTotalPaymentDTO): Promise<number>
+  findAll(data: IListPaymentsDTO): Promise<Payment[]>
   delete(payment_id: string): Promise<void>
   create(data: ICreatePayment): Promise<Payment>
   save(payment: Payment): Promise<Payment>

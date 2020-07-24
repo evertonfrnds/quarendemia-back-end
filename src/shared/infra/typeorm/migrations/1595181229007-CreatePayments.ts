@@ -25,17 +25,17 @@ export default class CreatePayments1595181229007 implements MigrationInterface {
           },
           {
             name: 'month',
-            type: 'decimal',
+            type: 'float',
             isNullable: false,
           },
           {
             name: 'year',
-            type: 'decimal',
+            type: 'float',
             isNullable: false,
           },
           {
             name: 'value',
-            type: 'decimal',
+            type: 'float',
             isNullable: false,
           },
           {

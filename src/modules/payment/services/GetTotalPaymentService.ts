@@ -1,4 +1,3 @@
-import Payment from '@modules/payment/infra/typeorm/entities/Payment'
 import { injectable, inject } from 'tsyringe'
 import IPaymentRepository from '../repositories/IPaymentRepository'
 
@@ -9,14 +8,14 @@ interface IRequest {
 }
 
 @injectable()
-class ListPaymentService {
+class GetTotalPaymentService {
   constructor(
     @inject('PaymentRepository')
     private paymentRepository: IPaymentRepository,
   ) {}
 
-  public async execute({ user_id, month, year }: IRequest): Promise<Payment[]> {
-    const payments = await this.paymentRepository.findAll({
+  public async execute({ user_id, month, year }: IRequest): Promise<number> {
+    const payments = await this.paymentRepository.getTotalPaymentFromMonth({
       user_id,
       month,
       year,
@@ -26,4 +25,4 @@ class ListPaymentService {
   }
 }
 
-export default ListPaymentService
+export default GetTotalPaymentService

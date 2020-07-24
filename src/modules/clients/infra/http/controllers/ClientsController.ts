@@ -3,7 +3,7 @@ import { container } from 'tsyringe'
 import { classToClass } from 'class-transformer'
 
 import CreateClientService from '@modules/clients/services/CreateClientService'
-import ListClientService from '@modules/clients/services/ListClientService'
+import ListClientsService from '@modules/clients/services/ListClientsService'
 import UpdateClientService from '@modules/clients/services/UpdateClientService'
 import ShowClientService from '@modules/clients/services/ShowClientService'
 import DeleteClientService from '@modules/clients/services/DeleteClientService'
@@ -11,7 +11,7 @@ import DeleteClientService from '@modules/clients/services/DeleteClientService'
 export default class ClientController {
   public async index(request: Request, response: Response): Promise<Response> {
     const { id } = request.user
-    const listClients = container.resolve(ListClientService)
+    const listClients = container.resolve(ListClientsService)
 
     const clients = await listClients.execute({ user_id: id })
 

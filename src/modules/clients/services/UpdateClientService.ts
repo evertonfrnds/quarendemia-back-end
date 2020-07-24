@@ -2,7 +2,7 @@ import AppError from '@shared/errors/AppError'
 
 import Client from '@modules/clients/infra/typeorm/entities/Client'
 import { injectable, inject } from 'tsyringe'
-import IClientRepository from '../repositories/IClientRepository'
+import IClientsRepository from '../repositories/IClientsRepository'
 
 interface IRequest {
   client_id: string
@@ -14,8 +14,8 @@ interface IRequest {
 @injectable()
 class UpdateClientService {
   constructor(
-    @inject('ClientRepository')
-    private clientRepository: IClientRepository,
+    @inject('ClientsRepository')
+    private clientsRepository: IClientsRepository,
   ) {}
 
   public async execute({
@@ -24,7 +24,7 @@ class UpdateClientService {
     name,
     email,
   }: IRequest): Promise<Client> {
-    const client = await this.clientRepository.findById(client_id)
+    const client = await this.clientsRepository.findById(client_id)
 
     if (!client) {
       throw new AppError('Cliente não encontrado.')
@@ -35,7 +35,7 @@ class UpdateClientService {
     client.plan_id = plan_id
     client.plan.id = plan_id
 
-    await this.clientRepository.save(client)
+    await this.clientsRepository.save(client)
 
     return client
   }

@@ -9,7 +9,8 @@ const paymentController = new PaymentController()
 
 paymentRouter.use(ensureAuthenticated)
 
-paymentRouter.get('/', paymentController.index)
+paymentRouter.get('/payment-total/:month/:year', paymentController.show)
+paymentRouter.get('/:month/:year', paymentController.index)
 
 paymentRouter.post(
   '/',
@@ -18,7 +19,6 @@ paymentRouter.post(
       client_id: Joi.string().required(),
       month: Joi.number().required(),
       year: Joi.number().required(),
-      value: Joi.number().required(),
     },
   }),
   paymentController.create,

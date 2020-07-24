@@ -4,13 +4,13 @@ Este plano de iteração será usado como exemplo da disciplina Engenharia de So
 
 ## Calendário da Iterações
 
-| Iteração | Data início | Data Final | Apresentação | Gerente   |
-| -------- | ----------- | ---------- | ------------ | --------- |
-| It1      | 19/06/2020  | 24/06/2020 | 26/06/2020   | Everton   |
-| It2      | 24/06/2020  | 02/07/2020 | 03/07/2020   | Fernando  |
-| It3      | 02/07/2020  | 09/07/2020 | 10/07/2020   | Douglas   |
-| It4      | 09/07/2020  | 16/07/2020 | 17/07/2020   | José Rubens | 
-| It5      | 16/07/2020  | 23/07/2020 | 24/07/2020   | Gerente 5 |
+| Iteração | Data início | Data Final | Apresentação | Gerente     |
+| -------- | ----------- | ---------- | ------------ | ----------- |
+| It1      | 19/06/2020  | 24/06/2020 | 26/06/2020   | Everton     |
+| It2      | 24/06/2020  | 02/07/2020 | 03/07/2020   | Fernando    |
+| It3      | 02/07/2020  | 09/07/2020 | 10/07/2020   | Douglas     |
+| It4      | 09/07/2020  | 16/07/2020 | 17/07/2020   | José Rubens |
+| It5      | 16/07/2020  | 23/07/2020 | 24/07/2020   | Gerente 5   |
 
 ## Descrição das Tarefas em cada Iteração
 
@@ -92,7 +92,6 @@ A Iteração 3 começou dia 03/07/2020 e vai até 12/07/2020. As atividades dess
 - Trabalhou no front-end da aplicação;
 - Por ser mais experiente, continuou dando suporte aos outros desenvolvedores;
 - Commitou tudo que foi pedido por seu Gerente;
-
 
 ### T04 - Iteração 4 - Desenvolvimento Final
 

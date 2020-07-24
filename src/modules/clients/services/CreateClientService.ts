@@ -1,6 +1,6 @@
 import Client from '@modules/clients/infra/typeorm/entities/Client'
 import { injectable, inject } from 'tsyringe'
-import IClientRepository from '../repositories/IClientRepository'
+import IClientsRepository from '../repositories/IClientsRepository'
 
 interface IRequest {
   user_id: string
@@ -12,8 +12,8 @@ interface IRequest {
 @injectable()
 class CreateClientService {
   constructor(
-    @inject('ClientRepository')
-    private clientRepository: IClientRepository,
+    @inject('ClientsRepository')
+    private clientsRepository: IClientsRepository,
   ) {}
 
   public async execute({
@@ -22,7 +22,7 @@ class CreateClientService {
     name,
     email,
   }: IRequest): Promise<Client> {
-    const client = await this.clientRepository.create({
+    const client = await this.clientsRepository.create({
       user_id,
       name,
       email,
