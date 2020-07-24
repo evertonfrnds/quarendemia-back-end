@@ -1,18 +1,7 @@
-<<<<<<< HEAD
-import AppError from '@shared/errors/AppError'
-
-import FakeMeasuresRepository from '../repositories/fakes/FakeMeasuresRepository'
-
-import CreateMeasureService from './CreateMeasureService'
-
-let fakeMeasuresRepository: FakeMeasuresRepository
-
-=======
 import FakeMeasuresRepository from '../repositories/fakes/FakeMeasuresRepository'
 import CreateMeasureService from './CreateMeasureService'
 
 let fakeMeasuresRepository: FakeMeasuresRepository
->>>>>>> 546c9a2a9198cc3fd3cff4df67718a8b8a484e6c
 let createMeasure: CreateMeasureService
 
 describe('CreateMeasure', () => {
