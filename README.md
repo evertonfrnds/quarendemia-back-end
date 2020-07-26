@@ -29,6 +29,7 @@ docker run --name NOME_DA_IMAGEM -e POSTGRES_PASSWORD=SUA_SENHA -p 5432:5432 -d 
 ```
 
 *Substitua NOME_DA_IMAGEM por o nome de sua preferência para a imagem*
+
 *Substitua SUA_SENHA por uma senha confiável de sua preferência*
 
 ## Requisitos Funcionais
