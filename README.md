@@ -13,6 +13,24 @@
 
 Quarendemia visa cadastrar os usuários de academias locais bem como atualizar as informações necessárias de pagamentos.
 
+## Usagem
+
+- Criar arquivo .env na raiz do projeto e preencher as informações contidas em .env.example;
+- Criar arquivo ormconfig.json na raiz do projeto e preencher as informações contidas em ormconfig.example.json;
+- Caso utilize docker para criar a imagem do banco de dados, abaixo tem um código necessário.
+
+```bash
+yarn
+yarn start
+```
+
+```bash
+docker run --name NOME_DA_IMAGEM -e POSTGRES_PASSWORD=SUA_SENHA -p 5432:5432 -d postgres
+```
+
+_Substitua NOME_DA_IMAGEM por o nome de sua preferência para a imagem_
+_Substitua SUA_SENHA por uma senha confiável de sua preferência_
+
 ## Requisitos Funcionais
 
 Os requisitos funcionais detalhados estão na página wiki [Requisitos Funcionais](docs/docVisao.md).
