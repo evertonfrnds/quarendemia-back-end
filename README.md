@@ -21,7 +21,7 @@ Quarendemia visa cadastrar os usuários de academias locais bem como atualizar a
 
 ```bash
 yarn
-yarn start
+yarn dev:server
 ```
 
 ```bash
